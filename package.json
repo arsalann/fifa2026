@@ -12,7 +12,7 @@
     "preview": "vite preview",
     "test": "node scripts/run-tests.mjs",
     "pipeline:validate": "bruin validate pipelines/worldcup_2026",
-    "pipeline:run": "bruin run pipelines/worldcup_2026 --selector +marts.app_data_manifest",
+    "pipeline:run": "bruin run pipelines/worldcup_2026 --selector +marts.app_data_manifest --workers 1",
     "pipeline:export": "node scripts/export-bruin-data.mjs",
     "pipeline:refresh": "npm run pipeline:run && npm run pipeline:export",
     "update-data": "node scripts/generate-schedule.mjs",

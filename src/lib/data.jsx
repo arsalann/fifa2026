@@ -12,16 +12,56 @@ const LIVE_SCHEDULE_URL = `${BASE_URL}.netlify/functions/bruin-schedule`
 
 const DataContext = createContext(null)
 
-function stateFromPayload(payload) {
-  return {
-    matches: Array.isArray(payload?.matches) ? payload.matches.map((m) => ({ ...m })) : [],
-    updatedAt: payload?.generatedAt ? new Date(payload.generatedAt) : null,
-    source: 'bruin',
+const GROUP_STAGE_NAMES = new Set(['group', 'groups', 'group stage'])
+
+function parseJson(value, fallback = value) {
+  if (typeof value !== 'string') return value
+  try {
+    return JSON.parse(value)
+  } catch {
+    return fallback
   }
 }
 
+function normalizeStage(stage) {
+  const value = String(stage ?? '').trim().toLowerCase()
+  return GROUP_STAGE_NAMES.has(value) ? 'group' : value
+}
+
+function normalizeMatch(match) {
+  const group = match?.group ?? match?.groupName ?? match?.group_name
+  return {
+    ...match,
+    stage: normalizeStage(match?.stage ?? match?.stageName ?? match?.stage_name),
+    group: group == null ? group : String(group).trim(),
+    score: parseJson(match?.score, null),
+    goals1: parseJson(match?.goals1, match?.goals1),
+    goals2: parseJson(match?.goals2, match?.goals2),
+  }
+}
+
+function hasRenderableGroups(matches) {
+  return matches.some((m) => m.stage === 'group' && m.group && m.team1 && m.team2)
+}
+
+function stateFromPayload(payload) {
+  return {
+    matches: Array.isArray(payload?.matches) ? payload.matches.map(normalizeMatch) : [],
+    updatedAt: payload?.generatedAt ? new Date(payload.generatedAt) : null,
+    source: payload?.source ?? 'bruin',
+  }
+}
+
+export function scheduleStateFromPayload(payload, fallbackPayload = bruinData) {
+  const state = stateFromPayload(payload)
+  if (hasRenderableGroups(state.matches)) return state
+
+  const fallbackState = stateFromPayload(fallbackPayload)
+  return hasRenderableGroups(fallbackState.matches) ? fallbackState : state
+}
+
 export function DataProvider({ children }) {
-  const [state, setState] = useState(() => stateFromPayload(bruinData))
+  const [state, setState] = useState(() => scheduleStateFromPayload(bruinData))
 
   const refresh = useCallback(() => {
     if (typeof fetch !== 'function') {
@@ -39,8 +79,8 @@ export function DataProvider({ children }) {
           return response.json()
         }),
       )
-      .then((payload) => setState(stateFromPayload(payload)))
-      .catch(() => setState(stateFromPayload(bruinData)))
+      .then((payload) => setState(scheduleStateFromPayload(payload)))
+      .catch(() => setState(scheduleStateFromPayload(bruinData)))
   }, [])
 
   useEffect(() => {
