@@ -5,7 +5,7 @@ connection: motherduck-fifa
 
 materialization:
   type: table
-  strategy: truncate+insert
+  strategy: merge
 
 depends:
   - raw.reference_teams_json
@@ -18,6 +18,7 @@ columns:
       - name: not_null
   - name: payload
     type: json
+    update_on_merge: true
 
 @bruin */
 
@@ -27,6 +28,7 @@ WITH team_rows AS (
         value AS payload
     FROM raw.reference_teams_json,
         json_each(payload)
+    WHERE filename = 'teams.json'
 )
 SELECT team_name, payload
 FROM team_rows
