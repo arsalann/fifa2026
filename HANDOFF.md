@@ -2,115 +2,161 @@
 
 ## Goal
 
-Recreate the World Cup 2026 teams/stats app and turn it into a Bruin data-ingestion demo. The app should display data produced by Bruin/ingestr into DuckDB, not fetch provider data directly from the browser. The ad slot should be removed.
+Recreate the World Cup 2026 teams/stats app as a Bruin data-ingestion demo.
+The app should display Bruin-produced data, remove ads, show Bruin branding,
+deploy cleanly to Netlify, and be positioned for a future near-live Bruin Cloud
+architecture.
 
 ## Current State
 
-- React/Vite app is in place and running from `src/`.
-- Bruin CLI is upgraded to `v0.11.633`.
-- Bruin pipeline lives in `pipelines/worldcup_2026/`.
-- App runtime imports generated Bruin JSON only:
-  - `src/data/bruin/schedule.json`
-  - `src/data/bruin/teams.json`
-  - `src/data/bruin/details.json`
-- Original reference files remain as Bruin ingestion inputs:
-  - `src/data/schedule.json`
-  - `src/data/teams.json`
-- Bruin app-data run works with:
-  - `bruin run pipelines/worldcup_2026 --selector +marts.app_data_manifest --config-file .context/bruin.app.yml`
-- Export works with:
-  - `WORLDCUP_DUCKDB_PATH=data/worldcup2026.duckdb npm run pipeline:export`
+- Work has been committed and merged to `main` via PR #2:
+  - PR: https://github.com/arsalann/fifa2026/pull/2
+  - Commit: `60356fd` (`Add Bruin-powered Netlify data refresh`)
+  - Merge commit on `origin/main`: `401e7b3`
+- Local workspace is on branch `arsalann/recreate-worldcup-stats-bruin`, clean,
+  and tracking `origin/arsalann/recreate-worldcup-stats-bruin`.
+- React/Vite app is implemented in `src/`.
+- App runtime uses Bruin-generated JSON:
+  - bundled fallback: `src/data/bruin/*.json`
+  - deployed/browser-refreshable copies: `public/data/bruin/*.json`
+- Netlify is configured with `netlify.toml`:
+  - build command: `npm run build`
+  - publish dir: `dist`
+  - Node version: `20`
+  - no-cache headers for `/data/bruin/*`
+  - immutable cache headers for `/assets/*`
+  - SPA fallback to `/index.html`
+- Bruin CLI used locally: `v0.11.633`.
+- Bruin pipeline lives at `pipelines/worldcup_2026/`.
 - Latest generated app data contains:
   - 104 matches
   - 48 teams
-  - 5 ESPN scoreboard overlays/summaries
-- Dev server was started at `http://127.0.0.1:5173/`.
-- `npm test` passes.
-- `npm run build` passes.
+  - 104 ESPN summaries
+- ESPN full-window DuckDB asset now backfills all 104 tournament events:
+  - `raw.espn_scoreboard_window`
+- Validation passed before merge:
+  - `bruin validate pipelines/worldcup_2026 --config-file .context/bruin.app.yml`
+  - `bruin run pipelines/worldcup_2026 --selector +marts.app_data_manifest --config-file .context/bruin.app.yml`
+  - `WORLDCUP_DUCKDB_PATH=data/worldcup2026.duckdb npm run pipeline:export`
+  - `npm test`
+  - `npm run build`
+  - `git diff --check`
+- Netlify deploy preview checks passed before merge.
 
 ## Files In Flight
 
+- `netlify.toml`
+- `package.json`
+- `README.md`
+- `pipelines/worldcup_2026/README.md`
+- `pipelines/worldcup_2026/assets/raw/espn_scoreboard_window.sql`
+- `pipelines/worldcup_2026/assets/marts/app_matches.sql`
+- `pipelines/worldcup_2026/assets/marts/app_data_manifest.sql`
+- `scripts/export-bruin-data.mjs`
 - `src/App.jsx`
 - `src/lib/data.jsx`
-- `src/lib/espn.js`
 - `src/styles.css`
 - `src/data/bruin/schedule.json`
 - `src/data/bruin/teams.json`
 - `src/data/bruin/details.json`
-- `scripts/export-bruin-data.mjs`
-- `pipelines/worldcup_2026/pipeline.yml`
-- `pipelines/worldcup_2026/assets/raw/*.asset.yml`
-- `pipelines/worldcup_2026/assets/raw/reference_schedule_json.sql`
-- `pipelines/worldcup_2026/assets/raw/reference_teams_json.sql`
-- `pipelines/worldcup_2026/assets/marts/app_matches.sql`
-- `pipelines/worldcup_2026/assets/marts/app_teams.sql`
-- `pipelines/worldcup_2026/assets/marts/app_data_manifest.sql`
-- `pipelines/worldcup_2026/assets/marts/provider_coverage.sql`
-- `.bruin.yml.example`
-- `.env.example`
-- `.gitignore`
-- `vite.config.js`
+- `public/data/bruin/schedule.json`
+- `public/data/bruin/teams.json`
+- `public/data/bruin/details.json`
+- `public/bruin-logo.svg`
 - `tests/suite.test.jsx`
-- `README.md`
-- `pipelines/worldcup_2026/README.md`
-- `CLAUDE.md`
-- `package.json`
 
 ## Changed
 
-- Copied/recreated the upstream World Cup stats app in this workspace.
-- Added Bruin pipeline scaffolding and assets for:
+- Recreated the upstream World Cup stats app in React/Vite.
+- Added Bruin pipeline scaffold for:
   - ESPN
   - API-Football
   - BallDontLie FIFA
   - football-data.org
   - local reference schedule/team JSON ingestion into DuckDB
-- Added ESPN raw assets:
-  - `raw.espn_teams`
-  - `raw.espn_scoreboard`
-  - `raw.espn_competitors`
-  - `raw.espn_standings`
-  - `raw.espn_news`
-- Added app-facing marts:
-  - `marts.app_matches`
-  - `marts.app_teams`
-  - `marts.app_data_manifest`
-- Changed `npm run pipeline:run` to run the Bruin selector `+marts.app_data_manifest`.
-- Changed `scripts/export-bruin-data.mjs` to export schedule, teams, and ESPN details JSON from DuckDB.
-- Changed app data imports from static `src/data/*.json` to generated `src/data/bruin/*.json`.
-- Removed browser-side ESPN/openfootball fetching from `src/lib/data.jsx`.
-- Changed match facts/lineups to read Bruin-exported details JSON instead of fetching ESPN summary from the browser.
-- Removed the ad slot completely:
-  - deleted `src/components/AdSlot.jsx`
-  - removed `AdSlot` from `src/App.jsx`
-  - removed ad CSS
-  - removed AdSense `ads.txt` plugin from `vite.config.js`
-  - removed ad env vars and tests
+- Switched the app away from browser-side ESPN/openfootball fetching.
+- Added Bruin-produced app exports:
+  - `schedule.json`
+  - `teams.json`
+  - `details.json`
+- Added public JSON exports under `public/data/bruin/` so Netlify can serve
+  refreshable static data without rebuilding app code.
+- Added `npm run pipeline:refresh` for `pipeline:run && pipeline:export`.
+- Added a Bruin-powered header badge with `public/bruin-logo.svg`.
+- Removed the ad slot and related ad config/CSS/tests.
+- Fixed match details popup:
+  - centered modal on desktop
+  - bottom-sheet behavior retained on mobile
+- Added ESPN full-window backfill:
+  - `raw.espn_scoreboard_window` reads ESPN scoreboard range
+    `20260611-20260719`
+  - app marts now use this full-window table for scores/details
+- Added ESPN aliases in the mart:
+  - `Czech Republic` -> `Czechia`
+  - `Bosnia & Herzegovina` -> `Bosnia-Herzegovina`
+  - existing aliases include `DR Congo`, `USA`, `Turkey`
+- Added Netlify deployment config.
+- Updated tests so mock ESPN scenarios reset generated score state before
+  applying mock feeds.
 
 ## Failed Attempts
 
-- Initial standalone `ingestr` checks failed because `ingestr v1.0.34` rejected documented soccer URI schemes:
+- Initial standalone `ingestr v1.0.34` rejected documented soccer URI schemes:
   - `api-football://`
   - `balldontlie-fifa://`
   - `football-data://`
   - `espn://`
-- Bruin generic connections could not be used for ingestr source URIs; Bruin panicked because generic connections do not implement the ingestr URI interface.
-- A direct `bruin run` of `marts.app_data_manifest` did not run upstream dependencies. The working command uses selector syntax: `--selector +marts.app_data_manifest`.
-- Temporary Bruin config under `.context` initially wrote DuckDB relative to `.context`; later a config with an absolute DuckDB path was generated at `.context/bruin.app.yml`.
-- The first ESPN mart export failed to orient `DR Congo` scores because ESPN calls the team `Congo DR`. Fixed by adding ESPN alias fields in `marts.app_matches`.
-- Browser plugin/in-app browser automation was unavailable earlier (`agent.browsers.list()` returned no browsers), so frontend verification relied on route-render tests, build, and HTTP smoke checks.
+- Bruin generic connections could not be used for ingestr source URIs; Bruin
+  panicked because generic connections do not implement the ingestr URI
+  interface.
+- Direct `bruin run marts.app_data_manifest` did not run upstream dependencies.
+  Working command uses selector syntax:
+  - `--selector +marts.app_data_manifest`
+- Initial ESPN ingestr scoreboard asset only produced 5 current scoreboard rows,
+  causing many past matches to show `Result pending`.
+- Running old `raw.espn_scoreboard` and new DuckDB SQL asset together caused a
+  DuckDB write-lock conflict. The app-data dependency path now uses
+  `raw.espn_scoreboard_window` as the score source.
+- ESPN timestamp strings like `2026-06-11T19:00Z` failed DuckDB timestamp
+  casting in the first SQL version. The asset stores `date` as varchar.
+- Generated Bruin data broke old ESPN mock tests because tests layered mocks on
+  top of already-scored real schedule rows. Fixed with a clean schedule helper.
+- GitHub connector failed to create the PR with 403, so `gh pr create` was used.
+- Browser plugin/in-app browser was unavailable for visual inspection, so UI was
+  verified through tests/build/HTTP smoke checks rather than screenshots.
 
 ## Next Steps
 
-- Decide whether to commit generated `src/data/bruin/*.json` or generate them in CI before build.
-- Add a checked-in non-secret `.bruin.yml` workflow or document that `.context/bruin.app.yml` is local-only and must be recreated from `.bruin.yml.example`.
-- Expand Bruin ingestion beyond ESPN scoreboard once the provider connectors are confirmed executable through Bruin:
-  - API-Football tables
-  - BallDontLie FIFA tables
-  - football-data.org tables
-- Add richer marts for goals, lineups, and match facts if ESPN/other source raw tables expose enough structured fields.
-- Consider removing or archiving old `scripts/generate-schedule.mjs` if the Bruin flow is now the only accepted data path.
-- Re-run:
+- If continuing development locally, either switch to `main` and pull:
+  - `git checkout main`
+  - `git pull origin main`
+  or keep working on a new branch from `origin/main`.
+- For Netlify static deploys, refresh data before deploy when needed:
+  - `npm run pipeline:refresh`
+  - commit regenerated `src/data/bruin/*` and `public/data/bruin/*`
+  - push to trigger Netlify deploy
+- Decide whether to keep the static-deploy model or move to near-live data.
+- Proposed near-live architecture:
+  - Bruin Cloud scheduled every minute
+  - write to a cloud database/warehouse
+  - expose a thin read API via Netlify Function or Edge Function
+  - React app polls the API every 15-60 seconds during live matches
+- Avoid having the browser read most cloud databases directly; credentials and
+  CORS/auth make that unsafe. Use an API layer.
+- Good cloud targets to evaluate:
+  - Postgres/Supabase
+  - MotherDuck
+  - BigQuery
+  - Snowflake
+- Add richer marts if upstream data supports them:
+  - goals
+  - lineups
+  - match facts
+  - team/player tournament stats
+- Expand beyond ESPN full-window data once the API-Football, BallDontLie FIFA,
+  and football-data.org Bruin/ingestr connectors are confirmed executable in the
+  target environment.
+- Re-run core checks after future changes:
   - `bruin validate pipelines/worldcup_2026 --config-file .context/bruin.app.yml`
   - `bruin run pipelines/worldcup_2026 --selector +marts.app_data_manifest --config-file .context/bruin.app.yml`
   - `WORLDCUP_DUCKDB_PATH=data/worldcup2026.duckdb npm run pipeline:export`
