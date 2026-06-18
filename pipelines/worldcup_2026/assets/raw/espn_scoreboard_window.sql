@@ -8,7 +8,7 @@ connection: motherduck-fifa
 
 materialization:
   type: table
-  strategy: truncate+insert
+  strategy: merge
 
 columns:
   - name: id
@@ -16,10 +16,36 @@ columns:
     primary_key: true
     checks:
       - name: not_null
+  - name: uid
+    type: varchar
+    update_on_merge: true
   - name: date
     type: varchar
+    update_on_merge: true
   - name: name
     type: varchar
+    update_on_merge: true
+  - name: short_name
+    type: varchar
+    update_on_merge: true
+  - name: season
+    type: json
+    update_on_merge: true
+  - name: competitions
+    type: json
+    update_on_merge: true
+  - name: status
+    type: json
+    update_on_merge: true
+  - name: venue
+    type: json
+    update_on_merge: true
+  - name: links
+    type: json
+    update_on_merge: true
+  - name: ingested_at
+    type: timestamp
+    update_on_merge: true
 
 @bruin */
 

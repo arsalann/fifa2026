@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T16:24:55.812Z",
+  "generatedAt": "2026-06-18T19:49:56.161Z",
   "source": "bruin:motherduck-fifa:raw.espn_scoreboard",
   "summaries": {
     "760414": {
@@ -2535,7 +2535,7 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "37.9"
+                "displayValue": "38"
               },
               {
                 "name": "shotAssists",
@@ -2555,7 +2555,7 @@
               {
                 "name": "totalShots",
                 "label": "totalShots",
-                "displayValue": "8"
+                "displayValue": "7"
               }
             ]
           },
@@ -2589,7 +2589,7 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "62.1"
+                "displayValue": "62"
               },
               {
                 "name": "shotAssists",
@@ -3020,12 +3020,12 @@
               {
                 "name": "foulsCommitted",
                 "label": "foulsCommitted",
-                "displayValue": "3"
+                "displayValue": "12"
               },
               {
                 "name": "wonCorners",
                 "label": "wonCorners",
-                "displayValue": "2"
+                "displayValue": "5"
               },
               {
                 "name": "goalAssists",
@@ -3035,17 +3035,17 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "44.8"
+                "displayValue": "38.2"
               },
               {
                 "name": "shotAssists",
                 "label": "shotAssists",
-                "displayValue": "3"
+                "displayValue": "11"
               },
               {
                 "name": "shotsOnTarget",
                 "label": "shotsOnTarget",
-                "displayValue": "1"
+                "displayValue": "3"
               },
               {
                 "name": "totalGoals",
@@ -3055,7 +3055,7 @@
               {
                 "name": "totalShots",
                 "label": "totalShots",
-                "displayValue": "4"
+                "displayValue": "14"
               }
             ]
           },
@@ -3074,12 +3074,12 @@
               {
                 "name": "foulsCommitted",
                 "label": "foulsCommitted",
-                "displayValue": "3"
+                "displayValue": "10"
               },
               {
                 "name": "wonCorners",
                 "label": "wonCorners",
-                "displayValue": "1"
+                "displayValue": "5"
               },
               {
                 "name": "goalAssists",
@@ -3089,27 +3089,27 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "55.2"
+                "displayValue": "61.8"
               },
               {
                 "name": "shotAssists",
                 "label": "shotAssists",
-                "displayValue": "2"
+                "displayValue": "11"
               },
               {
                 "name": "shotsOnTarget",
                 "label": "shotsOnTarget",
-                "displayValue": "0"
+                "displayValue": "4"
               },
               {
                 "name": "totalGoals",
                 "label": "totalGoals",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "totalShots",
                 "label": "totalShots",
-                "displayValue": "2"
+                "displayValue": "17"
               }
             ]
           }
@@ -3122,7 +3122,7 @@
             "city": "Atlanta, Georgia"
           }
         },
-        "attendance": 0,
+        "attendance": 67442,
         "officials": []
       },
       "rosters": []
@@ -3136,7 +3136,53 @@
               "name": "Switzerland",
               "id": "475"
             },
-            "statistics": []
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "3"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "4"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "69"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "4"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "4"
+              }
+            ]
           },
           {
             "team": {
@@ -3144,7 +3190,53 @@
               "name": "Bosnia-Herzegovina",
               "id": "452"
             },
-            "statistics": []
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "9"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "2"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "31"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "2"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "3"
+              }
+            ]
           }
         ]
       },

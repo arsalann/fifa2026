@@ -5,7 +5,7 @@ connection: motherduck-fifa
 
 materialization:
   type: table
-  strategy: truncate+insert
+  strategy: merge
 
 columns:
   - name: filename
@@ -13,13 +13,15 @@ columns:
     primary_key: true
   - name: ingested_at
     type: timestamp
+    update_on_merge: true
   - name: payload
     type: json
+    update_on_merge: true
 
 @bruin */
 
 SELECT
-    filename,
+    'schedule.json' AS filename,
     CURRENT_TIMESTAMP AS ingested_at,
     content::JSON AS payload
 FROM (

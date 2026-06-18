@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T16:24:55.812Z",
+  "generatedAt": "2026-06-18T19:49:56.161Z",
   "source": "bruin:motherduck-fifa:marts.app_matches",
   "matches": [
     {
@@ -53,15 +53,12 @@
       "kickoff": "2026-06-18T12:00:00-04:00",
       "city": "Atlanta",
       "espnId": "760438",
-      "liveState": "1h",
-      "live": {
-        "score": [
+      "score": {
+        "ft": [
           1,
-          0
-        ],
-        "clock": "24'"
+          1
+        ]
       },
-      "score": null,
       "goals1": null,
       "goals2": null
     },
@@ -161,6 +158,14 @@
       "kickoff": "2026-06-18T12:00:00-07:00",
       "city": "Los Angeles (Inglewood)",
       "espnId": "760439",
+      "liveState": "ht",
+      "live": {
+        "score": [
+          0,
+          0
+        ],
+        "clock": "45'+3'"
+      },
       "score": null,
       "goals1": null,
       "goals2": null
