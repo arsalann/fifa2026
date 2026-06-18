@@ -8,6 +8,7 @@ connection: motherduck-fifa
 
 materialization:
   type: table
+  strategy: truncate+insert
 
 depends:
   - raw.reference_schedule_json
