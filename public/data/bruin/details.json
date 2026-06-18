@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T19:49:56.161Z",
+  "generatedAt": "2026-06-18T20:50:06.569Z",
   "source": "bruin:motherduck-fifa:raw.espn_scoreboard",
   "summaries": {
     "760414": {
@@ -3035,7 +3035,7 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "38.2"
+                "displayValue": "38.3"
               },
               {
                 "name": "shotAssists",
@@ -3089,7 +3089,7 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "61.8"
+                "displayValue": "61.7"
               },
               {
                 "name": "shotAssists",
@@ -3145,42 +3145,42 @@
               {
                 "name": "foulsCommitted",
                 "label": "foulsCommitted",
-                "displayValue": "3"
+                "displayValue": "7"
               },
               {
                 "name": "wonCorners",
                 "label": "wonCorners",
-                "displayValue": "4"
+                "displayValue": "7"
               },
               {
                 "name": "goalAssists",
                 "label": "goalAssists",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "69"
+                "displayValue": "61.9"
               },
               {
                 "name": "shotAssists",
                 "label": "shotAssists",
-                "displayValue": "4"
+                "displayValue": "8"
               },
               {
                 "name": "shotsOnTarget",
                 "label": "shotsOnTarget",
-                "displayValue": "1"
+                "displayValue": "5"
               },
               {
                 "name": "totalGoals",
                 "label": "totalGoals",
-                "displayValue": "0"
+                "displayValue": "2"
               },
               {
                 "name": "totalShots",
                 "label": "totalShots",
-                "displayValue": "4"
+                "displayValue": "11"
               }
             ]
           },
@@ -3199,7 +3199,7 @@
               {
                 "name": "foulsCommitted",
                 "label": "foulsCommitted",
-                "displayValue": "9"
+                "displayValue": "16"
               },
               {
                 "name": "wonCorners",
@@ -3214,17 +3214,17 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "31"
+                "displayValue": "38.1"
               },
               {
                 "name": "shotAssists",
                 "label": "shotAssists",
-                "displayValue": "2"
+                "displayValue": "3"
               },
               {
                 "name": "shotsOnTarget",
                 "label": "shotsOnTarget",
-                "displayValue": "1"
+                "displayValue": "2"
               },
               {
                 "name": "totalGoals",
@@ -3234,7 +3234,7 @@
               {
                 "name": "totalShots",
                 "label": "totalShots",
-                "displayValue": "3"
+                "displayValue": "4"
               }
             ]
           }
@@ -3247,7 +3247,7 @@
             "city": "Inglewood, California"
           }
         },
-        "attendance": 0,
+        "attendance": 70026,
         "officials": []
       },
       "rosters": []

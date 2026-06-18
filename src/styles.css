@@ -337,6 +337,7 @@ tr.maybe td:first-child {
 }
 
 .team-name {
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -414,7 +415,7 @@ tr.maybe td:first-child {
 
 .match-main {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 1fr) 82px minmax(0, 1fr);
   align-items: center;
   gap: 8px;
 }
@@ -422,6 +423,10 @@ tr.maybe td:first-child {
 .match-main .side {
   min-width: 0;
   display: flex;
+}
+
+.match-main .team {
+  width: 100%;
 }
 
 .match-main .side.home {
@@ -432,9 +437,23 @@ tr.maybe td:first-child {
   justify-content: flex-end;
 }
 
+.match-main .side.away .team {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.match-main .flag {
+  flex: none;
+  line-height: 1;
+}
+
+.match-main .team-name {
+  line-height: 1.16;
+}
+
 .match-main .center {
   text-align: center;
-  min-width: 74px;
+  min-width: 0;
 }
 
 .score {
@@ -449,6 +468,8 @@ tr.maybe td:first-child {
 }
 
 .kickoff-time {
+  font-size: 0.96rem;
+  color: var(--text);
   font-weight: 700;
 }
 
@@ -1030,13 +1051,18 @@ table.boot-table th:last-child {
 .sheet-title {
   display: flex;
   justify-content: space-between;
-  gap: 42px;
-  padding: 30px 32px 12px;
+  gap: 12px;
+  padding: 30px 78px 8px 32px;
   font-size: 1.35rem;
   font-weight: 700;
 }
 
-.sheet-title strong {
+.sheet-live {
+  padding: 0 78px 0 32px;
+  text-align: right;
+}
+
+.sheet-live strong {
   color: #83e19b;
   font-size: 1rem;
   white-space: nowrap;
@@ -1106,7 +1132,7 @@ table.boot-table th:last-child {
   color: var(--sheet-muted);
 }
 
-.kickoff-time {
+.sheet-score .kickoff-time {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -1250,11 +1276,15 @@ table.boot-table th:last-child {
   }
 
   .sheet-title {
-    padding: 22px 18px 8px;
+    padding: 22px 64px 4px 18px;
     font-size: 1rem;
   }
 
-  .sheet-title strong {
+  .sheet-live {
+    padding: 0 64px 0 18px;
+  }
+
+  .sheet-live strong {
     font-size: 0.88rem;
   }
 

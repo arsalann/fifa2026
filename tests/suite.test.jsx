@@ -117,6 +117,11 @@ const cleanScheduleMatches = () =>
   check('live payload normalizes group stage', driftedLive.matches[0].stage, 'group')
   check('live payload accepts group_name', driftedLive.matches[0].group, 'A')
   check('live payload parses score JSON', computeGroups(driftedLive.matches).A[0].pts, 3)
+  check(
+    'bundled Bruin schedule includes scorer data',
+    schedule.matches.some((m) => m.goals1?.length || m.goals2?.length),
+    true,
+  )
 }
 
 // ---------- third place race ----------
