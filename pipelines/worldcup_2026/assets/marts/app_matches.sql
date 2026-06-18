@@ -8,7 +8,7 @@ connection: motherduck-fifa
 
 materialization:
   type: table
-  strategy: truncate+insert
+  strategy: merge
 
 depends:
   - raw.reference_schedule_json
@@ -22,14 +22,97 @@ columns:
       - name: not_null
   - name: match_key
     type: varchar
+    update_on_merge: true
+  - name: stage
+    type: varchar
+    update_on_merge: true
+  - name: round
+    type: varchar
+    update_on_merge: true
+  - name: group_name
+    type: varchar
+    update_on_merge: true
   - name: espn_id
     type: varchar
+    update_on_merge: true
   - name: team1
     type: varchar
+    update_on_merge: true
   - name: team2
     type: varchar
+    update_on_merge: true
+  - name: team1_espn_name
+    type: varchar
+    update_on_merge: true
+  - name: team2_espn_name
+    type: varchar
+    update_on_merge: true
   - name: kickoff
     type: varchar
+    update_on_merge: true
+  - name: city
+    type: varchar
+    update_on_merge: true
+  - name: reference_score
+    type: json
+    update_on_merge: true
+  - name: reference_goals1
+    type: json
+    update_on_merge: true
+  - name: reference_goals2
+    type: json
+    update_on_merge: true
+  - name: espn_kickoff
+    type: varchar
+    update_on_merge: true
+  - name: status_state
+    type: varchar
+    update_on_merge: true
+  - name: status_name
+    type: varchar
+    update_on_merge: true
+  - name: status_period
+    type: integer
+    update_on_merge: true
+  - name: display_clock
+    type: varchar
+    update_on_merge: true
+  - name: venue_name
+    type: varchar
+    update_on_merge: true
+  - name: home_team
+    type: varchar
+    update_on_merge: true
+  - name: away_team
+    type: varchar
+    update_on_merge: true
+  - name: home_score
+    type: integer
+    update_on_merge: true
+  - name: away_score
+    type: integer
+    update_on_merge: true
+  - name: home_linescores
+    type: json
+    update_on_merge: true
+  - name: away_linescores
+    type: json
+    update_on_merge: true
+  - name: competitions
+    type: json
+    update_on_merge: true
+  - name: team1_score
+    type: integer
+    update_on_merge: true
+  - name: team2_score
+    type: integer
+    update_on_merge: true
+  - name: team1_ht_score
+    type: integer
+    update_on_merge: true
+  - name: team2_ht_score
+    type: integer
+    update_on_merge: true
 
 @bruin */
 
@@ -65,6 +148,7 @@ WITH reference_matches AS (
         json_extract(value, '$.goals2') AS reference_goals2
     FROM raw.reference_schedule_json,
         json_each(payload, '$.matches')
+    WHERE filename = 'schedule.json'
 ),
 espn_events AS (
     SELECT
