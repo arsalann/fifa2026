@@ -1,6 +1,7 @@
 /* @bruin
 name: raw.reference_teams_json
 description: Curated team history and metadata JSON ingested into DuckDB for app export.
+connection: motherduck-fifa
 
 materialization:
   type: table

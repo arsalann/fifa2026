@@ -4,6 +4,7 @@ description: |
   Full-window ESPN World Cup scoreboard backfill. This Bruin SQL asset loads
   the full tournament date range so the first run backfills historical results
   and later runs refresh the same event IDs with the latest ESPN state.
+connection: motherduck-fifa
 
 materialization:
   type: table

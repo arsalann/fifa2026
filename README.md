@@ -20,15 +20,18 @@ This repo is ready to deploy as a static Netlify site. `netlify.toml` sets:
 - Build command: `npm run build`
 - Publish directory: `dist`
 - Node version: `20`
+- Netlify Function read endpoint for live schedule data from MotherDuck
 - No-cache headers for `/data/bruin/*`
 - SPA fallback to `index.html`
 
-The deployed app uses the committed Bruin exports under `public/data/bruin/`.
-Run `npm run pipeline:refresh` before deploying when you want to refresh DuckDB
-and regenerate those JSON files.
+Set `MOTHERDUCK_TOKEN` in Netlify for the read-only MotherDuck token. The
+deployed app polls `/.netlify/functions/bruin-schedule` first, then falls back
+to the committed Bruin exports under `public/data/bruin/` if the function is
+unavailable. Run `npm run pipeline:refresh` before deploying when you want to
+refresh MotherDuck and regenerate those fallback JSON files.
 
-The app runtime reads Bruin-generated JSON. `src/data/bruin/` is bundled as a
-fallback, and `public/data/bruin/` is fetched on app load/refresh so a fresh
+The app runtime reads Bruin-generated data. `src/data/bruin/` is bundled as a
+fallback, and `public/data/bruin/` is fetched as a second fallback so a fresh
 pipeline export can be picked up without changing browser code:
 
 - `schedule.json` - app-ready matches from Bruin marts.
@@ -40,27 +43,20 @@ input. The browser no longer fetches ESPN or openfootball directly.
 
 ## Bruin Pipeline
 
-The Bruin project lives in `pipelines/worldcup_2026` and targets local DuckDB at
-`data/worldcup2026.duckdb`.
+The Bruin project lives in `pipelines/worldcup_2026` and targets the `fifa`
+database in MotherDuck.
 
 ```bash
 cp .bruin.yml.example .bruin.yml
-export API_FOOTBALL_API_KEY=...
-export BALLDONTLIE_FIFA_API_KEY=...
-export FOOTBALL_DATA_ORG_API_KEY=...
+export MOTHERDUCK_TOKEN=...
 
 npm run pipeline:validate
 npm run pipeline:refresh
 npm run dev
 ```
 
-The raw layer uses the requested ingestr soccer sources:
-
-- ESPN full-window scoreboard backfill plus latest ingestr scoreboard, teams,
-  competitors, standings, and news
-- API-Football
-- BallDontLie FIFA
-- football-data.org
+The raw layer uses ESPN for the live-score overlay and match details, plus
+curated local reference JSON for the tournament schedule and team metadata.
 
 See `pipelines/worldcup_2026/README.md` for the source/table map and the current
-local tooling limitation around the unreleased soccer URI schemes.
+tooling limitation around the unreleased soccer URI schemes.

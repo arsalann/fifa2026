@@ -2,7 +2,11 @@ import { execFileSync } from 'node:child_process'
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 
-const dbPath = resolve(process.env.WORLDCUP_DUCKDB_PATH ?? 'data/worldcup2026.duckdb')
+const dbPath = process.env.WORLDCUP_DUCKDB_PATH
+  ? resolve(process.env.WORLDCUP_DUCKDB_PATH)
+  : null
+const bruinConnection = process.env.WORLDCUP_BRUIN_QUERY_CONNECTION ?? 'motherduck-fifa'
+const bruinConfigFile = process.env.WORLDCUP_BRUIN_CONFIG_FILE ?? '.bruin.yml'
 const schedulePath = resolve(
   process.env.WORLDCUP_BRUIN_SCHEDULE_PATH ?? 'src/data/bruin/schedule.json',
 )
@@ -21,8 +25,39 @@ const publicDetailsPath = resolve(
 )
 
 function query(sql) {
-  const out = execFileSync('duckdb', ['-readonly', dbPath, '-json', sql], { encoding: 'utf8' })
-  return JSON.parse(out || '[]')
+  if (dbPath) {
+    const out = execFileSync('duckdb', ['-readonly', dbPath, '-json', sql], { encoding: 'utf8' })
+    return JSON.parse(out || '[]')
+  }
+
+  const out = execFileSync(
+    'bruin',
+    [
+      'query',
+      '--config-file',
+      bruinConfigFile,
+      '--connection',
+      bruinConnection,
+      '--output',
+      'json',
+      '--query',
+      sql,
+    ],
+    { encoding: 'utf8' },
+  )
+  const parsed = JSON.parse(out || '[]')
+  if (Array.isArray(parsed)) return parsed
+  if (Array.isArray(parsed.rows) && Array.isArray(parsed.columns)) {
+    const columnNames = parsed.columns.map((column) =>
+      typeof column === 'string' ? column : column.name,
+    )
+    return parsed.rows.map((row) =>
+      Array.isArray(row)
+        ? Object.fromEntries(columnNames.map((name, index) => [name, row[index]]))
+        : row,
+    )
+  }
+  return parsed.rows ?? parsed.data ?? []
 }
 
 function parseJson(value, fallback = null) {
@@ -103,7 +138,7 @@ function summaryFromScoreboard(row) {
   }
 }
 
-if (!existsSync(dbPath)) {
+if (dbPath && !existsSync(dbPath)) {
   throw new Error(`DuckDB database not found at ${dbPath}. Run npm run pipeline:run first.`)
 }
 
@@ -163,7 +198,7 @@ const matches = matchRows.map((row) => {
 
 const schedulePayload = {
   generatedAt,
-  source: 'bruin:data/worldcup2026.duckdb:marts.app_matches',
+  source: `bruin:${dbPath ?? bruinConnection}:marts.app_matches`,
   matches,
 }
 writeJson(schedulePath, schedulePayload)
@@ -178,7 +213,7 @@ const teams = Object.fromEntries(teamRows.map((row) => [row.team_name, parseJson
 writeJson(teamsPath, teams)
 writeJson(publicTeamsPath, teams)
 
-let details = { generatedAt, source: 'bruin:raw.espn_scoreboard', summaries: {} }
+let details = { generatedAt, source: `bruin:${dbPath ?? bruinConnection}:raw.espn_scoreboard`, summaries: {} }
 try {
   const summaryRows = query(`
     SELECT id, competitions, venue

@@ -1,10 +1,10 @@
 name: worldcup_2026
-schedule: daily
+schedule: "* * * * *"
 start_date: "2026-01-01"
 catchup: false
 
 default_connections:
-  duckdb: "duckdb-default"
+  motherduck: "motherduck-fifa"
 
 default:
   type: duckdb.sql

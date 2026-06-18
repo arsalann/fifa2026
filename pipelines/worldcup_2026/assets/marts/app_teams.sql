@@ -1,6 +1,7 @@
 /* @bruin
 name: marts.app_teams
 description: Team metadata JSON rows generated from the Bruin-ingested team reference.
+connection: motherduck-fifa
 
 materialization:
   type: table

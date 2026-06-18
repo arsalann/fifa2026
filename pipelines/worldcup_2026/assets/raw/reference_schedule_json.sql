@@ -1,6 +1,7 @@
 /* @bruin
 name: raw.reference_schedule_json
 description: Curated tournament schedule JSON ingested into DuckDB for app export.
+connection: motherduck-fifa
 
 materialization:
   type: table
