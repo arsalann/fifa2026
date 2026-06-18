@@ -1,0 +1,10 @@
+name: raw.api_football_match_events
+type: ingestr
+connection: duckdb-default
+description: API-Football fixture events for World Cup 2026.
+parameters:
+  source_connection: api-football-worldcup
+  source_table: match_events
+  destination: duckdb
+  version: v1
+  incremental_strategy: replace

@@ -1,0 +1,10 @@
+name: raw.football_data_org_match_events
+type: ingestr
+connection: duckdb-default
+description: football-data.org normalized match events when unfold headers are available.
+parameters:
+  source_connection: football-data-org-worldcup
+  source_table: match_events
+  destination: duckdb
+  version: v1
+  incremental_strategy: replace

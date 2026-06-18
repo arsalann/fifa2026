@@ -1,0 +1,10 @@
+name: raw.espn_standings
+type: ingestr
+connection: duckdb-default
+description: ESPN standings for the FIFA World Cup league when available.
+parameters:
+  source_connection: espn-worldcup
+  source_table: standings
+  destination: duckdb
+  version: v1
+  incremental_strategy: replace

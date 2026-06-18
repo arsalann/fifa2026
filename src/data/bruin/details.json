@@ -1,0 +1,631 @@
+{
+  "generatedAt": "2026-06-18T12:48:11.809Z",
+  "source": "bruin:raw.espn_scoreboard",
+  "summaries": {
+    "760431": {
+      "boxscore": {
+        "teams": [
+          {
+            "team": {
+              "displayName": "Austria",
+              "name": "Austria",
+              "id": "474"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "12"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "4"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "1"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "63.2"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "6"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "4"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "3"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "11"
+              }
+            ]
+          },
+          {
+            "team": {
+              "displayName": "Jordan",
+              "name": "Jordan",
+              "id": "2917"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "7"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "3"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "1"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "36.8"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "9"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "4"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "11"
+              }
+            ]
+          }
+        ]
+      },
+      "gameInfo": {
+        "venue": {
+          "fullName": "Levi's Stadium",
+          "address": {
+            "city": "Santa Clara, California"
+          }
+        },
+        "attendance": 68527,
+        "officials": []
+      },
+      "rosters": []
+    },
+    "760434": {
+      "boxscore": {
+        "teams": [
+          {
+            "team": {
+              "displayName": "Ghana",
+              "name": "Ghana",
+              "id": "4469"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "9"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "2"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "1"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "37.9"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "5"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "2"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "8"
+              }
+            ]
+          },
+          {
+            "team": {
+              "displayName": "Panama",
+              "name": "Panama",
+              "id": "2659"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "11"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "2"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "62.1"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "8"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "4"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "11"
+              }
+            ]
+          }
+        ]
+      },
+      "gameInfo": {
+        "venue": {
+          "fullName": "BMO Field",
+          "address": {
+            "city": "Toronto"
+          }
+        },
+        "attendance": 42942,
+        "officials": []
+      },
+      "rosters": []
+    },
+    "760435": {
+      "boxscore": {
+        "teams": [
+          {
+            "team": {
+              "displayName": "Portugal",
+              "name": "Portugal",
+              "id": "482"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "9"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "5"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "1"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "75.4"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "7"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "7"
+              }
+            ]
+          },
+          {
+            "team": {
+              "displayName": "Congo DR",
+              "name": "Congo DR",
+              "id": "2850"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "10"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "4"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "1"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "24.6"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "7"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "2"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "8"
+              }
+            ]
+          }
+        ]
+      },
+      "gameInfo": {
+        "venue": {
+          "fullName": "NRG Stadium",
+          "address": {
+            "city": "Houston, Texas"
+          }
+        },
+        "attendance": 68777,
+        "officials": []
+      },
+      "rosters": []
+    },
+    "760436": {
+      "boxscore": {
+        "teams": [
+          {
+            "team": {
+              "displayName": "Uzbekistan",
+              "name": "Uzbekistan",
+              "id": "2570"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "14"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "3"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "38.6"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "5"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "2"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "8"
+              }
+            ]
+          },
+          {
+            "team": {
+              "displayName": "Colombia",
+              "name": "Colombia",
+              "id": "208"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "11"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "4"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "3"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "61.4"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "11"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "4"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "3"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "15"
+              }
+            ]
+          }
+        ]
+      },
+      "gameInfo": {
+        "venue": {
+          "fullName": "Estadio Banorte",
+          "address": {
+            "city": "Mexico City"
+          }
+        },
+        "attendance": 80824,
+        "officials": []
+      },
+      "rosters": []
+    },
+    "760437": {
+      "boxscore": {
+        "teams": [
+          {
+            "team": {
+              "displayName": "England",
+              "name": "England",
+              "id": "448"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "10"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "8"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "3"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "51.7"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "15"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "11"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "4"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "22"
+              }
+            ]
+          },
+          {
+            "team": {
+              "displayName": "Croatia",
+              "name": "Croatia",
+              "id": "477"
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "12"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "2"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "2"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "48.3"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "7"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "5"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "2"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "10"
+              }
+            ]
+          }
+        ]
+      },
+      "gameInfo": {
+        "venue": {
+          "fullName": "AT&T Stadium",
+          "address": {
+            "city": "Arlington, Texas"
+          }
+        },
+        "attendance": 70389,
+        "officials": []
+      },
+      "rosters": []
+    }
+  }
+}

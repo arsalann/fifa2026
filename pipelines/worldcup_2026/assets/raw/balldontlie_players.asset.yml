@@ -1,0 +1,10 @@
+name: raw.balldontlie_fifa_players
+type: ingestr
+connection: duckdb-default
+description: BallDontLie FIFA player profiles for World Cup 2026.
+parameters:
+  source_connection: balldontlie-fifa-worldcup
+  source_table: players
+  destination: duckdb
+  version: v1
+  incremental_strategy: replace

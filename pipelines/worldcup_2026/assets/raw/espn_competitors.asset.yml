@@ -1,0 +1,21 @@
+name: raw.espn_competitors
+type: ingestr
+connection: duckdb-default
+description: ESPN scoreboard competitor/team rows for World Cup events.
+parameters:
+  source_connection: espn-worldcup
+  source_table: competitors
+  destination: duckdb
+  version: v1
+  incremental_strategy: merge
+
+columns:
+  - name: event_id
+    type: varchar
+    primary_key: true
+  - name: competition_id
+    type: varchar
+    primary_key: true
+  - name: team_id
+    type: varchar
+    primary_key: true
