@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import bruinData from '../data/bruin/schedule.json'
 
 const LIVE_MS = 25 * 1000 // poll hard while a match is being played
@@ -6,26 +6,39 @@ const IDLE_MS = 5 * 60 * 1000 // gentle background poll otherwise
 const SOON_MS = 5 * 60 * 1000 // ramp up this long before a kickoff
 
 const LIVE_STATES = new Set(['1h', 'ht', '2h', 'et', 'pens', 'live'])
+const BASE_URL = import.meta.env?.BASE_URL ?? '/'
+const PUBLIC_SCHEDULE_URL = `${BASE_URL}data/bruin/schedule.json`
 
 const DataContext = createContext(null)
 
+function stateFromPayload(payload) {
+  return {
+    matches: Array.isArray(payload?.matches) ? payload.matches.map((m) => ({ ...m })) : [],
+    updatedAt: payload?.generatedAt ? new Date(payload.generatedAt) : null,
+    source: 'bruin',
+  }
+}
+
 export function DataProvider({ children }) {
-  const [state, setState] = useState(() => {
-    const generatedAt = bruinData.generatedAt ? new Date(bruinData.generatedAt) : null
-    return {
-      matches: Array.isArray(bruinData.matches) ? bruinData.matches.map((m) => ({ ...m })) : [],
-      updatedAt: generatedAt,
-      source: 'bruin',
-    }
-  })
+  const [state, setState] = useState(() => stateFromPayload(bruinData))
 
   const refresh = useCallback(() => {
-    setState({
-      matches: Array.isArray(bruinData.matches) ? bruinData.matches.map((m) => ({ ...m })) : [],
-      updatedAt: bruinData.generatedAt ? new Date(bruinData.generatedAt) : null,
-      source: 'bruin',
-    })
+    if (typeof fetch !== 'function') {
+      setState(stateFromPayload(bruinData))
+      return Promise.resolve()
+    }
+    return fetch(`${PUBLIC_SCHEDULE_URL}?t=${Date.now()}`, { cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Unable to load Bruin data: ${response.status}`)
+        return response.json()
+      })
+      .then((payload) => setState(stateFromPayload(payload)))
+      .catch(() => setState(stateFromPayload(bruinData)))
   }, [])
+
+  useEffect(() => {
+    refresh()
+  }, [refresh])
 
   const value = useMemo(() => ({ ...state, refresh }), [state, refresh])
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>

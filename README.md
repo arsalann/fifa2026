@@ -13,7 +13,23 @@ npm test
 npm run build
 ```
 
-The app runtime reads Bruin-generated JSON from `src/data/bruin/`:
+## Netlify
+
+This repo is ready to deploy as a static Netlify site. `netlify.toml` sets:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: `20`
+- No-cache headers for `/data/bruin/*`
+- SPA fallback to `index.html`
+
+The deployed app uses the committed Bruin exports under `public/data/bruin/`.
+Run `npm run pipeline:refresh` before deploying when you want to refresh DuckDB
+and regenerate those JSON files.
+
+The app runtime reads Bruin-generated JSON. `src/data/bruin/` is bundled as a
+fallback, and `public/data/bruin/` is fetched on app load/refresh so a fresh
+pipeline export can be picked up without changing browser code:
 
 - `schedule.json` - app-ready matches from Bruin marts.
 - `teams.json` - team metadata from Bruin-ingested reference data.
@@ -34,13 +50,14 @@ export BALLDONTLIE_FIFA_API_KEY=...
 export FOOTBALL_DATA_ORG_API_KEY=...
 
 npm run pipeline:validate
-npm run pipeline:run
-npm run pipeline:export
+npm run pipeline:refresh
+npm run dev
 ```
 
 The raw layer uses the requested ingestr soccer sources:
 
-- ESPN scoreboard, teams, competitors, standings, and news
+- ESPN full-window scoreboard backfill plus latest ingestr scoreboard, teams,
+  competitors, standings, and news
 - API-Football
 - BallDontLie FIFA
 - football-data.org

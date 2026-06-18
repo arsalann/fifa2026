@@ -12,6 +12,8 @@ an app-ready schedule overlay for the React app.
 - `src/data/bruin/schedule.json`: generated app match data.
 - `src/data/bruin/teams.json`: generated team metadata.
 - `src/data/bruin/details.json`: generated match-summary data.
+- `public/data/bruin/*.json`: refreshable browser-facing copies of the same
+  generated data.
 
 ## Sources
 
@@ -39,14 +41,17 @@ Then validate, run the app-data selector, and export:
 
 ```bash
 npm run pipeline:validate
-npm run pipeline:run
-npm run pipeline:export
+npm run pipeline:refresh
 ```
 
 `pipeline:run` executes the upstream assets needed for `marts.app_data_manifest`:
-ESPN scoreboard ingestion, local reference JSON ingestion, and app-facing marts.
-`pipeline:export` serializes those DuckDB marts/raw rows into `src/data/bruin/`.
-The app imports only these generated files at runtime.
+ESPN full-window scoreboard ingestion, local reference JSON ingestion, and
+app-facing marts. The full-window ESPN asset loads the whole tournament range on
+each run, which backfills historical results on the first run and refreshes
+event rows on later runs. It is the app-score source; the separate ESPN ingestr
+assets are retained for source coverage demos. `pipeline:export` serializes
+those DuckDB marts/raw rows into `src/data/bruin/` and `public/data/bruin/`.
+The app uses only these generated files at runtime.
 
 ## Current Tooling Note
 

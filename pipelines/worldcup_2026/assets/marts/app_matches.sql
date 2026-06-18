@@ -10,7 +10,7 @@ materialization:
 
 depends:
   - raw.reference_schedule_json
-  - raw.espn_scoreboard
+  - raw.espn_scoreboard_window
 
 columns:
   - name: match_index
@@ -41,12 +41,16 @@ WITH reference_matches AS (
         json_extract_string(value, '$.team1') AS team1,
         json_extract_string(value, '$.team2') AS team2,
         CASE json_extract_string(value, '$.team1')
+            WHEN 'Bosnia & Herzegovina' THEN 'Bosnia-Herzegovina'
+            WHEN 'Czech Republic' THEN 'Czechia'
             WHEN 'DR Congo' THEN 'Congo DR'
             WHEN 'USA' THEN 'United States'
             WHEN 'Turkey' THEN 'Türkiye'
             ELSE json_extract_string(value, '$.team1')
         END AS team1_espn_name,
         CASE json_extract_string(value, '$.team2')
+            WHEN 'Bosnia & Herzegovina' THEN 'Bosnia-Herzegovina'
+            WHEN 'Czech Republic' THEN 'Czechia'
             WHEN 'DR Congo' THEN 'Congo DR'
             WHEN 'USA' THEN 'United States'
             WHEN 'Turkey' THEN 'Türkiye'
@@ -79,7 +83,8 @@ espn_events AS (
         CAST(json_extract_string(competitions, '$[0].competitors[1].score') AS INTEGER) AS c1_score,
         json_extract(competitions, '$[0].competitors[1].linescores') AS c1_linescores,
         competitions
-    FROM raw.espn_scoreboard
+    FROM raw.espn_scoreboard_window
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY id ORDER BY date DESC) = 1
 ),
 espn_oriented AS (
     SELECT

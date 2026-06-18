@@ -10,6 +10,15 @@ const teamsPath = resolve(process.env.WORLDCUP_BRUIN_TEAMS_PATH ?? 'src/data/bru
 const detailsPath = resolve(
   process.env.WORLDCUP_BRUIN_DETAILS_PATH ?? 'src/data/bruin/details.json',
 )
+const publicSchedulePath = resolve(
+  process.env.WORLDCUP_PUBLIC_BRUIN_SCHEDULE_PATH ?? 'public/data/bruin/schedule.json',
+)
+const publicTeamsPath = resolve(
+  process.env.WORLDCUP_PUBLIC_BRUIN_TEAMS_PATH ?? 'public/data/bruin/teams.json',
+)
+const publicDetailsPath = resolve(
+  process.env.WORLDCUP_PUBLIC_BRUIN_DETAILS_PATH ?? 'public/data/bruin/details.json',
+)
 
 function query(sql) {
   const out = execFileSync('duckdb', ['-readonly', dbPath, '-json', sql], { encoding: 'utf8' })
@@ -152,11 +161,13 @@ const matches = matchRows.map((row) => {
   }
 })
 
-writeJson(schedulePath, {
+const schedulePayload = {
   generatedAt,
   source: 'bruin:data/worldcup2026.duckdb:marts.app_matches',
   matches,
-})
+}
+writeJson(schedulePath, schedulePayload)
+writeJson(publicSchedulePath, schedulePayload)
 
 const teamRows = query(`
   SELECT team_name, payload
@@ -165,12 +176,14 @@ const teamRows = query(`
 `)
 const teams = Object.fromEntries(teamRows.map((row) => [row.team_name, parseJson(row.payload, {})]))
 writeJson(teamsPath, teams)
+writeJson(publicTeamsPath, teams)
 
 let details = { generatedAt, source: 'bruin:raw.espn_scoreboard', summaries: {} }
 try {
   const summaryRows = query(`
     SELECT id, competitions, venue
-    FROM raw.espn_scoreboard
+    FROM raw.espn_scoreboard_window
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY id ORDER BY date DESC) = 1
     ORDER BY id
   `)
   details = {
@@ -182,7 +195,11 @@ try {
   // scoreboard has not been ingested yet.
 }
 writeJson(detailsPath, details)
+writeJson(publicDetailsPath, details)
 
 console.log(`Exported ${matches.length} matches to ${schedulePath}`)
+console.log(`Exported ${matches.length} matches to ${publicSchedulePath}`)
 console.log(`Exported ${teamRows.length} teams to ${teamsPath}`)
+console.log(`Exported ${teamRows.length} teams to ${publicTeamsPath}`)
 console.log(`Exported ${Object.keys(details.summaries).length} ESPN summaries to ${detailsPath}`)
+console.log(`Exported ${Object.keys(details.summaries).length} ESPN summaries to ${publicDetailsPath}`)

@@ -8,6 +8,7 @@ materialization:
 depends:
   - marts.app_matches
   - marts.app_teams
+  - raw.espn_scoreboard_window
 
 columns:
   - name: generated_at
@@ -22,4 +23,5 @@ columns:
 SELECT
     CURRENT_TIMESTAMP AS generated_at,
     (SELECT COUNT(*) FROM marts.app_matches) AS match_rows,
-    (SELECT COUNT(*) FROM marts.app_teams) AS team_rows
+    (SELECT COUNT(*) FROM marts.app_teams) AS team_rows,
+    (SELECT COUNT(*) FROM raw.espn_scoreboard_window) AS espn_window_rows
