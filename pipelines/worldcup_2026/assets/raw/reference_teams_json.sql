@@ -5,6 +5,7 @@ connection: motherduck-fifa
 
 materialization:
   type: table
+  strategy: truncate+insert
 
 columns:
   - name: filename
