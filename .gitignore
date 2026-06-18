@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.test-bundle.mjs
+.env
+.env.*
+!.env.example
+
+.bruin.yml
+data/*.db
+data/*.duckdb
+data/*.duckdb.wal
+logs/runs
+logs/*.log
+__pycache__/
+*.py[cod]

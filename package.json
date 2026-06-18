@@ -1,0 +1,28 @@
+{
+  "name": "worldcup-teams-stats",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node scripts/run-tests.mjs",
+    "pipeline:validate": "bruin validate pipelines/worldcup_2026",
+    "pipeline:run": "bruin run pipelines/worldcup_2026 --selector +marts.app_data_manifest",
+    "pipeline:export": "node scripts/export-bruin-data.mjs",
+    "update-data": "node scripts/generate-schedule.mjs",
+    "update-icons": "node scripts/generate-icons.mjs"
+  },
+  "dependencies": {
+    "posthog-js": "^1.387.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "esbuild": "^0.28.1",
+    "vite": "^5.4.0"
+  }
+}

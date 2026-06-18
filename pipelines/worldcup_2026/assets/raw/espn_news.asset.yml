@@ -1,0 +1,15 @@
+name: raw.espn_news
+type: ingestr
+connection: duckdb-default
+description: ESPN news for the FIFA World Cup league.
+parameters:
+  source_connection: espn-worldcup
+  source_table: news
+  destination: duckdb
+  version: v1
+  incremental_strategy: merge
+
+columns:
+  - name: id
+    type: varchar
+    primary_key: true
