@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T15:50:03.547Z",
+  "generatedAt": "2026-06-18T16:24:55.812Z",
   "source": "bruin:motherduck-fifa:raw.espn_scoreboard",
   "summaries": {
     "760414": {
@@ -3020,42 +3020,42 @@
               {
                 "name": "foulsCommitted",
                 "label": "foulsCommitted",
-                "displayValue": "0"
+                "displayValue": "3"
               },
               {
                 "name": "wonCorners",
                 "label": "wonCorners",
-                "displayValue": "0"
+                "displayValue": "2"
               },
               {
                 "name": "goalAssists",
                 "label": "goalAssists",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "0"
+                "displayValue": "44.8"
               },
               {
                 "name": "shotAssists",
                 "label": "shotAssists",
-                "displayValue": "0"
+                "displayValue": "3"
               },
               {
                 "name": "shotsOnTarget",
                 "label": "shotsOnTarget",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "totalGoals",
                 "label": "totalGoals",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "totalShots",
                 "label": "totalShots",
-                "displayValue": "0"
+                "displayValue": "4"
               }
             ]
           },
@@ -3074,12 +3074,12 @@
               {
                 "name": "foulsCommitted",
                 "label": "foulsCommitted",
-                "displayValue": "0"
+                "displayValue": "3"
               },
               {
                 "name": "wonCorners",
                 "label": "wonCorners",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "goalAssists",
@@ -3089,12 +3089,12 @@
               {
                 "name": "possessionPct",
                 "label": "possessionPct",
-                "displayValue": "0"
+                "displayValue": "55.2"
               },
               {
                 "name": "shotAssists",
                 "label": "shotAssists",
-                "displayValue": "0"
+                "displayValue": "2"
               },
               {
                 "name": "shotsOnTarget",
@@ -3109,7 +3109,7 @@
               {
                 "name": "totalShots",
                 "label": "totalShots",
-                "displayValue": "0"
+                "displayValue": "2"
               }
             ]
           }
