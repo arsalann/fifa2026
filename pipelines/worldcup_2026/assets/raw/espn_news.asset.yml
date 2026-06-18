@@ -1,11 +1,11 @@
 name: raw.espn_news
 type: ingestr
-connection: duckdb-default
+connection: motherduck-fifa
 description: ESPN news for the FIFA World Cup league.
 parameters:
   source_connection: espn-worldcup
   source_table: news
-  destination: duckdb
+  destination: motherduck
   version: v1
   incremental_strategy: merge
 

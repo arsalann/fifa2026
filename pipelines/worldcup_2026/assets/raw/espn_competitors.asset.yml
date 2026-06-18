@@ -1,11 +1,11 @@
 name: raw.espn_competitors
 type: ingestr
-connection: duckdb-default
+connection: motherduck-fifa
 description: ESPN scoreboard competitor/team rows for World Cup events.
 parameters:
   source_connection: espn-worldcup
   source_table: competitors
-  destination: duckdb
+  destination: motherduck
   version: v1
   incremental_strategy: merge
 

@@ -5,6 +5,10 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["@duckdb/node-api", "@duckdb/node-bindings"]
+
 [[headers]]
   for = "/data/bruin/*"
   [headers.values]

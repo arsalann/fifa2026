@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-18T13:24:28.324Z",
-  "source": "bruin:data/worldcup2026.duckdb:marts.app_matches",
+  "generatedAt": "2026-06-18T15:50:03.547Z",
+  "source": "bruin:motherduck-fifa:marts.app_matches",
   "matches": [
     {
       "key": "2026-06-11|Mexico City",

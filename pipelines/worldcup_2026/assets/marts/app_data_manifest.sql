@@ -1,6 +1,7 @@
 /* @bruin
 name: marts.app_data_manifest
 description: Manifest asset used by npm run pipeline:run to build all app-facing Bruin data.
+connection: motherduck-fifa
 
 materialization:
   type: table

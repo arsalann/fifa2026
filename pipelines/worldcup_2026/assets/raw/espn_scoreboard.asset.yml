@@ -1,11 +1,11 @@
 name: raw.espn_scoreboard
 type: ingestr
-connection: duckdb-default
+connection: motherduck-fifa
 description: ESPN scoreboard events for the World Cup 2026 date window.
 parameters:
   source_connection: espn-worldcup
   source_table: scoreboard
-  destination: duckdb
+  destination: motherduck
   version: v1
   incremental_strategy: merge
 

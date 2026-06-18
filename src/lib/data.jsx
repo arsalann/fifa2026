@@ -8,6 +8,7 @@ const SOON_MS = 5 * 60 * 1000 // ramp up this long before a kickoff
 const LIVE_STATES = new Set(['1h', 'ht', '2h', 'et', 'pens', 'live'])
 const BASE_URL = import.meta.env?.BASE_URL ?? '/'
 const PUBLIC_SCHEDULE_URL = `${BASE_URL}data/bruin/schedule.json`
+const LIVE_SCHEDULE_URL = `${BASE_URL}.netlify/functions/bruin-schedule`
 
 const DataContext = createContext(null)
 
@@ -27,11 +28,17 @@ export function DataProvider({ children }) {
       setState(stateFromPayload(bruinData))
       return Promise.resolve()
     }
-    return fetch(`${PUBLIC_SCHEDULE_URL}?t=${Date.now()}`, { cache: 'no-store' })
+    return fetch(`${LIVE_SCHEDULE_URL}?t=${Date.now()}`, { cache: 'no-store' })
       .then((response) => {
         if (!response.ok) throw new Error(`Unable to load Bruin data: ${response.status}`)
         return response.json()
       })
+      .catch(() =>
+        fetch(`${PUBLIC_SCHEDULE_URL}?t=${Date.now()}`, { cache: 'no-store' }).then((response) => {
+          if (!response.ok) throw new Error(`Unable to load Bruin fallback data: ${response.status}`)
+          return response.json()
+        }),
+      )
       .then((payload) => setState(stateFromPayload(payload)))
       .catch(() => setState(stateFromPayload(bruinData)))
   }, [])

@@ -3,29 +3,10 @@ default_environment: default
 environments:
   default:
     connections:
-      duckdb:
-        - name: "duckdb-default"
-          path: "data/worldcup2026.duckdb"
-
-      # API-Football sends x-apisports-key and defaults to league=1, season=2026.
-      api_football:
-        - name: "api-football-worldcup"
-          api_key: "${API_FOOTBALL_API_KEY}"
-          league: 1
-          season: 2026
-
-      # BallDontLie FIFA sends Authorization and defaults to season=2026.
-      balldontlie_fifa:
-        - name: "balldontlie-fifa-worldcup"
-          api_key: "${BALLDONTLIE_FIFA_API_KEY}"
-          season: 2026
-
-      # football-data.org sends X-Auth-Token and defaults to competition=WC, season=2026.
-      football_data_org:
-        - name: "football-data-org-worldcup"
-          api_key: "${FOOTBALL_DATA_ORG_API_KEY}"
-          competition: "WC"
-          season: 2026
+      motherduck:
+        - name: "motherduck-fifa"
+          token: "${MOTHERDUCK_TOKEN}"
+          database: "fifa"
 
       # ESPN is keyless and powers the app's live-score overlay.
       espn:

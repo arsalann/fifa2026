@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-18T13:24:28.324Z",
-  "source": "bruin:raw.espn_scoreboard",
+  "generatedAt": "2026-06-18T15:50:03.547Z",
+  "source": "bruin:motherduck-fifa:raw.espn_scoreboard",
   "summaries": {
     "760414": {
       "boxscore": {
@@ -3011,7 +3011,53 @@
               "name": "Czechia",
               "id": "450"
             },
-            "statistics": []
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "0"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "0"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "0"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "0"
+              }
+            ]
           },
           {
             "team": {
@@ -3019,7 +3065,53 @@
               "name": "South Africa",
               "id": "467"
             },
-            "statistics": []
+            "statistics": [
+              {
+                "name": "appearances",
+                "label": "appearances",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "label": "foulsCommitted",
+                "displayValue": "0"
+              },
+              {
+                "name": "wonCorners",
+                "label": "wonCorners",
+                "displayValue": "0"
+              },
+              {
+                "name": "goalAssists",
+                "label": "goalAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "possessionPct",
+                "label": "possessionPct",
+                "displayValue": "0"
+              },
+              {
+                "name": "shotAssists",
+                "label": "shotAssists",
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "shotsOnTarget",
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "label": "totalGoals",
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "label": "totalShots",
+                "displayValue": "0"
+              }
+            ]
           }
         ]
       },

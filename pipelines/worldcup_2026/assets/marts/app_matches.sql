@@ -4,6 +4,7 @@ description: |
   App-ready World Cup match rows. Bruin ingests the curated reference schedule
   and overlays ESPN-ingested scoreboard IDs, status, and scores where ESPN has
   a matching event.
+connection: motherduck-fifa
 
 materialization:
   type: table
