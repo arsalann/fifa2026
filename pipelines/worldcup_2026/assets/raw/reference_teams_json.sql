@@ -26,24 +26,27 @@ SELECT
     content::JSON AS payload
 FROM (
     SELECT 1 AS priority, *
-    FROM read_text('pipelines/worldcup_2026/reference/teams.json')
+    FROM read_text('https://raw.githubusercontent.com/arsalann/fifa2026/main/pipelines/worldcup_2026/reference/teams.json')
     UNION ALL
     SELECT 2 AS priority, *
-    FROM read_text('reference/teams.json')
+    FROM read_text('pipelines/worldcup_2026/reference/teams.json')
     UNION ALL
     SELECT 3 AS priority, *
-    FROM read_text('../../reference/teams.json')
+    FROM read_text('reference/teams.json')
     UNION ALL
     SELECT 4 AS priority, *
-    FROM read_text('src/data/teams.json')
+    FROM read_text('../../reference/teams.json')
     UNION ALL
     SELECT 5 AS priority, *
-    FROM read_text('../../src/data/teams.json')
+    FROM read_text('src/data/teams.json')
     UNION ALL
     SELECT 6 AS priority, *
-    FROM read_text('../../../src/data/teams.json')
+    FROM read_text('../../src/data/teams.json')
     UNION ALL
     SELECT 7 AS priority, *
+    FROM read_text('../../../src/data/teams.json')
+    UNION ALL
+    SELECT 8 AS priority, *
     FROM read_text('../../../../src/data/teams.json')
 )
 WHERE content IS NOT NULL
