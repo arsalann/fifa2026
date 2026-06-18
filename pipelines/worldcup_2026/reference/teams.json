@@ -1,0 +1,1188 @@
+{
+  "Mexico": {
+    "slug": "mexico",
+    "flag": "🇲🇽",
+    "confederation": "CONCACAF",
+    "nickname": "El Tri",
+    "firstAppearance": 1930,
+    "titles": [],
+    "bestFinish": "Quarter-finals (1970, 1986)",
+    "history": [
+      { "year": 1930, "result": "Group stage" },
+      { "year": 1950, "result": "Group stage" },
+      { "year": 1954, "result": "Group stage" },
+      { "year": 1958, "result": "Group stage" },
+      { "year": 1962, "result": "Group stage" },
+      { "year": 1966, "result": "Group stage" },
+      { "year": 1970, "result": "Quarter-finals" },
+      { "year": 1978, "result": "Group stage" },
+      { "year": 1986, "result": "Quarter-finals" },
+      { "year": 1994, "result": "Round of 16" },
+      { "year": 1998, "result": "Round of 16" },
+      { "year": 2002, "result": "Round of 16" },
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2010, "result": "Round of 16" },
+      { "year": 2014, "result": "Round of 16" },
+      { "year": 2018, "result": "Round of 16" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Luis Hernández", "goals": 4 },
+    "legend": "Hugo Sánchez",
+    "facts": [
+      "First country to host three World Cups (1970, 1986, 2026) — and the Azteca will be the first stadium to stage matches at three tournaments.",
+      "Reached the Round of 16 a record seven tournaments in a row (1994–2018) without ever getting past it.",
+      "Played the very first match of the 2026 World Cup at the Estadio Azteca."
+    ]
+  },
+  "South Africa": {
+    "slug": "south-africa",
+    "flag": "🇿🇦",
+    "confederation": "CAF",
+    "nickname": "Bafana Bafana",
+    "firstAppearance": 1998,
+    "titles": [],
+    "bestFinish": "Group stage (1998, 2002, 2010)",
+    "history": [
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2010, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Shaun Bartlett", "goals": 2 },
+    "legend": "Benni McCarthy",
+    "facts": [
+      "Hosted the first World Cup on African soil in 2010 — Siphiwe Tshabalala's opening-match thunderbolt is an all-time tournament moment.",
+      "In 2010 became the first host nation ever eliminated in the group stage, despite beating France."
+    ]
+  },
+  "South Korea": {
+    "slug": "south-korea",
+    "flag": "🇰🇷",
+    "confederation": "AFC",
+    "nickname": "Taegeuk Warriors",
+    "firstAppearance": 1954,
+    "titles": [],
+    "bestFinish": "Fourth place (2002)",
+    "history": [
+      { "year": 1954, "result": "Group stage" },
+      { "year": 1986, "result": "Group stage" },
+      { "year": 1990, "result": "Group stage" },
+      { "year": 1994, "result": "Group stage" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Fourth place" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2010, "result": "Round of 16" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "Park Ji-sung", "goals": 3 },
+    "legend": "Son Heung-min",
+    "facts": [
+      "Their 2002 semi-final run as co-hosts is still the best finish by any Asian team at a World Cup.",
+      "Asia's most frequent World Cup guest — 2026 is their 11th tournament in a row.",
+      "Knocked holders Germany out in 2018 with two stoppage-time goals."
+    ]
+  },
+  "Czech Republic": {
+    "slug": "czech-republic",
+    "flag": "🇨🇿",
+    "confederation": "UEFA",
+    "nickname": "Národní tým",
+    "firstAppearance": 1934,
+    "titles": [],
+    "bestFinish": "Runners-up (1934, 1962 — as Czechoslovakia)",
+    "history": [
+      { "year": 1934, "result": "Runners-up (as Czechoslovakia)" },
+      { "year": 1938, "result": "Quarter-finals (as Czechoslovakia)" },
+      { "year": 1954, "result": "Group stage (as Czechoslovakia)" },
+      { "year": 1958, "result": "Group stage (as Czechoslovakia)" },
+      { "year": 1962, "result": "Runners-up (as Czechoslovakia)" },
+      { "year": 1970, "result": "Group stage (as Czechoslovakia)" },
+      { "year": 1982, "result": "Group stage (as Czechoslovakia)" },
+      { "year": 1990, "result": "Quarter-finals (as Czechoslovakia)" },
+      { "year": 2006, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Oldřich Nejedlý", "goals": 7 },
+    "legend": "Pavel Nedvěd",
+    "facts": [
+      "Reached two finals as Czechoslovakia (1934, 1962) but lost both — to hosts Italy and to Brazil.",
+      "First World Cup as the independent Czech Republic since 2006, ending a 20-year wait."
+    ]
+  },
+  "Canada": {
+    "slug": "canada",
+    "flag": "🇨🇦",
+    "confederation": "CONCACAF",
+    "nickname": "Les Rouges",
+    "firstAppearance": 1986,
+    "titles": [],
+    "bestFinish": "Group stage (1986, 2022)",
+    "history": [
+      { "year": 1986, "result": "Group stage" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Alphonso Davies", "goals": 1 },
+    "legend": "Alphonso Davies",
+    "facts": [
+      "Co-hosting in 2026 — Toronto and Vancouver stage Canada's first ever home World Cup matches.",
+      "Alphonso Davies' header vs Croatia in 2022 was Canada's first ever men's World Cup goal.",
+      "Still chasing a first World Cup win after going 0-for-6 in 1986 and 2022."
+    ]
+  },
+  "Bosnia & Herzegovina": {
+    "slug": "bosnia-herzegovina",
+    "flag": "🇧🇦",
+    "confederation": "UEFA",
+    "nickname": "Zmajevi (The Dragons)",
+    "firstAppearance": 2014,
+    "titles": [],
+    "bestFinish": "Group stage (2014)",
+    "history": [
+      { "year": 2014, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Edin Džeko", "goals": 1 },
+    "legend": "Edin Džeko",
+    "facts": [
+      "Only their second World Cup — in 2014 they were edged out by a controversial offside call against Nigeria-conquering Argentina.",
+      "Beat Iran 3-1 in 2014 for their first (and so far only) World Cup win."
+    ]
+  },
+  "Qatar": {
+    "slug": "qatar",
+    "flag": "🇶🇦",
+    "confederation": "AFC",
+    "nickname": "Al-Annabi (The Maroon)",
+    "firstAppearance": 2022,
+    "titles": [],
+    "bestFinish": "Group stage (2022)",
+    "history": [
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Mohammed Muntari", "goals": 1 },
+    "legend": "Akram Afif",
+    "facts": [
+      "First time qualifying for a World Cup on merit — in 2022 they entered as hosts and lost all three games.",
+      "Back-to-back Asian Cup champions (2019, 2023) coming into 2026."
+    ]
+  },
+  "Switzerland": {
+    "slug": "switzerland",
+    "flag": "🇨🇭",
+    "confederation": "UEFA",
+    "nickname": "La Nati",
+    "firstAppearance": 1934,
+    "titles": [],
+    "bestFinish": "Quarter-finals (1934, 1938, 1954)",
+    "history": [
+      { "year": 1934, "result": "Quarter-finals" },
+      { "year": 1938, "result": "Quarter-finals" },
+      { "year": 1950, "result": "Group stage" },
+      { "year": 1954, "result": "Quarter-finals" },
+      { "year": 1962, "result": "Group stage" },
+      { "year": 1966, "result": "Group stage" },
+      { "year": 1994, "result": "Round of 16" },
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2010, "result": "Group stage" },
+      { "year": 2014, "result": "Round of 16" },
+      { "year": 2018, "result": "Round of 16" },
+      { "year": 2022, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "Sepp Hügi", "goals": 6 },
+    "legend": "Granit Xhaka",
+    "facts": [
+      "In 2006 they were knocked out without conceding a single goal — still the only team ever eliminated that way (lost the shootout to Ukraine).",
+      "Hosted the 1954 World Cup, which featured the highest-scoring match in tournament history: their 5-7 quarter-final against Austria."
+    ]
+  },
+  "Brazil": {
+    "slug": "brazil",
+    "flag": "🇧🇷",
+    "confederation": "CONMEBOL",
+    "nickname": "Seleção",
+    "firstAppearance": 1930,
+    "titles": [1958, 1962, 1970, 1994, 2002],
+    "bestFinish": "Champions (×5)",
+    "history": [
+      { "year": 1930, "result": "Group stage" },
+      { "year": 1934, "result": "First round" },
+      { "year": 1938, "result": "Third place" },
+      { "year": 1950, "result": "Runners-up" },
+      { "year": 1954, "result": "Quarter-finals" },
+      { "year": 1958, "result": "Champions" },
+      { "year": 1962, "result": "Champions" },
+      { "year": 1966, "result": "Group stage" },
+      { "year": 1970, "result": "Champions" },
+      { "year": 1974, "result": "Fourth place" },
+      { "year": 1978, "result": "Third place" },
+      { "year": 1982, "result": "Second group stage" },
+      { "year": 1986, "result": "Quarter-finals" },
+      { "year": 1990, "result": "Round of 16" },
+      { "year": 1994, "result": "Champions" },
+      { "year": 1998, "result": "Runners-up" },
+      { "year": 2002, "result": "Champions" },
+      { "year": 2006, "result": "Quarter-finals" },
+      { "year": 2010, "result": "Quarter-finals" },
+      { "year": 2014, "result": "Fourth place" },
+      { "year": 2018, "result": "Quarter-finals" },
+      { "year": 2022, "result": "Quarter-finals" }
+    ],
+    "topScorer": { "name": "Ronaldo", "goals": 15 },
+    "legend": "Pelé",
+    "facts": [
+      "The only nation to play in every single World Cup — 2026 is appearance number 23.",
+      "Record five titles, and the all-time leader in World Cup wins (76) and goals (237) entering 2026.",
+      "Pelé remains the only player in history with three World Cup winner's medals (1958, 1962, 1970).",
+      "Haven't won the trophy since 2002 — their longest drought since their first title."
+    ]
+  },
+  "Morocco": {
+    "slug": "morocco",
+    "flag": "🇲🇦",
+    "confederation": "CAF",
+    "nickname": "Atlas Lions",
+    "firstAppearance": 1970,
+    "titles": [],
+    "bestFinish": "Fourth place (2022)",
+    "history": [
+      { "year": 1970, "result": "Group stage" },
+      { "year": 1986, "result": "Round of 16" },
+      { "year": 1994, "result": "Group stage" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Fourth place" }
+    ],
+    "topScorer": { "name": "Youssef En-Nesyri", "goals": 2 },
+    "legend": "Achraf Hakimi",
+    "facts": [
+      "In 2022 they became the first African and first Arab nation ever to reach a World Cup semi-final, beating Belgium, Spain and Portugal along the way.",
+      "In 1986 they were the first African team to top a World Cup group and reach the knockout rounds.",
+      "Will co-host the 2030 World Cup with Spain and Portugal."
+    ]
+  },
+  "Haiti": {
+    "slug": "haiti",
+    "flag": "🇭🇹",
+    "confederation": "CONCACAF",
+    "nickname": "Les Grenadiers",
+    "firstAppearance": 1974,
+    "titles": [],
+    "bestFinish": "Group stage (1974)",
+    "history": [
+      { "year": 1974, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Emmanuel Sanon", "goals": 2 },
+    "legend": "Emmanuel Sanon",
+    "facts": [
+      "Back at the World Cup after 52 years — the longest gap between appearances of any 2026 team.",
+      "In 1974, Emmanuel Sanon's goal against Italy famously ended goalkeeper Dino Zoff's record 1,142-minute international clean-sheet streak.",
+      "Qualified in 2026 despite being unable to play home qualifiers in Haiti due to the security situation."
+    ]
+  },
+  "Scotland": {
+    "slug": "scotland",
+    "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "confederation": "UEFA",
+    "nickname": "The Tartan Army",
+    "firstAppearance": 1954,
+    "titles": [],
+    "bestFinish": "Group stage (8 times)",
+    "history": [
+      { "year": 1954, "result": "Group stage" },
+      { "year": 1958, "result": "Group stage" },
+      { "year": 1974, "result": "Group stage" },
+      { "year": 1978, "result": "Group stage" },
+      { "year": 1982, "result": "Group stage" },
+      { "year": 1986, "result": "Group stage" },
+      { "year": 1990, "result": "Group stage" },
+      { "year": 1998, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Joe Jordan", "goals": 4 },
+    "legend": "Kenny Dalglish",
+    "facts": [
+      "Hold the record for most World Cup appearances without ever surviving the first round — 2026 is attempt number nine.",
+      "Went unbeaten at the 1974 World Cup and were still eliminated, on goal difference.",
+      "First World Cup since 1998 — a 28-year wait."
+    ]
+  },
+  "USA": {
+    "slug": "usa",
+    "flag": "🇺🇸",
+    "confederation": "CONCACAF",
+    "nickname": "The Stars and Stripes (USMNT)",
+    "firstAppearance": 1930,
+    "titles": [],
+    "bestFinish": "Third place (1930)",
+    "history": [
+      { "year": 1930, "result": "Third place" },
+      { "year": 1934, "result": "First round" },
+      { "year": 1950, "result": "Group stage" },
+      { "year": 1990, "result": "Group stage" },
+      { "year": 1994, "result": "Round of 16" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Quarter-finals" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2010, "result": "Round of 16" },
+      { "year": 2014, "result": "Round of 16" },
+      { "year": 2022, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "Landon Donovan", "goals": 5 },
+    "legend": "Christian Pulisic",
+    "facts": [
+      "Main host of 2026 — 11 of the 16 venues and every match from the quarter-finals on are in the USA.",
+      "Their 1-0 win over England in 1950 is still considered one of the greatest upsets in World Cup history.",
+      "Reached the semi-finals of the very first World Cup in 1930 — still their best finish."
+    ]
+  },
+  "Paraguay": {
+    "slug": "paraguay",
+    "flag": "🇵🇾",
+    "confederation": "CONMEBOL",
+    "nickname": "La Albirroja",
+    "firstAppearance": 1930,
+    "titles": [],
+    "bestFinish": "Quarter-finals (2010)",
+    "history": [
+      { "year": 1930, "result": "Group stage" },
+      { "year": 1950, "result": "Group stage" },
+      { "year": 1958, "result": "Group stage" },
+      { "year": 1986, "result": "Round of 16" },
+      { "year": 1998, "result": "Round of 16" },
+      { "year": 2002, "result": "Round of 16" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2010, "result": "Quarter-finals" }
+    ],
+    "legend": "José Luis Chilavert",
+    "facts": [
+      "First World Cup since 2010, ending a 16-year absence.",
+      "Goalkeeper-captain José Luis Chilavert famously took Paraguay's free kicks and penalties at France '98.",
+      "Reached their first quarter-final in 2010, falling 1-0 to eventual champions Spain."
+    ]
+  },
+  "Australia": {
+    "slug": "australia",
+    "flag": "🇦🇺",
+    "confederation": "AFC",
+    "nickname": "Socceroos",
+    "firstAppearance": 1974,
+    "titles": [],
+    "bestFinish": "Round of 16 (2006, 2022)",
+    "history": [
+      { "year": 1974, "result": "Group stage" },
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2010, "result": "Group stage" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "Tim Cahill", "goals": 5 },
+    "legend": "Tim Cahill",
+    "facts": [
+      "Sixth World Cup in a row — quite a streak for a country that waited 32 years between its first (1974) and second (2006) appearances.",
+      "In 2022 they won two group games at a single World Cup for the first time.",
+      "Tim Cahill scored at three different World Cups (2006, 2010, 2014), including a famous volley vs the Netherlands."
+    ]
+  },
+  "Turkey": {
+    "slug": "turkey",
+    "flag": "🇹🇷",
+    "confederation": "UEFA",
+    "nickname": "Ay-Yıldızlılar (The Crescent-Stars)",
+    "firstAppearance": 1954,
+    "titles": [],
+    "bestFinish": "Third place (2002)",
+    "history": [
+      { "year": 1954, "result": "Group stage" },
+      { "year": 2002, "result": "Third place" }
+    ],
+    "legend": "Hakan Şükür",
+    "facts": [
+      "Only their third World Cup ever — and they finished third the last time they showed up (2002).",
+      "Hakan Şükür's strike after 10.8 seconds in the 2002 third-place match is still the fastest goal in World Cup history.",
+      "First World Cup in 24 years."
+    ]
+  },
+  "Germany": {
+    "slug": "germany",
+    "flag": "🇩🇪",
+    "confederation": "UEFA",
+    "nickname": "Die Mannschaft",
+    "firstAppearance": 1934,
+    "titles": [1954, 1974, 1990, 2014],
+    "bestFinish": "Champions (×4)",
+    "history": [
+      { "year": 1934, "result": "Third place" },
+      { "year": 1938, "result": "First round" },
+      { "year": 1954, "result": "Champions (as West Germany)" },
+      { "year": 1958, "result": "Fourth place (as West Germany)" },
+      { "year": 1962, "result": "Quarter-finals (as West Germany)" },
+      { "year": 1966, "result": "Runners-up (as West Germany)" },
+      { "year": 1970, "result": "Third place (as West Germany)" },
+      { "year": 1974, "result": "Champions (as West Germany)" },
+      { "year": 1978, "result": "Second group stage (as West Germany)" },
+      { "year": 1982, "result": "Runners-up (as West Germany)" },
+      { "year": 1986, "result": "Runners-up (as West Germany)" },
+      { "year": 1990, "result": "Champions (as West Germany)" },
+      { "year": 1994, "result": "Quarter-finals" },
+      { "year": 1998, "result": "Quarter-finals" },
+      { "year": 2002, "result": "Runners-up" },
+      { "year": 2006, "result": "Third place" },
+      { "year": 2010, "result": "Third place" },
+      { "year": 2014, "result": "Champions" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Miroslav Klose", "goals": 16 },
+    "legend": "Franz Beckenbauer",
+    "facts": [
+      "Record eight World Cup final appearances, with four titles.",
+      "Miroslav Klose's 16 goals are the most by any player in World Cup history.",
+      "Their 7-1 semi-final demolition of hosts Brazil in 2014 is the most famous scoreline in modern World Cup memory.",
+      "Crashed out in the group stage at both 2018 and 2022 — they arrive in 2026 with a point to prove."
+    ]
+  },
+  "Curaçao": {
+    "slug": "curacao",
+    "flag": "🇨🇼",
+    "confederation": "CONCACAF",
+    "nickname": "The Blue Wave",
+    "firstAppearance": 2026,
+    "titles": [],
+    "bestFinish": "Debut in 2026",
+    "history": [],
+    "legend": "Leandro Bacuna",
+    "facts": [
+      "World Cup debutants — and with roughly 156,000 residents, the smallest nation by population ever to qualify, taking the record from Iceland.",
+      "A Caribbean island of about 444 km² — smaller than many of the host cities it will play in.",
+      "Many squad members were born in the Netherlands and came through Dutch academies."
+    ]
+  },
+  "Ivory Coast": {
+    "slug": "ivory-coast",
+    "flag": "🇨🇮",
+    "confederation": "CAF",
+    "nickname": "Les Éléphants",
+    "firstAppearance": 2006,
+    "titles": [],
+    "bestFinish": "Group stage (2006, 2010, 2014)",
+    "history": [
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2010, "result": "Group stage" },
+      { "year": 2014, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Didier Drogba", "goals": 2 },
+    "legend": "Didier Drogba",
+    "facts": [
+      "The golden generation of Drogba, Yaya Touré and the Kalou brothers kept landing in 'groups of death' — three straight group-stage exits (2006–2014).",
+      "Reigning African champions after winning AFCON 2023 on home soil.",
+      "First World Cup in 12 years."
+    ]
+  },
+  "Ecuador": {
+    "slug": "ecuador",
+    "flag": "🇪🇨",
+    "confederation": "CONMEBOL",
+    "nickname": "La Tri",
+    "firstAppearance": 2002,
+    "titles": [],
+    "bestFinish": "Round of 16 (2006)",
+    "history": [
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Enner Valencia", "goals": 6 },
+    "legend": "Enner Valencia",
+    "facts": [
+      "Enner Valencia has scored Ecuador's last six World Cup goals — every one of their goals in 2014 and 2022.",
+      "Scored the opening goal of the 2022 World Cup (Valencia vs Qatar, naturally)."
+    ]
+  },
+  "Netherlands": {
+    "slug": "netherlands",
+    "flag": "🇳🇱",
+    "confederation": "UEFA",
+    "nickname": "Oranje",
+    "firstAppearance": 1934,
+    "titles": [],
+    "bestFinish": "Runners-up (1974, 1978, 2010)",
+    "history": [
+      { "year": 1934, "result": "First round" },
+      { "year": 1938, "result": "First round" },
+      { "year": 1974, "result": "Runners-up" },
+      { "year": 1978, "result": "Runners-up" },
+      { "year": 1990, "result": "Round of 16" },
+      { "year": 1994, "result": "Quarter-finals" },
+      { "year": 1998, "result": "Fourth place" },
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2010, "result": "Runners-up" },
+      { "year": 2014, "result": "Third place" },
+      { "year": 2022, "result": "Quarter-finals" }
+    ],
+    "topScorer": { "name": "Johnny Rep", "goals": 7 },
+    "legend": "Johan Cruyff",
+    "facts": [
+      "Three finals, zero titles — widely called the best team never to win the World Cup.",
+      "Johan Cruyff's 1974 'Total Football' side changed how the game is played despite losing the final to West Germany.",
+      "Lost the 1978 final to the hosts (Argentina) and the 2010 final to Spain in extra time."
+    ]
+  },
+  "Japan": {
+    "slug": "japan",
+    "flag": "🇯🇵",
+    "confederation": "AFC",
+    "nickname": "Samurai Blue",
+    "firstAppearance": 1998,
+    "titles": [],
+    "bestFinish": "Round of 16 (2002, 2010, 2018, 2022)",
+    "history": [
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Round of 16" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2010, "result": "Round of 16" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Round of 16" },
+      { "year": 2022, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "Keisuke Honda", "goals": 4 },
+    "legend": "Hidetoshi Nakata",
+    "facts": [
+      "Beat both Germany AND Spain in the 2022 group stage, then lost the Round of 16 on penalties — they've reached the last 16 four times but never the quarters.",
+      "Eighth consecutive World Cup — every tournament since their 1998 debut.",
+      "Their fans famously clean the stadium after matches, win or lose."
+    ]
+  },
+  "Sweden": {
+    "slug": "sweden",
+    "flag": "🇸🇪",
+    "confederation": "UEFA",
+    "nickname": "Blågult (Blue-Yellow)",
+    "firstAppearance": 1934,
+    "titles": [],
+    "bestFinish": "Runners-up (1958)",
+    "history": [
+      { "year": 1934, "result": "Quarter-finals" },
+      { "year": 1938, "result": "Fourth place" },
+      { "year": 1950, "result": "Third place" },
+      { "year": 1958, "result": "Runners-up" },
+      { "year": 1970, "result": "Group stage" },
+      { "year": 1974, "result": "Second group stage" },
+      { "year": 1978, "result": "Group stage" },
+      { "year": 1990, "result": "Group stage" },
+      { "year": 1994, "result": "Third place" },
+      { "year": 2002, "result": "Round of 16" },
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2018, "result": "Quarter-finals" }
+    ],
+    "topScorer": { "name": "Kennet Andersson", "goals": 5 },
+    "legend": "Zlatan Ibrahimović",
+    "facts": [
+      "Lost the 1958 final at home to a 17-year-old Pelé's Brazil.",
+      "Zlatan Ibrahimović, for all his goals, never scored at a World Cup.",
+      "First World Cup since 2018."
+    ]
+  },
+  "Tunisia": {
+    "slug": "tunisia",
+    "flag": "🇹🇳",
+    "confederation": "CAF",
+    "nickname": "Eagles of Carthage",
+    "firstAppearance": 1978,
+    "titles": [],
+    "bestFinish": "Group stage (6 times)",
+    "history": [
+      { "year": 1978, "result": "Group stage" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Wahbi Khazri", "goals": 2 },
+    "legend": "Wahbi Khazri",
+    "facts": [
+      "In 1978 they became the first African team ever to win a World Cup match (3-1 over Mexico).",
+      "Beat reigning champions France 1-0 in 2022 — and still went out on goal difference.",
+      "Seventh appearance, still chasing a first trip to the knockout rounds."
+    ]
+  },
+  "Belgium": {
+    "slug": "belgium",
+    "flag": "🇧🇪",
+    "confederation": "UEFA",
+    "nickname": "The Red Devils",
+    "firstAppearance": 1930,
+    "titles": [],
+    "bestFinish": "Third place (2018)",
+    "history": [
+      { "year": 1930, "result": "Group stage" },
+      { "year": 1934, "result": "First round" },
+      { "year": 1938, "result": "First round" },
+      { "year": 1954, "result": "Group stage" },
+      { "year": 1970, "result": "Group stage" },
+      { "year": 1982, "result": "Second group stage" },
+      { "year": 1986, "result": "Fourth place" },
+      { "year": 1990, "result": "Round of 16" },
+      { "year": 1994, "result": "Round of 16" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Round of 16" },
+      { "year": 2014, "result": "Quarter-finals" },
+      { "year": 2018, "result": "Third place" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Romelu Lukaku", "goals": 5 },
+    "legend": "Kevin De Bruyne",
+    "facts": [
+      "Their 2018 'golden generation' finished third — Belgium's best ever — including a famous last-minute counter-attack winner vs Japan.",
+      "Played in the very first World Cup in 1930.",
+      "Spent years ranked #1 in the world without winning a major trophy."
+    ]
+  },
+  "Egypt": {
+    "slug": "egypt",
+    "flag": "🇪🇬",
+    "confederation": "CAF",
+    "nickname": "The Pharaohs",
+    "firstAppearance": 1934,
+    "titles": [],
+    "bestFinish": "Group stage / First round",
+    "history": [
+      { "year": 1934, "result": "First round" },
+      { "year": 1990, "result": "Group stage" },
+      { "year": 2018, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Mohamed Salah", "goals": 2 },
+    "legend": "Mohamed Salah",
+    "facts": [
+      "The first African and Middle Eastern team ever to play at a World Cup, back in 1934.",
+      "Record seven-time Africa Cup of Nations champions — yet still searching for their first World Cup win.",
+      "Mo Salah finally gets another World Cup shot after scoring twice in 2018 while half-fit."
+    ]
+  },
+  "Iran": {
+    "slug": "iran",
+    "flag": "🇮🇷",
+    "confederation": "AFC",
+    "nickname": "Team Melli",
+    "firstAppearance": 1978,
+    "titles": [],
+    "bestFinish": "Group stage (6 times)",
+    "history": [
+      { "year": 1978, "result": "Group stage" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Mehdi Taremi", "goals": 2 },
+    "legend": "Ali Daei",
+    "facts": [
+      "Their politically charged 2-1 win over the USA at France '98 remains one of the World Cup's most storied matches.",
+      "Fourth consecutive World Cup — but the group stage has never been cracked in six tries.",
+      "Ali Daei was international football's all-time top scorer (109 goals) until Cristiano Ronaldo passed him."
+    ]
+  },
+  "New Zealand": {
+    "slug": "new-zealand",
+    "flag": "🇳🇿",
+    "confederation": "OFC",
+    "nickname": "The All Whites",
+    "firstAppearance": 1982,
+    "titles": [],
+    "bestFinish": "Group stage (1982, 2010)",
+    "history": [
+      { "year": 1982, "result": "Group stage" },
+      { "year": 2010, "result": "Group stage" }
+    ],
+    "legend": "Wynton Rufer",
+    "facts": [
+      "At 2010 they drew all three games — the only unbeaten team at the entire tournament — and still went home.",
+      "Have never won a World Cup match, but have also only lost three.",
+      "First World Cup in 16 years, as Oceania's first ever direct qualifier."
+    ]
+  },
+  "Spain": {
+    "slug": "spain",
+    "flag": "🇪🇸",
+    "confederation": "UEFA",
+    "nickname": "La Roja",
+    "firstAppearance": 1934,
+    "titles": [2010],
+    "bestFinish": "Champions (2010)",
+    "history": [
+      { "year": 1934, "result": "Quarter-finals" },
+      { "year": 1950, "result": "Fourth place" },
+      { "year": 1962, "result": "Group stage" },
+      { "year": 1966, "result": "Group stage" },
+      { "year": 1978, "result": "Group stage" },
+      { "year": 1982, "result": "Second group stage" },
+      { "year": 1986, "result": "Quarter-finals" },
+      { "year": 1990, "result": "Round of 16" },
+      { "year": 1994, "result": "Quarter-finals" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Quarter-finals" },
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2010, "result": "Champions" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Round of 16" },
+      { "year": 2022, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "David Villa", "goals": 9 },
+    "legend": "Andrés Iniesta",
+    "facts": [
+      "Won the 2010 title while scoring only eight goals in seven games — every knockout match finished 1-0.",
+      "Reigning European champions (2024) and arrive among the favorites.",
+      "Put 7 past Costa Rica in 2022, their biggest ever World Cup win."
+    ]
+  },
+  "Cape Verde": {
+    "slug": "cape-verde",
+    "flag": "🇨🇻",
+    "confederation": "CAF",
+    "nickname": "Tubarões Azuis (Blue Sharks)",
+    "firstAppearance": 2026,
+    "titles": [],
+    "bestFinish": "Debut in 2026",
+    "history": [],
+    "legend": "Ryan Mendes",
+    "facts": [
+      "World Cup debutants — an island nation of about half a million people, one of the smallest countries ever to qualify.",
+      "Built around a diaspora squad: many players were born in Portugal, the Netherlands and France.",
+      "Won their qualifying group ahead of Cameroon to book the ticket."
+    ]
+  },
+  "Saudi Arabia": {
+    "slug": "saudi-arabia",
+    "flag": "🇸🇦",
+    "confederation": "AFC",
+    "nickname": "The Green Falcons",
+    "firstAppearance": 1994,
+    "titles": [],
+    "bestFinish": "Round of 16 (1994)",
+    "history": [
+      { "year": 1994, "result": "Round of 16" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Sami Al-Jaber", "goals": 3 },
+    "legend": "Sami Al-Jaber",
+    "facts": [
+      "Their 2-1 win over eventual champions Argentina in 2022 is statistically one of the biggest upsets in World Cup history.",
+      "Saeed Al-Owairan's length-of-the-field solo goal vs Belgium in 1994 is routinely ranked among the greatest World Cup goals ever.",
+      "Will host the 2034 World Cup."
+    ]
+  },
+  "Uruguay": {
+    "slug": "uruguay",
+    "flag": "🇺🇾",
+    "confederation": "CONMEBOL",
+    "nickname": "La Celeste",
+    "firstAppearance": 1930,
+    "titles": [1930, 1950],
+    "bestFinish": "Champions (1930, 1950)",
+    "history": [
+      { "year": 1930, "result": "Champions" },
+      { "year": 1950, "result": "Champions" },
+      { "year": 1954, "result": "Fourth place" },
+      { "year": 1962, "result": "Group stage" },
+      { "year": 1966, "result": "Quarter-finals" },
+      { "year": 1970, "result": "Fourth place" },
+      { "year": 1974, "result": "Group stage" },
+      { "year": 1986, "result": "Round of 16" },
+      { "year": 1990, "result": "Round of 16" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2010, "result": "Fourth place" },
+      { "year": 2014, "result": "Round of 16" },
+      { "year": 2018, "result": "Quarter-finals" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Óscar Míguez", "goals": 8 },
+    "legend": "Luis Suárez",
+    "facts": [
+      "Won the very first World Cup as hosts in 1930 — and refused to defend it in Europe in 1934.",
+      "The 1950 'Maracanazo', beating hosts Brazil in front of ~200,000 fans, is arguably the biggest shock in football history.",
+      "A nation of just 3.4 million with two world titles."
+    ]
+  },
+  "France": {
+    "slug": "france",
+    "flag": "🇫🇷",
+    "confederation": "UEFA",
+    "nickname": "Les Bleus",
+    "firstAppearance": 1930,
+    "titles": [1998, 2018],
+    "bestFinish": "Champions (1998, 2018)",
+    "history": [
+      { "year": 1930, "result": "Group stage" },
+      { "year": 1934, "result": "First round" },
+      { "year": 1938, "result": "Quarter-finals" },
+      { "year": 1954, "result": "Group stage" },
+      { "year": 1958, "result": "Third place" },
+      { "year": 1966, "result": "Group stage" },
+      { "year": 1978, "result": "Group stage" },
+      { "year": 1982, "result": "Fourth place" },
+      { "year": 1986, "result": "Third place" },
+      { "year": 1998, "result": "Champions" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2006, "result": "Runners-up" },
+      { "year": 2010, "result": "Group stage" },
+      { "year": 2014, "result": "Quarter-finals" },
+      { "year": 2018, "result": "Champions" },
+      { "year": 2022, "result": "Runners-up" }
+    ],
+    "topScorer": { "name": "Just Fontaine", "goals": 13 },
+    "legend": "Zinedine Zidane",
+    "facts": [
+      "Three of the last four finals featured France — champions in 2018, runners-up in 2022 after one of the greatest finals ever.",
+      "Just Fontaine's 13 goals in 1958 remain the record for a single World Cup.",
+      "Kylian Mbappé has 12 World Cup goals before age 28 — Klose's all-time record of 16 is in real danger.",
+      "Scored a hat-trick in a World Cup final (Mbappé, 2022) and still lost."
+    ]
+  },
+  "Senegal": {
+    "slug": "senegal",
+    "flag": "🇸🇳",
+    "confederation": "CAF",
+    "nickname": "The Lions of Teranga",
+    "firstAppearance": 2002,
+    "titles": [],
+    "bestFinish": "Quarter-finals (2002)",
+    "history": [
+      { "year": 2002, "result": "Quarter-finals" },
+      { "year": 2018, "result": "Group stage" },
+      { "year": 2022, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "Papa Bouba Diop", "goals": 3 },
+    "legend": "Sadio Mané",
+    "facts": [
+      "Announced themselves by beating reigning champions France in the opening match of their 2002 debut, then reached the quarter-finals.",
+      "In 2018 they became the first team ever eliminated from a World Cup on the fair-play (yellow card) tiebreaker.",
+      "2021 African champions led by Sadio Mané, who missed the 2022 World Cup through injury."
+    ]
+  },
+  "Iraq": {
+    "slug": "iraq",
+    "flag": "🇮🇶",
+    "confederation": "AFC",
+    "nickname": "The Lions of Mesopotamia",
+    "firstAppearance": 1986,
+    "titles": [],
+    "bestFinish": "Group stage (1986)",
+    "history": [
+      { "year": 1986, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Ahmed Radhi", "goals": 1 },
+    "legend": "Ahmed Radhi",
+    "facts": [
+      "Back at the World Cup after 40 years — only their second appearance ever.",
+      "Ahmed Radhi's strike vs Belgium in 1986 is still Iraq's only World Cup goal (for now).",
+      "Their fairy-tale 2007 Asian Cup title, won amid war at home, is one of football's great stories."
+    ]
+  },
+  "Norway": {
+    "slug": "norway",
+    "flag": "🇳🇴",
+    "confederation": "UEFA",
+    "nickname": "Løvene (The Lions)",
+    "firstAppearance": 1938,
+    "titles": [],
+    "bestFinish": "Round of 16 (1998)",
+    "history": [
+      { "year": 1938, "result": "First round" },
+      { "year": 1994, "result": "Group stage" },
+      { "year": 1998, "result": "Round of 16" }
+    ],
+    "legend": "Erling Haaland",
+    "facts": [
+      "Erling Haaland's first World Cup — he scored 16 goals in qualifying, a European record.",
+      "First appearance since 1998, when they famously beat Brazil 2-1 in the group stage.",
+      "Norway have played Brazil twice at World Cups and never lost to them."
+    ]
+  },
+  "Argentina": {
+    "slug": "argentina",
+    "flag": "🇦🇷",
+    "confederation": "CONMEBOL",
+    "nickname": "La Albiceleste",
+    "firstAppearance": 1930,
+    "titles": [1978, 1986, 2022],
+    "bestFinish": "Champions (×3)",
+    "history": [
+      { "year": 1930, "result": "Runners-up" },
+      { "year": 1934, "result": "First round" },
+      { "year": 1958, "result": "Group stage" },
+      { "year": 1962, "result": "Group stage" },
+      { "year": 1966, "result": "Quarter-finals" },
+      { "year": 1974, "result": "Second round" },
+      { "year": 1978, "result": "Champions" },
+      { "year": 1982, "result": "Second round" },
+      { "year": 1986, "result": "Champions" },
+      { "year": 1990, "result": "Runners-up" },
+      { "year": 1994, "result": "Round of 16" },
+      { "year": 1998, "result": "Quarter-finals" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2006, "result": "Quarter-finals" },
+      { "year": 2010, "result": "Quarter-finals" },
+      { "year": 2014, "result": "Runners-up" },
+      { "year": 2018, "result": "Round of 16" },
+      { "year": 2022, "result": "Champions" }
+    ],
+    "topScorer": { "name": "Lionel Messi", "goals": 13 },
+    "legend": "Diego Maradona",
+    "facts": [
+      "Defending champions after the epic 2022 final win over France on penalties.",
+      "Lionel Messi holds the record for most World Cup appearances (26 matches) and is aiming to play at a record sixth World Cup.",
+      "Maradona's 1986 quarter-final vs England produced both the 'Hand of God' and the 'Goal of the Century' — four minutes apart.",
+      "Six final appearances, second only to Germany."
+    ]
+  },
+  "Algeria": {
+    "slug": "algeria",
+    "flag": "🇩🇿",
+    "confederation": "CAF",
+    "nickname": "Les Fennecs (Desert Foxes)",
+    "firstAppearance": 1982,
+    "titles": [],
+    "bestFinish": "Round of 16 (2014)",
+    "history": [
+      { "year": 1982, "result": "Group stage" },
+      { "year": 1986, "result": "Group stage" },
+      { "year": 2010, "result": "Group stage" },
+      { "year": 2014, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "Islam Slimani", "goals": 2 },
+    "legend": "Riyad Mahrez",
+    "facts": [
+      "Their shock 2-1 win over West Germany in 1982 led to the infamous 'Disgrace of Gijón' — and forced FIFA to make final group games kick off simultaneously.",
+      "Took eventual champions Germany to extra time in the 2014 Round of 16.",
+      "First World Cup in 12 years."
+    ]
+  },
+  "Austria": {
+    "slug": "austria",
+    "flag": "🇦🇹",
+    "confederation": "UEFA",
+    "nickname": "Das Team",
+    "firstAppearance": 1934,
+    "titles": [],
+    "bestFinish": "Third place (1954)",
+    "history": [
+      { "year": 1934, "result": "Fourth place" },
+      { "year": 1954, "result": "Third place" },
+      { "year": 1958, "result": "Group stage" },
+      { "year": 1978, "result": "Second group stage" },
+      { "year": 1982, "result": "Second group stage" },
+      { "year": 1990, "result": "Group stage" },
+      { "year": 1998, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Hans Krankl", "goals": 4 },
+    "legend": "David Alaba",
+    "facts": [
+      "First World Cup since 1998 — a 28-year drought ended.",
+      "Took part in the highest-scoring World Cup match ever: a 7-5 quarter-final win over Switzerland in 1954.",
+      "The 1978 'Miracle of Córdoba' win over West Germany is still celebrated in Austria (and mourned in Germany)."
+    ]
+  },
+  "Jordan": {
+    "slug": "jordan",
+    "flag": "🇯🇴",
+    "confederation": "AFC",
+    "nickname": "Al-Nashama (The Chivalrous)",
+    "firstAppearance": 2026,
+    "titles": [],
+    "bestFinish": "Debut in 2026",
+    "history": [],
+    "legend": "Musa Al-Taamari",
+    "facts": [
+      "World Cup debutants, building on their surprise run to the 2023 Asian Cup final.",
+      "Musa Al-Taamari is the talisman — one of the few Jordanians playing top-flight European football."
+    ]
+  },
+  "Portugal": {
+    "slug": "portugal",
+    "flag": "🇵🇹",
+    "confederation": "UEFA",
+    "nickname": "Seleção das Quinas",
+    "firstAppearance": 1966,
+    "titles": [],
+    "bestFinish": "Third place (1966)",
+    "history": [
+      { "year": 1966, "result": "Third place" },
+      { "year": 1986, "result": "Group stage" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2006, "result": "Fourth place" },
+      { "year": 2010, "result": "Round of 16" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Round of 16" },
+      { "year": 2022, "result": "Quarter-finals" }
+    ],
+    "topScorer": { "name": "Eusébio", "goals": 9 },
+    "legend": "Cristiano Ronaldo",
+    "facts": [
+      "Cristiano Ronaldo, 41, is chasing a record sixth World Cup — he's already the only man to score at five of them.",
+      "Eusébio's nine goals in 1966 carried debutants Portugal to third place, including four in one game after trailing North Korea 0-3.",
+      "Reigning UEFA Nations League champions."
+    ]
+  },
+  "DR Congo": {
+    "slug": "dr-congo",
+    "flag": "🇨🇩",
+    "confederation": "CAF",
+    "nickname": "Les Léopards",
+    "firstAppearance": 1974,
+    "titles": [],
+    "bestFinish": "Group stage (1974 — as Zaire)",
+    "history": [
+      { "year": 1974, "result": "Group stage (as Zaire)" }
+    ],
+    "legend": "Cédric Bakambu",
+    "facts": [
+      "Back after 52 years — in 1974, as Zaire, they were the first sub-Saharan African team ever at a World Cup.",
+      "The 1974 image of Mwepu Ilunga sprinting from the wall to boot away Brazil's free kick is one of the World Cup's most replayed clips.",
+      "Two-time African champions (1968, 1974) hunting their first ever World Cup goal."
+    ]
+  },
+  "Uzbekistan": {
+    "slug": "uzbekistan",
+    "flag": "🇺🇿",
+    "confederation": "AFC",
+    "nickname": "The White Wolves",
+    "firstAppearance": 2026,
+    "titles": [],
+    "bestFinish": "Debut in 2026",
+    "history": [],
+    "legend": "Eldor Shomurodov",
+    "facts": [
+      "World Cup debutants — the first nation from Central Asia ever to qualify.",
+      "Their golden generation came through together, winning the 2018 AFC U-23 title.",
+      "Striker Eldor Shomurodov (Roma) leads the line."
+    ]
+  },
+  "Colombia": {
+    "slug": "colombia",
+    "flag": "🇨🇴",
+    "confederation": "CONMEBOL",
+    "nickname": "Los Cafeteros",
+    "firstAppearance": 1962,
+    "titles": [],
+    "bestFinish": "Quarter-finals (2014)",
+    "history": [
+      { "year": 1962, "result": "Group stage" },
+      { "year": 1990, "result": "Round of 16" },
+      { "year": 1994, "result": "Group stage" },
+      { "year": 1998, "result": "Group stage" },
+      { "year": 2014, "result": "Quarter-finals" },
+      { "year": 2018, "result": "Round of 16" }
+    ],
+    "topScorer": { "name": "James Rodríguez", "goals": 6 },
+    "legend": "Carlos Valderrama",
+    "facts": [
+      "James Rodríguez won the 2014 Golden Boot with six goals, including the tournament's goal of the year vs Uruguay.",
+      "First World Cup since 2018; they reached the 2024 Copa América final on the way back.",
+      "The 1990s side of Valderrama and Higuita remains one of football's most beloved cult teams."
+    ]
+  },
+  "England": {
+    "slug": "england",
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "confederation": "UEFA",
+    "nickname": "The Three Lions",
+    "firstAppearance": 1950,
+    "titles": [1966],
+    "bestFinish": "Champions (1966)",
+    "history": [
+      { "year": 1950, "result": "Group stage" },
+      { "year": 1954, "result": "Quarter-finals" },
+      { "year": 1958, "result": "Group stage" },
+      { "year": 1962, "result": "Quarter-finals" },
+      { "year": 1966, "result": "Champions" },
+      { "year": 1970, "result": "Quarter-finals" },
+      { "year": 1982, "result": "Second group stage" },
+      { "year": 1986, "result": "Quarter-finals" },
+      { "year": 1990, "result": "Fourth place" },
+      { "year": 1998, "result": "Round of 16" },
+      { "year": 2002, "result": "Quarter-finals" },
+      { "year": 2006, "result": "Quarter-finals" },
+      { "year": 2010, "result": "Round of 16" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Fourth place" },
+      { "year": 2022, "result": "Quarter-finals" }
+    ],
+    "topScorer": { "name": "Gary Lineker", "goals": 10 },
+    "legend": "Harry Kane",
+    "facts": [
+      "Champions on home soil in 1966 — and it hasn't 'come home' since.",
+      "Harry Kane (8 World Cup goals) needs three to pass Gary Lineker as England's all-time World Cup scorer.",
+      "Euro 2024 runners-up, perennially among the favorites."
+    ]
+  },
+  "Croatia": {
+    "slug": "croatia",
+    "flag": "🇭🇷",
+    "confederation": "UEFA",
+    "nickname": "Vatreni (The Blazers)",
+    "firstAppearance": 1998,
+    "titles": [],
+    "bestFinish": "Runners-up (2018)",
+    "history": [
+      { "year": 1998, "result": "Third place" },
+      { "year": 2002, "result": "Group stage" },
+      { "year": 2006, "result": "Group stage" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2018, "result": "Runners-up" },
+      { "year": 2022, "result": "Third place" }
+    ],
+    "topScorer": { "name": "Davor Šuker", "goals": 6 },
+    "legend": "Luka Modrić",
+    "facts": [
+      "A nation of under 4 million that reached the 2018 final and finished third in 1998 and 2022.",
+      "Luka Modrić, 40, eyes a remarkable fifth World Cup; he won the Golden Ball in 2018.",
+      "Practically unbeatable in shootouts: 4 wins in 5 World Cup penalty shootouts."
+    ]
+  },
+  "Ghana": {
+    "slug": "ghana",
+    "flag": "🇬🇭",
+    "confederation": "CAF",
+    "nickname": "The Black Stars",
+    "firstAppearance": 2006,
+    "titles": [],
+    "bestFinish": "Quarter-finals (2010)",
+    "history": [
+      { "year": 2006, "result": "Round of 16" },
+      { "year": 2010, "result": "Quarter-finals" },
+      { "year": 2014, "result": "Group stage" },
+      { "year": 2022, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Asamoah Gyan", "goals": 6 },
+    "legend": "Asamoah Gyan",
+    "facts": [
+      "Came within a crossbar of being Africa's first semi-finalist in 2010 — after Luis Suárez's goal-line handball, Gyan's last-minute penalty hit the bar.",
+      "Asamoah Gyan's six goals are the most by an African player in World Cup history.",
+      "Reached the knockouts in their first two appearances (2006, 2010)."
+    ]
+  },
+  "Panama": {
+    "slug": "panama",
+    "flag": "🇵🇦",
+    "confederation": "CONCACAF",
+    "nickname": "La Marea Roja (The Red Tide)",
+    "firstAppearance": 2018,
+    "titles": [],
+    "bestFinish": "Group stage (2018)",
+    "history": [
+      { "year": 2018, "result": "Group stage" }
+    ],
+    "topScorer": { "name": "Felipe Baloy", "goals": 1 },
+    "legend": "Felipe Baloy",
+    "facts": [
+      "Felipe Baloy's goal vs England in 2018 — celebrated like a title back home — is Panama's only World Cup goal so far.",
+      "The 2018 qualification triggered a national holiday in Panama.",
+      "Second appearance, first World Cup win still on the wish list."
+    ]
+  }
+}

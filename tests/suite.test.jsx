@@ -18,6 +18,7 @@ import {
 } from '../src/lib/espn.js'
 import {
   DataProvider,
+  scheduleStateFromPayload,
   matchStatus,
   finalScore,
   isInPlay,
@@ -87,6 +88,35 @@ const cleanScheduleMatches = () =>
   check('label W74', placeholderLabel('W74'), 'Winner of Match 74')
   check('scoreline pens', scoreline({ ft: [2, 2], et: [3, 3], p: [4, 2] }), '3 – 3 (4–2 pens)')
   check('dayKey local', typeof dayKey('2026-06-11T13:00:00-06:00'), 'string')
+}
+
+// ---------- schedule payload normalization ----------
+{
+  const emptyLive = scheduleStateFromPayload({
+    generatedAt: '2026-06-18T17:00:00.000Z',
+    source: 'motherduck:fifa:marts.app_matches',
+    matches: [],
+  })
+  check('empty live payload falls back to bundled schedule', emptyLive.matches.length, schedule.matches.length)
+  check('empty live payload keeps group cards renderable', Object.keys(computeGroups(emptyLive.matches)).length, 12)
+
+  const driftedLive = scheduleStateFromPayload({
+    generatedAt: '2026-06-18T17:00:00.000Z',
+    source: 'live',
+    matches: [
+      {
+        stage: 'Group Stage',
+        group_name: ' A ',
+        team1: 'Mexico',
+        team2: 'South Africa',
+        kickoff: '2026-06-11T13:00:00-06:00',
+        score: '{"ft":[2,0]}',
+      },
+    ],
+  })
+  check('live payload normalizes group stage', driftedLive.matches[0].stage, 'group')
+  check('live payload accepts group_name', driftedLive.matches[0].group, 'A')
+  check('live payload parses score JSON', computeGroups(driftedLive.matches).A[0].pts, 3)
 }
 
 // ---------- third place race ----------
