@@ -158,8 +158,12 @@ export default function MatchFacts({ match, onClose }) {
         </button>
         <div className="sheet-title">
           <span>FIFA World Cup 2026</span>
-          {live && <strong>{liveLabel(status, live.clock)}</strong>}
         </div>
+        {live && (
+          <div className="sheet-live">
+            <strong>{liveLabel(status, live.clock)}</strong>
+          </div>
+        )}
         <div className="sheet-head">
           <div className="sheet-team">
             <span className="flag big">{t1?.flag ?? '·'}</span>

@@ -51,9 +51,45 @@ function liveState(row) {
   return null
 }
 
+function parseMinute(clockText) {
+  const m = /(\d+)/.exec(String(clockText ?? ''))
+  return m ? parseInt(m[1], 10) : null
+}
+
+function goalsFromCompetition(competition) {
+  const competitors = competition?.competitors ?? []
+  const home = competitors.find((c) => c.homeAway === 'home') ?? competitors[0]
+  const homeId = String(home?.team?.id ?? home?.id ?? '')
+  const goals = [[], []]
+
+  for (const d of competition?.details ?? []) {
+    if (!d?.scoringPlay) continue
+    const text = d.type?.text ?? ''
+    if (/shootout/i.test(text)) continue
+    const entry = {
+      name: d.athletesInvolved?.[0]?.displayName ?? 'Goal',
+      minute: parseMinute(d.clock?.displayValue),
+    }
+    if (d.penaltyKick || /penalty/i.test(text)) entry.penalty = true
+    if (d.ownGoal || /own goal/i.test(text)) entry.owngoal = true
+    goals[String(d.team?.id) === homeId ? 0 : 1].push(entry)
+  }
+
+  return goals
+}
+
+function goals(row) {
+  const reference = [parseJson(row.reference_goals1), parseJson(row.reference_goals2)]
+  const competition = parseJson(row.competitions, [])?.[0]
+  const [homeGoals, awayGoals] = goalsFromCompetition(competition)
+  if (!homeGoals.length && !awayGoals.length) return reference
+  return row.team1_espn_name === row.home_team ? [homeGoals, awayGoals] : [awayGoals, homeGoals]
+}
+
 function toMatch(row) {
   const matchScore = score(row)
   const state = liveState(row)
+  const [goals1, goals2] = goals(row)
   return {
     key: row.match_key,
     index: Number(row.match_index),
@@ -71,8 +107,8 @@ function toMatch(row) {
         ? { score: [Number(row.team1_score), Number(row.team2_score)], clock: row.display_clock }
         : undefined,
     score: state === 'ft' ? matchScore : parseJson(row.reference_score),
-    goals1: parseJson(row.reference_goals1),
-    goals2: parseJson(row.reference_goals2),
+    goals1,
+    goals2,
   }
 }
 
@@ -106,10 +142,14 @@ async function loadPayload() {
           team2,
           kickoff,
           city,
+          team1_espn_name,
+          team2_espn_name,
           reference_score,
           reference_goals1,
           reference_goals2,
           espn_id,
+          home_team,
+          away_team,
           status_state,
           status_name,
           status_period,
@@ -117,7 +157,8 @@ async function loadPayload() {
           team1_score,
           team2_score,
           team1_ht_score,
-          team2_ht_score
+          team2_ht_score,
+          competitions
       FROM marts.app_matches
       ORDER BY match_index
     `)
