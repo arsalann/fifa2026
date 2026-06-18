@@ -21,4 +21,17 @@ SELECT
     filename,
     CURRENT_TIMESTAMP AS ingested_at,
     content::JSON AS payload
-FROM read_text('src/data/schedule.json')
+FROM (
+    SELECT 1 AS priority, *
+    FROM read_text('src/data/schedule.json')
+    UNION ALL
+    SELECT 2 AS priority, *
+    FROM read_text('../../src/data/schedule.json')
+    UNION ALL
+    SELECT 3 AS priority, *
+    FROM read_text('../../../src/data/schedule.json')
+    UNION ALL
+    SELECT 4 AS priority, *
+    FROM read_text('../../../../src/data/schedule.json')
+)
+QUALIFY ROW_NUMBER() OVER (ORDER BY priority) = 1

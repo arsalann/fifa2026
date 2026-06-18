@@ -282,7 +282,7 @@ check('alias unknown', canonName('Narnia'), null)
   check('live goal in golden boot', goldenBoot(matches)[0]?.name, 'Raúl Jiménez')
 
   // adaptive polling: fast when live, gentle otherwise
-  const idle = schedule.matches.map((m) => ({ ...m })) // untouched -> all upcoming/far
+  const idle = cleanScheduleMatches()
   const farFuture = new Date('2027-01-01T00:00:00Z')
   check('idle poll is gentle', nextRefreshDelay(idle, farFuture) >= 60000, true)
   check('live poll is fast', nextRefreshDelay(matches, new Date('2026-06-11T19:30Z')) <= 30000, true)

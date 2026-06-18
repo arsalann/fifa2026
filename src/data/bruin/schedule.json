@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T15:50:03.547Z",
+  "generatedAt": "2026-06-18T16:24:55.812Z",
   "source": "bruin:motherduck-fifa:marts.app_matches",
   "matches": [
     {
@@ -53,6 +53,14 @@
       "kickoff": "2026-06-18T12:00:00-04:00",
       "city": "Atlanta",
       "espnId": "760438",
+      "liveState": "1h",
+      "live": {
+        "score": [
+          1,
+          0
+        ],
+        "clock": "24'"
+      },
       "score": null,
       "goals1": null,
       "goals2": null
