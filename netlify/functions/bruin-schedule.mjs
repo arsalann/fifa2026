@@ -2,6 +2,7 @@ import { DuckDBInstance } from '@duckdb/node-api'
 
 const DB_NAME = process.env.MOTHERDUCK_DATABASE ?? 'fifa'
 const CACHE_MS = 15 * 1000
+const DUCKDB_HOME = process.env.DUCKDB_HOME || '/tmp'
 
 let cachedPayload = null
 let cachedAt = 0
@@ -80,8 +81,12 @@ async function getInstance() {
     throw new Error('MOTHERDUCK_TOKEN is not configured')
   }
   if (!instancePromise) {
+    process.env.HOME ||= DUCKDB_HOME
     const token = encodeURIComponent(process.env.MOTHERDUCK_TOKEN)
-    instancePromise = DuckDBInstance.create(`md:${DB_NAME}?motherduck_token=${token}`)
+    instancePromise = DuckDBInstance.create(`md:${DB_NAME}?motherduck_token=${token}`, {
+      home_directory: DUCKDB_HOME,
+      temp_directory: process.env.DUCKDB_TEMP_DIRECTORY ?? '/tmp',
+    })
   }
   return instancePromise
 }
