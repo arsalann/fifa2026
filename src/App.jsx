@@ -43,6 +43,10 @@ export default function App() {
           <span aria-hidden="true">🏆</span> World Cup 2026
         </h1>
         <div className="topbar-actions">
+          <a className="powered-by" href="https://getbruin.com/" target="_blank" rel="noreferrer">
+            <span>Powered by</span>
+            <img src="/bruin-logo.svg" alt="Bruin" />
+          </a>
           <UpdatedChip />
           <button
             className="chip"

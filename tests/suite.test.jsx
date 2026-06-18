@@ -41,6 +41,17 @@ const check = (label, got, want) => {
   }
 }
 
+const cleanScheduleMatches = () =>
+  schedule.matches.map((m) => ({
+    ...m,
+    espnId: null,
+    live: undefined,
+    liveState: undefined,
+    score: null,
+    goals1: [],
+    goals2: [],
+  }))
+
 // ---------- standings / scorers / format ----------
 {
   const M = (t1, t2, g, ft, ht, goals1 = [], goals2 = []) => ({
@@ -106,7 +117,7 @@ check("alias Côte d'Ivoire", canonName("Côte d'Ivoire"), 'Ivory Coast')
 check('alias unknown', canonName('Narnia'), null)
 
 {
-  const matches = schedule.matches.map((m) => ({ ...m }))
+  const matches = cleanScheduleMatches()
   const sb = parseScoreboard({ events: [
     { // halftime, ESPN home/away flipped vs our team1/team2
       id: '731001', date: '2026-06-11T19:00Z',
@@ -239,7 +250,7 @@ check('alias unknown', canonName('Narnia'), null)
 
 // ---------- live (in-play) updates ----------
 {
-  const matches = schedule.matches.map((m) => ({ ...m }))
+  const matches = cleanScheduleMatches()
   const live = parseScoreboard({
     events: [
       {
