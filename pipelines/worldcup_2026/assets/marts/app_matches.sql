@@ -142,4 +142,40 @@ matched AS (
 )
 SELECT *
 FROM matched
+UNION ALL
+SELECT
+    error('Expected 104 rows in marts.app_matches') AS match_index,
+    NULL AS match_key,
+    NULL AS stage,
+    NULL AS round,
+    NULL AS group_name,
+    NULL AS team1,
+    NULL AS team2,
+    NULL AS team1_espn_name,
+    NULL AS team2_espn_name,
+    NULL AS kickoff,
+    NULL AS city,
+    NULL::JSON AS reference_score,
+    NULL::JSON AS reference_goals1,
+    NULL::JSON AS reference_goals2,
+    NULL AS espn_id,
+    NULL AS espn_kickoff,
+    NULL AS status_state,
+    NULL AS status_name,
+    NULL AS status_period,
+    NULL AS display_clock,
+    NULL AS venue_name,
+    NULL AS home_team,
+    NULL AS away_team,
+    NULL AS home_score,
+    NULL AS away_score,
+    NULL::JSON AS home_linescores,
+    NULL::JSON AS away_linescores,
+    NULL::JSON AS competitions,
+    NULL AS team1_score,
+    NULL AS team2_score,
+    NULL AS team1_ht_score,
+    NULL AS team2_ht_score
+FROM (SELECT COUNT(*) AS match_count FROM matched)
+WHERE match_count != 104
 ORDER BY match_index
