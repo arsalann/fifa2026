@@ -6,6 +6,7 @@ import { computeGroups, teamTournamentRecord } from '../lib/standings'
 import { goldenBoot } from '../lib/scorers'
 import { useFavorite } from '../lib/prefs'
 import { track } from '../lib/analytics'
+import { flattenTeamMarkets, formatProbability, formatVolume } from '../lib/betting'
 import MatchCard from '../components/MatchCard'
 import Lineup from '../components/Lineup'
 
@@ -18,9 +19,24 @@ function Stat({ label, value }) {
   )
 }
 
+function MarketRow({ market }) {
+  const volume = formatVolume(market.volume)
+  return (
+    <div className="market-row">
+      <div>
+        <div className="market-row-main">
+          {market.label} · {market.source}
+        </div>
+        {volume && <div className="market-row-sub">{volume}</div>}
+      </div>
+      <strong>{formatProbability(market.probability)}</strong>
+    </div>
+  )
+}
+
 export default function TeamPage() {
   const { slug } = useParams()
-  const { matches } = useData()
+  const { matches, betting } = useData()
   const [favorite, setFavorite] = useFavorite()
 
   const entry = Object.entries(teams).find(([, t]) => t.slug === slug)
@@ -41,6 +57,10 @@ export default function TeamPage() {
   const rec = useMemo(() => teamTournamentRecord(matches, name), [matches, name])
 
   const scorers = useMemo(() => goldenBoot(matches).filter((s) => s.team === name), [matches, name])
+  const markets = useMemo(
+    () => flattenTeamMarkets(betting?.teamMarkets?.[name]).slice(0, 5),
+    [betting, name],
+  )
 
   useEffect(() => {
     if (name) track('team_viewed', { team: name })
@@ -94,6 +114,19 @@ export default function TeamPage() {
           <Stat label="Record (W-D-L)" value={`${rec.w}-${rec.d}-${rec.l}`} />
           <Stat label="Goals for / against" value={`${rec.gf} / ${rec.ga}`} />
         </div>
+        {markets.length > 0 && (
+          <>
+            <h4>Market view</h4>
+            <div className="market-list">
+              {markets.map((market) => (
+                <MarketRow
+                  key={`${market.source}-${market.type}-${market.label}`}
+                  market={market}
+                />
+              ))}
+            </div>
+          </>
+        )}
         {scorers.length > 0 && (
           <>
             <h4>2026 goalscorers</h4>

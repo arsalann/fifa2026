@@ -9,7 +9,7 @@ an app-ready schedule overlay for the React app.
   reference JSON ingested through DuckDB.
 - `assets/marts/`: DuckDB SQL assets that normalize Bruin-ingested data for the app.
 - MotherDuck database: `fifa`.
-- `src/data/bruin/schedule.json`: generated app match data.
+- `src/data/bruin/schedule.json`: generated app match data plus betting insights.
 - `src/data/bruin/teams.json`: generated team metadata.
 - `src/data/bruin/details.json`: generated match-summary data.
 - `public/data/bruin/*.json`: refreshable browser-facing copies of the same
@@ -20,11 +20,17 @@ an app-ready schedule overlay for the React app.
 The app-data path uses:
 
 - ESPN full-window scoreboard data for match IDs, scores, status, and details.
+- ESPN match-summary data for box scores, facts, rosters, and starting XIs.
+- Kalshi public World Cup winner and correct-score events.
+- Polymarket public World Cup search results for team futures, group winners,
+  and knockout qualification markets.
 - Curated local reference JSON for tournament schedule and team metadata.
 
 The retained ESPN ingestr assets cover scoreboard, teams, competitors,
 standings, and news. The app-score source is the DuckDB SQL full-window ESPN
-asset, `raw.espn_scoreboard_window`.
+asset, `raw.espn_scoreboard_window`. The lineup source is the Bruin Python
+asset, `raw.espn_match_summary`, which lands ESPN summary payloads in
+MotherDuck before export.
 
 ## Config
 
@@ -43,11 +49,14 @@ npm run pipeline:refresh
 ```
 
 `pipeline:run` executes the upstream assets needed for `marts.app_data_manifest`:
-ESPN full-window scoreboard ingestion, local reference JSON ingestion, and
+ESPN full-window scoreboard ingestion, ESPN match-summary ingestion, Kalshi and
+Polymarket public market ingestion, local reference JSON ingestion, and
 app-facing marts. The full-window ESPN asset loads the whole tournament range on
 each run, which backfills historical results on the first run and refreshes
-event rows on later runs. It is the app-score source; the separate ESPN ingestr
-assets are retained for source coverage demos. `pipeline:export` uses
+event rows on later runs. It is the app-score source; `raw.espn_match_summary`
+refreshes one summary payload per event ID so lineups stay warehouse-owned. The
+separate ESPN ingestr assets are retained for source coverage demos.
+`pipeline:export` uses
 `bruin query` against the `motherduck-fifa` connection and serializes those
 MotherDuck marts/raw rows into `src/data/bruin/` and `public/data/bruin/`. The
 app uses only these generated files at runtime. Set `WORLDCUP_DUCKDB_PATH` only

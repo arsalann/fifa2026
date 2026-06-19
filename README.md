@@ -36,7 +36,10 @@ pipeline export can be picked up without changing browser code:
 
 - `schedule.json` - app-ready matches from Bruin marts.
 - `teams.json` - team metadata from Bruin-ingested reference data.
-- `details.json` - ESPN match summaries exported from Bruin-ingested ESPN rows.
+- `details.json` - ESPN match summaries exported from `raw.espn_match_summary`
+  and scoreboard fallback rows in MotherDuck.
+- `schedule.json` also carries betting-market insights from Bruin marts: team
+  futures and match-level correct-score markets when provider data is available.
 
 The original reference JSON under `src/data/` remains only as a Bruin ingestion
 input. The browser no longer fetches ESPN or openfootball directly.
@@ -55,7 +58,8 @@ npm run pipeline:refresh
 npm run dev
 ```
 
-The raw layer uses ESPN for the live-score overlay and match details, plus
+The raw layer uses ESPN for the live-score overlay, match summaries, and
+lineups; Kalshi and Polymarket public markets for betting insights; plus
 curated local reference JSON for the tournament schedule and team metadata.
 
 See `pipelines/worldcup_2026/README.md` for the source/table map and the current

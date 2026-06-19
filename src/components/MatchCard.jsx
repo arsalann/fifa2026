@@ -2,6 +2,7 @@ import { useState } from 'react'
 import TeamTag from './TeamTag'
 import MatchFacts from './MatchFacts'
 import { matchStatus, finalScore, isInPlay } from '../lib/data.jsx'
+import { formatProbability } from '../lib/betting'
 import { STADIUMS, fmtTime, fmtDate, shortCity, liveLabel } from '../lib/format'
 import { track } from '../lib/analytics'
 
@@ -33,6 +34,7 @@ export default function MatchCard({ match, showDate = false, highlight = false }
 
   const label = match.group ? `Group ${match.group}` : match.round
   const stadium = STADIUMS[match.city]
+  const topScore = match.betting?.correctScore?.[0]
 
   const openFacts = () => {
     track('match_facts_opened', { stage: match.stage, status })
@@ -105,6 +107,13 @@ export default function MatchCard({ match, showDate = false, highlight = false }
             <TeamTag name={match.team2} bold />
           </div>
         </div>
+        {topScore && (
+          <div className="market-strip">
+            <span className="market-source">{topScore.source}</span>
+            <span className="market-label">Top score: {topScore.label}</span>
+            <strong>{formatProbability(topScore.probability)}</strong>
+          </div>
+        )}
         {openable && <div className="match-foot">Match facts ›</div>}
       </div>
       {factsOpen && <MatchFacts match={match} onClose={() => setFactsOpen(false)} />}

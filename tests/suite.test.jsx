@@ -5,6 +5,7 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { MemoryRouter } from 'react-router-dom'
 import schedule from '../src/data/bruin/schedule.json'
+import details from '../src/data/bruin/details.json'
 import { computeGroups, thirdPlaceRace, teamTournamentRecord } from '../src/lib/standings.js'
 import { goldenBoot, tournamentTotals } from '../src/lib/scorers.js'
 import { placeholderLabel, scoreline, dayKey } from '../src/lib/format.js'
@@ -120,6 +121,13 @@ const cleanScheduleMatches = () =>
   check(
     'bundled Bruin schedule includes scorer data',
     schedule.matches.some((m) => m.goals1?.length || m.goals2?.length),
+    true,
+  )
+  check(
+    'bundled Bruin details includes lineup rosters',
+    Object.values(details.summaries).some((s) =>
+      s.rosters?.some((r) => r.roster?.filter((p) => p.starter).length >= 11),
+    ),
     true,
   )
 }
