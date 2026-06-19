@@ -8,7 +8,7 @@ connection: motherduck-fifa
 
 materialization:
   type: table
-  strategy: truncate+insert
+  strategy: create+replace
 
 columns:
   - name: id
@@ -29,19 +29,19 @@ columns:
     type: varchar
     update_on_merge: true
   - name: season
-    type: json
+    type: varchar
     update_on_merge: true
   - name: competitions
-    type: json
+    type: varchar
     update_on_merge: true
   - name: status
-    type: json
+    type: varchar
     update_on_merge: true
   - name: venue
-    type: json
+    type: varchar
     update_on_merge: true
   - name: links
-    type: json
+    type: varchar
     update_on_merge: true
   - name: ingested_at
     type: timestamp
@@ -50,7 +50,7 @@ columns:
 @bruin */
 
 WITH payload AS (
-    SELECT content::JSON AS payload
+    SELECT content AS payload
     FROM read_text('https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=300')
 ),
 events AS (

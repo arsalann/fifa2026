@@ -1,3 +1,40 @@
+"""@bruin
+name: raw.kalshi_worldcup_events
+description: Open Kalshi World Soccer Cup events with nested markets for app insights.
+image: python:3.13
+connection: motherduck-fifa
+
+materialization:
+  type: table
+  strategy: create+replace
+
+columns:
+  - name: event_ticker
+    type: varchar
+    primary_key: true
+  - name: series_ticker
+    type: varchar
+  - name: sub_title
+    type: varchar
+  - name: title
+    type: varchar
+  - name: category
+    type: varchar
+  - name: strike_date
+    type: timestamp
+  - name: strike_period
+    type: varchar
+  - name: created_time
+    type: timestamp
+  - name: updated_time
+    type: timestamp
+  - name: markets
+    type: json
+  - name: raw
+    type: json
+
+@bruin"""
+
 from urllib.request import Request, urlopen
 import json
 
