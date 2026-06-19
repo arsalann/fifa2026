@@ -32,6 +32,11 @@ import {
   track,
   trackPageview,
 } from '../src/lib/analytics.js'
+import {
+  hasActiveRun,
+  hasRecentRun,
+  triggerWindow,
+} from '../netlify/functions/bruin-cloud.mjs'
 
 let fails = 0
 const check = (label, got, want) => {
@@ -370,6 +375,26 @@ check('alias unknown', canonName('Narnia'), null)
     threw = true
   }
   check('track/trackPageview are safe no-ops', threw, false)
+}
+
+// ---------- Bruin Cloud trigger gate ----------
+{
+  check('bruin cloud active run detected', hasActiveRun([{ status: 'running' }]), true)
+  check('bruin cloud terminal run not active', hasActiveRun([{ status: 'success' }]), false)
+  check(
+    'bruin cloud recent run throttles trigger',
+    hasRecentRun([{ start_date: { date: '2026-06-19 07:11:08.106000', timezone: 'Z' } }], Date.parse('2026-06-19T07:12:00Z'), 300000),
+    true,
+  )
+  check(
+    'bruin cloud old run allows trigger',
+    hasRecentRun([{ start_date: '2026-06-19T07:00:00Z' }], Date.parse('2026-06-19T07:12:00Z'), 300000),
+    false,
+  )
+  check('bruin cloud trigger window is one UTC hour', triggerWindow(new Date('2026-06-19T19:45:00Z')), {
+    startDate: '2026-06-19T19:00:00.000Z',
+    endDate: '2026-06-19T20:00:00.000Z',
+  })
 }
 
 console.log(fails ? `\n${fails} FAILURE(S)` : '\nall tests passed')

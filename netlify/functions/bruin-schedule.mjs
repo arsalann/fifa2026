@@ -1,4 +1,5 @@
 import { DuckDBInstance } from '@duckdb/node-api'
+import { ensureBruinRun } from './bruin-cloud.mjs'
 
 const DB_NAME = process.env.MOTHERDUCK_DATABASE ?? 'fifa'
 const CACHE_MS = 15 * 1000
@@ -174,13 +175,19 @@ async function loadPayload() {
 }
 
 export async function handler() {
+  let pipelineRun = null
   try {
+    try {
+      pipelineRun = await ensureBruinRun()
+    } catch {
+      pipelineRun = { checked: true, triggered: false, reason: 'cloud_error' }
+    }
     if (cachedPayload && Date.now() - cachedAt < CACHE_MS) {
-      return json(200, cachedPayload)
+      return json(200, { ...cachedPayload, pipelineRun })
     }
     cachedPayload = await loadPayload()
     cachedAt = Date.now()
-    return json(200, cachedPayload)
+    return json(200, { ...cachedPayload, pipelineRun })
   } catch (error) {
     return json(500, { error: error?.message ?? 'Unable to load Bruin data' })
   }
