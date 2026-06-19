@@ -50,23 +50,23 @@ columns:
 @bruin */
 
 WITH payload AS (
-    SELECT *
-    FROM read_json_auto('https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=300')
+    SELECT content::JSON AS payload
+    FROM read_text('https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=300')
 ),
 events AS (
-    SELECT unnest(events) AS event
+    SELECT unnest(json_extract(payload, '$.events')::JSON[]) AS event
     FROM payload
 )
 SELECT
-    event.id::VARCHAR AS id,
-    event.uid::VARCHAR AS uid,
-    event.date::VARCHAR AS date,
-    event.name::VARCHAR AS name,
-    event.shortName::VARCHAR AS short_name,
-    to_json(event.season) AS season,
-    to_json(event.competitions) AS competitions,
-    to_json(event.status) AS status,
-    to_json(event.venue) AS venue,
-    to_json(event.links) AS links,
+    json_extract_string(event, '$.id') AS id,
+    json_extract_string(event, '$.uid') AS uid,
+    json_extract_string(event, '$.date') AS date,
+    json_extract_string(event, '$.name') AS name,
+    json_extract_string(event, '$.shortName') AS short_name,
+    json_extract(event, '$.season') AS season,
+    json_extract(event, '$.competitions') AS competitions,
+    json_extract(event, '$.status') AS status,
+    json_extract(event, '$.venue') AS venue,
+    json_extract(event, '$.links') AS links,
     CURRENT_TIMESTAMP AS ingested_at
 FROM events
