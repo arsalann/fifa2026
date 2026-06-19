@@ -43,10 +43,18 @@ export default function App() {
           <span aria-hidden="true">🏆</span> World Cup 2026
         </h1>
         <div className="topbar-actions">
-          <a className="powered-by" href="https://getbruin.com/" target="_blank" rel="noreferrer">
+          <div className="powered-by" aria-label="Powered by Bruin, Netlify, and MotherDuck">
             <span>Powered by</span>
-            <img src="/bruin-logo.svg" alt="Bruin" />
-          </a>
+            <a className="powered-link" href="https://getbruin.com/" target="_blank" rel="noreferrer">
+              <img className="powered-logo powered-logo-bruin" src="/bruin-logo.svg" alt="Bruin" />
+            </a>
+            <a className="powered-link" href="https://www.netlify.com/" target="_blank" rel="noreferrer">
+              <img className="powered-logo powered-logo-netlify" src="/netlify-logo.png" alt="Netlify" />
+            </a>
+            <a className="powered-link" href="https://motherduck.com/" target="_blank" rel="noreferrer">
+              <img className="powered-logo powered-logo-motherduck" src="/motherduck-wordmark.png" alt="MotherDuck" />
+            </a>
+          </div>
           <UpdatedChip />
           <button
             className="chip"

@@ -28,7 +28,7 @@ function normalizeStage(stage) {
   return GROUP_STAGE_NAMES.has(value) ? 'group' : value
 }
 
-function normalizeMatch(match) {
+function normalizeMatch(match, fallbackMatch = null) {
   const group = match?.group ?? match?.groupName ?? match?.group_name
   return {
     ...match,
@@ -37,6 +37,7 @@ function normalizeMatch(match) {
     score: parseJson(match?.score, null),
     goals1: parseJson(match?.goals1, match?.goals1),
     goals2: parseJson(match?.goals2, match?.goals2),
+    betting: match?.betting ?? fallbackMatch?.betting,
   }
 }
 
@@ -44,16 +45,22 @@ function hasRenderableGroups(matches) {
   return matches.some((m) => m.stage === 'group' && m.group && m.team1 && m.team2)
 }
 
-function stateFromPayload(payload) {
+function stateFromPayload(payload, fallbackPayload = null) {
+  const fallbackMatches = new Map(
+    (fallbackPayload?.matches ?? []).map((match) => [Number(match.index), match]),
+  )
   return {
-    matches: Array.isArray(payload?.matches) ? payload.matches.map(normalizeMatch) : [],
+    matches: Array.isArray(payload?.matches)
+      ? payload.matches.map((match) => normalizeMatch(match, fallbackMatches.get(Number(match.index))))
+      : [],
     updatedAt: payload?.generatedAt ? new Date(payload.generatedAt) : null,
     source: payload?.source ?? 'bruin',
+    betting: payload?.betting ?? fallbackPayload?.betting ?? { teamMarkets: {} },
   }
 }
 
 export function scheduleStateFromPayload(payload, fallbackPayload = bruinData) {
-  const state = stateFromPayload(payload)
+  const state = stateFromPayload(payload, fallbackPayload)
   if (hasRenderableGroups(state.matches)) return state
 
   const fallbackState = stateFromPayload(fallbackPayload)

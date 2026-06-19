@@ -15,3 +15,22 @@ environments:
           league: "fifa.world"
           dates: "20260610-20260721"
           limit: 300
+
+      # Public, keyless prediction market sources for app insights.
+      kalshi:
+        - name: "kalshi-worldcup-events"
+          query_params:
+            series_ticker: "KXMENWORLDCUP"
+            status: "open"
+            with_nested_markets: "true"
+        - name: "kalshi-worldcup-correct-score"
+          query_params:
+            series_ticker: "KXWCSCORE"
+            status: "open"
+            with_nested_markets: "true"
+
+      polymarket:
+        - name: "polymarket-worldcup-search"
+          q: "FIFA World Cup 2026"
+          markets_status: "open"
+          events_status: "open"

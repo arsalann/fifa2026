@@ -23,10 +23,14 @@ const publicTeamsPath = resolve(
 const publicDetailsPath = resolve(
   process.env.WORLDCUP_PUBLIC_BRUIN_DETAILS_PATH ?? 'public/data/bruin/details.json',
 )
+const queryMaxBuffer = 256 * 1024 * 1024
 
 function query(sql) {
   if (dbPath) {
-    const out = execFileSync('duckdb', ['-readonly', dbPath, '-json', sql], { encoding: 'utf8' })
+    const out = execFileSync('duckdb', ['-readonly', dbPath, '-json', sql], {
+      encoding: 'utf8',
+      maxBuffer: queryMaxBuffer,
+    })
     return JSON.parse(out || '[]')
   }
 
@@ -45,7 +49,7 @@ function query(sql) {
       '--query',
       sql,
     ],
-    { encoding: 'utf8' },
+    { encoding: 'utf8', maxBuffer: queryMaxBuffer },
   )
   const parsed = JSON.parse(out || '[]')
   if (Array.isArray(parsed)) return parsed
@@ -77,6 +81,28 @@ function parseJson(value, fallback = null) {
 function writeJson(path, value) {
   mkdirSync(dirname(path), { recursive: true })
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`)
+}
+
+function numberOrNull(value) {
+  if (value == null || value === '') return null
+  const n = Number(value)
+  return Number.isFinite(n) ? n : null
+}
+
+function marketRow(row) {
+  return {
+    source: row.source,
+    type: row.market_type,
+    label: row.label ?? row.outcome,
+    probability: numberOrNull(row.probability),
+    bid: numberOrNull(row.bid),
+    ask: numberOrNull(row.ask),
+    lastPrice: numberOrNull(row.last_price),
+    volume: numberOrNull(row.volume),
+    marketId: row.market_id ?? null,
+    question: row.question ?? null,
+    url: row.url ?? null,
+  }
 }
 
 function score(row) {
@@ -142,16 +168,77 @@ function displayStat(stat) {
   }
 }
 
+function summaryTeam(team) {
+  return {
+    displayName: team?.displayName ?? team?.name ?? null,
+    name: team?.name ?? null,
+    id: team?.id ?? null,
+  }
+}
+
+function rosterPlayer(player) {
+  return {
+    starter: Boolean(player.starter),
+    captain: Boolean(player.captain ?? player.athlete?.captain),
+    jersey: player.jersey ?? player.athlete?.jersey ?? null,
+    athlete: {
+      displayName: player.athlete?.displayName ?? player.athlete?.shortName ?? null,
+      shortName: player.athlete?.shortName ?? null,
+    },
+    position: player.position
+      ? {
+          name: player.position.name ?? null,
+          displayName: player.position.displayName ?? null,
+          abbreviation: player.position.abbreviation ?? null,
+        }
+      : null,
+  }
+}
+
+function summaryFromEspnSummary(json, fallback = null) {
+  return {
+    boxscore: {
+      teams:
+        json?.boxscore?.teams?.map((team) => ({
+          team: summaryTeam(team.team),
+          statistics: (team.statistics ?? []).map(displayStat),
+        })) ??
+        fallback?.boxscore?.teams ??
+        [],
+    },
+    gameInfo: {
+      venue: {
+        fullName:
+          json?.gameInfo?.venue?.fullName ??
+          json?.gameInfo?.venue?.displayName ??
+          fallback?.gameInfo?.venue?.fullName ??
+          null,
+        address: {
+          city:
+            json?.gameInfo?.venue?.address?.city ??
+            fallback?.gameInfo?.venue?.address?.city ??
+            null,
+        },
+      },
+      attendance: json?.gameInfo?.attendance ?? fallback?.gameInfo?.attendance ?? null,
+      officials: json?.gameInfo?.officials ?? json?.officials ?? fallback?.gameInfo?.officials ?? [],
+    },
+    rosters:
+      json?.rosters?.map((roster) => ({
+        team: summaryTeam(roster.team),
+        roster: (roster.roster ?? []).map(rosterPlayer),
+      })) ??
+      fallback?.rosters ??
+      [],
+  }
+}
+
 function summaryFromScoreboard(row) {
   const competitions = parseJson(row.competitions, [])
   const competition = competitions?.[0]
   const competitors = competition?.competitors ?? []
   const teams = competitors.map((c) => ({
-    team: {
-      displayName: c.team?.displayName ?? c.team?.name,
-      name: c.team?.name,
-      id: c.team?.id,
-    },
+    team: summaryTeam(c.team),
     statistics: (c.statistics ?? []).map(displayStat),
   }))
 
@@ -213,10 +300,71 @@ const matchRows = query(`
   ORDER BY match_index
 `)
 
+let matchBettingByIndex = new Map()
+try {
+  const bettingRows = query(`
+    SELECT
+        match_index,
+        source,
+        market_type,
+        outcome_rank,
+        outcome,
+        probability,
+        bid,
+        ask,
+        last_price,
+        volume,
+        market_id,
+        url
+    FROM marts.app_match_betting
+    ORDER BY match_index, market_type, outcome_rank
+  `)
+  for (const row of bettingRows) {
+    const key = Number(row.match_index)
+    const current = matchBettingByIndex.get(key) ?? { correctScore: [] }
+    if (row.market_type === 'correct_score') {
+      current.correctScore.push({ rank: Number(row.outcome_rank), ...marketRow(row) })
+    }
+    matchBettingByIndex.set(key, current)
+  }
+} catch {
+  matchBettingByIndex = new Map()
+}
+
+let teamMarkets = {}
+try {
+  const rows = query(`
+    SELECT
+        team_name,
+        source,
+        market_type,
+        label,
+        probability,
+        bid,
+        ask,
+        last_price,
+        volume,
+        market_id,
+        question,
+        url
+    FROM marts.app_team_betting
+    ORDER BY team_name, market_type, source
+  `)
+  for (const row of rows) {
+    const team = row.team_name
+    teamMarkets[team] ??= {}
+    teamMarkets[team][row.market_type] ??= []
+    teamMarkets[team][row.market_type].push(marketRow(row))
+  }
+} catch {
+  teamMarkets = {}
+}
+
 const matches = matchRows.map((row) => {
   const matchScore = score(row)
   const state = liveState(row)
   const [goals1, goals2] = goals(row)
+  const betting = matchBettingByIndex.get(Number(row.match_index))
   return {
     key: row.match_key,
     index: Number(row.match_index),
@@ -236,6 +384,7 @@ const matches = matchRows.map((row) => {
     score: state === 'ft' ? matchScore : parseJson(row.reference_score),
     goals1,
     goals2,
+    ...(betting ? { betting } : {}),
   }
 })
 
@@ -243,6 +392,7 @@ const schedulePayload = {
   generatedAt,
   source: `bruin:${dbPath ?? bruinConnection}:marts.app_matches`,
   matches,
+  betting: { teamMarkets },
 }
 writeJson(schedulePath, schedulePayload)
 writeJson(publicSchedulePath, schedulePayload)
@@ -259,14 +409,30 @@ writeJson(publicTeamsPath, teams)
 let details = { generatedAt, source: `bruin:${dbPath ?? bruinConnection}:raw.espn_scoreboard`, summaries: {} }
 try {
   const summaryRows = query(`
-    SELECT id, competitions, venue
-    FROM raw.espn_scoreboard_window
-    QUALIFY ROW_NUMBER() OVER (PARTITION BY id ORDER BY date DESC) = 1
+    WITH scoreboard AS (
+      SELECT id, competitions, venue
+      FROM raw.espn_scoreboard_window
+      QUALIFY ROW_NUMBER() OVER (PARTITION BY id ORDER BY date DESC) = 1
+    )
+    SELECT
+      scoreboard.id,
+      scoreboard.competitions,
+      scoreboard.venue,
+      match_summary.summary
+    FROM scoreboard
+    LEFT JOIN raw.espn_match_summary AS match_summary
+      ON match_summary.event_id = scoreboard.id
     ORDER BY id
   `)
+  const summaries = summaryRows.map((row) => {
+    const fallback = summaryFromScoreboard(row)
+    const json = parseJson(row.summary)
+    return [row.id, json ? summaryFromEspnSummary(json, fallback) : fallback]
+  })
   details = {
     ...details,
-    summaries: Object.fromEntries(summaryRows.map((row) => [row.id, summaryFromScoreboard(row)])),
+    source: `bruin:${dbPath ?? bruinConnection}:raw.espn_scoreboard + raw.espn_match_summary`,
+    summaries: Object.fromEntries(summaries),
   }
 } catch {
   // ESPN is an app enhancement; schedule/team exports remain valid if the raw
@@ -279,5 +445,7 @@ console.log(`Exported ${matches.length} matches to ${schedulePath}`)
 console.log(`Exported ${matches.length} matches to ${publicSchedulePath}`)
 console.log(`Exported ${teamRows.length} teams to ${teamsPath}`)
 console.log(`Exported ${teamRows.length} teams to ${publicTeamsPath}`)
+console.log(`Exported ${Object.keys(teamMarkets).length} team betting market groups`)
+console.log(`Exported ${matchBettingByIndex.size} match betting market groups`)
 console.log(`Exported ${Object.keys(details.summaries).length} ESPN summaries to ${detailsPath}`)
 console.log(`Exported ${Object.keys(details.summaries).length} ESPN summaries to ${publicDetailsPath}`)
