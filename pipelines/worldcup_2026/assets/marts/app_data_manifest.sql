@@ -12,6 +12,8 @@ depends:
   - marts.app_teams
   - marts.app_team_betting
   - marts.app_match_betting
+  - marts.app_match_market_summary
+  - marts.app_market_insights
   - raw.espn_scoreboard_window
   - raw.espn_match_summary
 
@@ -26,6 +28,10 @@ columns:
     type: integer
   - name: match_betting_rows
     type: integer
+  - name: match_market_summary_rows
+    type: integer
+  - name: market_insight_rows
+    type: integer
   - name: espn_summary_rows
     type: integer
 
@@ -37,6 +43,8 @@ WITH counts AS (
         (SELECT COUNT(*) FROM marts.app_teams) AS team_rows,
         (SELECT COUNT(*) FROM marts.app_team_betting) AS team_betting_rows,
         (SELECT COUNT(*) FROM marts.app_match_betting) AS match_betting_rows,
+        (SELECT COUNT(*) FROM marts.app_match_market_summary) AS match_market_summary_rows,
+        (SELECT COUNT(*) FROM marts.app_market_insights) AS market_insight_rows,
         (SELECT COUNT(*) FROM raw.espn_scoreboard_window) AS espn_window_rows,
         (SELECT COUNT(*) FROM raw.espn_match_summary) AS espn_summary_rows
 )
@@ -52,6 +60,8 @@ SELECT
     END AS team_rows,
     team_betting_rows,
     match_betting_rows,
+    match_market_summary_rows,
+    market_insight_rows,
     CASE
         WHEN espn_window_rows != 104 THEN error('Expected 104 rows in raw.espn_scoreboard_window')
         ELSE espn_window_rows

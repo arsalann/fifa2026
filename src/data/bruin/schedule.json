@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T23:56:08.949Z",
+  "generatedAt": "2026-06-19T08:51:44.348Z",
   "source": "bruin:motherduck-fifa:marts.app_matches",
   "matches": [
     {
@@ -107,55 +107,19 @@
       "kickoff": "2026-06-18T19:00:00-06:00",
       "city": "Guadalajara (Zapopan)",
       "espnId": "760441",
-      "score": null,
-      "goals1": null,
-      "goals2": null,
-      "betting": {
-        "correctScore": [
-          {
-            "rank": 1,
-            "source": "Kalshi",
-            "type": "correct_score",
-            "label": "Draw 1-1",
-            "probability": 0.155,
-            "bid": 0.15,
-            "ask": 0.16,
-            "lastPrice": 0.16,
-            "volume": 75402.27,
-            "marketId": "KXWCSCORE-26JUN18MEXKOR-MEX1KOR1",
-            "question": null,
-            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun18mexkor"
-          },
-          {
-            "rank": 2,
-            "source": "Kalshi",
-            "type": "correct_score",
-            "label": "Mexico wins 1-0",
-            "probability": 0.135,
-            "bid": 0.13,
-            "ask": 0.14,
-            "lastPrice": 0.14,
-            "volume": 20105.5,
-            "marketId": "KXWCSCORE-26JUN18MEXKOR-MEX1KOR0",
-            "question": null,
-            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun18mexkor"
-          },
-          {
-            "rank": 3,
-            "source": "Kalshi",
-            "type": "correct_score",
-            "label": "Mexico wins 2-1",
-            "probability": 0.11,
-            "bid": 0.1,
-            "ask": 0.12,
-            "lastPrice": 0.12,
-            "volume": 276149.59,
-            "marketId": "KXWCSCORE-26JUN18MEXKOR-MEX2KOR1",
-            "question": null,
-            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun18mexkor"
-          }
+      "score": {
+        "ft": [
+          1,
+          0
         ]
-      }
+      },
+      "goals1": [
+        {
+          "name": "Luis Romo",
+          "minute": 50
+        }
+      ],
+      "goals2": []
     },
     {
       "key": "2026-06-24|Mexico City",
@@ -303,15 +267,12 @@
       "kickoff": "2026-06-18T15:00:00-07:00",
       "city": "Vancouver",
       "espnId": "760440",
-      "liveState": "2h",
-      "live": {
-        "score": [
+      "score": {
+        "ft": [
           6,
           0
-        ],
-        "clock": "90'+4'"
+        ]
       },
-      "score": null,
       "goals1": [
         {
           "name": "Cyle Larin",
@@ -339,53 +300,7 @@
           "minute": 90
         }
       ],
-      "goals2": [],
-      "betting": {
-        "correctScore": [
-          {
-            "rank": 1,
-            "source": "Kalshi",
-            "type": "correct_score",
-            "label": "Canada wins 6-0",
-            "probability": 0.64,
-            "bid": 0.56,
-            "ask": 0.72,
-            "lastPrice": 0.61,
-            "volume": 371103.86,
-            "marketId": "KXWCSCORE-26JUN18CANQAT-CAN6QAT0",
-            "question": null,
-            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun18canqat"
-          },
-          {
-            "rank": 2,
-            "source": "Kalshi",
-            "type": "correct_score",
-            "label": "Canada wins 7-0",
-            "probability": 0.30000000000000004,
-            "bid": 0.28,
-            "ask": 0.32,
-            "lastPrice": 0.27,
-            "volume": 284227.49,
-            "marketId": "KXWCSCORE-26JUN18CANQAT-CAN7QAT0",
-            "question": null,
-            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun18canqat"
-          },
-          {
-            "rank": 3,
-            "source": "Kalshi",
-            "type": "correct_score",
-            "label": "Canada wins 6-1",
-            "probability": 0.02,
-            "bid": 0.01,
-            "ask": 0.03,
-            "lastPrice": 0.01,
-            "volume": 151560.27,
-            "marketId": "KXWCSCORE-26JUN18CANQAT-CAN6QAT1",
-            "question": null,
-            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun18canqat"
-          }
-        ]
-      }
+      "goals2": []
     },
     {
       "key": "2026-06-24|Vancouver",
@@ -496,8 +411,8 @@
             "probability": 0.14500000000000002,
             "bid": 0.14,
             "ask": 0.15,
-            "lastPrice": 0.15,
-            "volume": 50.03,
+            "lastPrice": 0.16,
+            "volume": 2445.29,
             "marketId": "KXWCSCORE-26JUN19SCOMAR-SCO0MAR1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19scomar"
@@ -507,11 +422,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Draw 1-1",
-            "probability": 0.125,
-            "bid": 0.11,
+            "probability": 0.135,
+            "bid": 0.13,
             "ask": 0.14,
             "lastPrice": 0.14,
-            "volume": 32,
+            "volume": 3007.99,
             "marketId": "KXWCSCORE-26JUN19SCOMAR-SCO1MAR1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19scomar"
@@ -521,16 +436,38 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Morocco wins 2-0",
-            "probability": 0.11,
-            "bid": 0.1,
+            "probability": 0.11499999999999999,
+            "bid": 0.11,
             "ask": 0.12,
             "lastPrice": 0.12,
-            "volume": 161,
+            "volume": 5643.69,
             "marketId": "KXWCSCORE-26JUN19SCOMAR-SCO0MAR2",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19scomar"
           }
-        ]
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.1494845360824742,
+            "draw": 0.2886597938144329,
+            "team2": 0.5618556701030927
+          },
+          "expectedGoals": {
+            "team1": 0.7525773195876289,
+            "team2": 1.5257731958762881
+          },
+          "over25": 0.4020618556701031,
+          "bothTeamsScore": 0.45876288659793807,
+          "cleanSheet": {
+            "team1": 0.19587628865979376,
+            "team2": 0.45360824742268024
+          },
+          "topOutcome": "Morocco wins 1-0",
+          "topProbability": 0.14500000000000002,
+          "marketTotalProbability": 0.9700000000000003,
+          "outcomesCount": 23
+        }
       }
     },
     {
@@ -554,11 +491,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Brazil wins 3-0",
-            "probability": 0.14500000000000002,
-            "bid": 0.14,
+            "probability": 0.14,
+            "bid": 0.13,
             "ask": 0.15,
-            "lastPrice": 0.15,
-            "volume": 2363.17,
+            "lastPrice": 0.14,
+            "volume": 18651,
             "marketId": "KXWCSCORE-26JUN19BRAHTI-BRA3HTI0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19brahti"
@@ -568,11 +505,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Brazil wins 2-0",
-            "probability": 0.11499999999999999,
+            "probability": 0.12,
             "bid": 0.11,
-            "ask": 0.12,
+            "ask": 0.13,
             "lastPrice": 0.12,
-            "volume": 1056.9,
+            "volume": 6766.69,
             "marketId": "KXWCSCORE-26JUN19BRAHTI-BRA2HTI0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19brahti"
@@ -585,13 +522,35 @@
             "probability": 0.11499999999999999,
             "bid": 0.11,
             "ask": 0.12,
-            "lastPrice": 0.12,
-            "volume": 1048.67,
+            "lastPrice": 0.13,
+            "volume": 14729.83,
             "marketId": "KXWCSCORE-26JUN19BRAHTI-BRA4HTI0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19brahti"
           }
-        ]
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.91044776119403,
+            "draw": 0.059701492537313425,
+            "team2": 0.029850746268656716
+          },
+          "expectedGoals": {
+            "team1": 3.283582089552238,
+            "team2": 0.49253731343283597
+          },
+          "over25": 0.7412935323383086,
+          "bothTeamsScore": 0.37810945273631846,
+          "cleanSheet": {
+            "team1": 0.6069651741293532,
+            "team2": 0.029850746268656716
+          },
+          "topOutcome": "Brazil wins 3-0",
+          "topProbability": 0.14,
+          "marketTotalProbability": 1.0050000000000001,
+          "outcomesCount": 28
+        }
       }
     },
     {
@@ -717,11 +676,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "USA wins 1-0",
-            "probability": 0.125,
+            "probability": 0.13,
             "bid": 0.12,
-            "ask": 0.13,
-            "lastPrice": 0.13,
-            "volume": 844.28,
+            "ask": 0.14,
+            "lastPrice": 0.14,
+            "volume": 16255.62,
             "marketId": "KXWCSCORE-26JUN19USAAUS-USA1AUS0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19usaaus"
@@ -731,11 +690,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "USA wins 2-0",
-            "probability": 0.12,
-            "bid": 0.11,
+            "probability": 0.125,
+            "bid": 0.12,
             "ask": 0.13,
             "lastPrice": 0.13,
-            "volume": 1915.62,
+            "volume": 45574.5,
             "marketId": "KXWCSCORE-26JUN19USAAUS-USA2AUS0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19usaaus"
@@ -744,17 +703,39 @@
             "rank": 3,
             "source": "Kalshi",
             "type": "correct_score",
-            "label": "Draw 1-1",
-            "probability": 0.10500000000000001,
+            "label": "USA wins 2-1",
+            "probability": 0.11,
             "bid": 0.1,
-            "ask": 0.11,
-            "lastPrice": 0.11,
-            "volume": 671.19,
-            "marketId": "KXWCSCORE-26JUN19USAAUS-USA1AUS1",
+            "ask": 0.12,
+            "lastPrice": 0.12,
+            "volume": 138985.95,
+            "marketId": "KXWCSCORE-26JUN19USAAUS-USA2AUS1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19usaaus"
           }
-        ]
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.6231884057971019,
+            "draw": 0.2125603864734301,
+            "team2": 0.16425120772946872
+          },
+          "expectedGoals": {
+            "team1": 1.859903381642513,
+            "team2": 0.8550724637681167
+          },
+          "over25": 0.5120772946859907,
+          "bothTeamsScore": 0.5024154589371984,
+          "cleanSheet": {
+            "team1": 0.41545893719806787,
+            "team2": 0.14492753623188412
+          },
+          "topOutcome": "USA wins 1-0",
+          "topProbability": 0.13,
+          "marketTotalProbability": 1.0349999999999995,
+          "outcomesCount": 27
+        }
       }
     },
     {
@@ -778,11 +759,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Draw 1-1",
-            "probability": 0.125,
+            "probability": 0.13,
             "bid": 0.12,
-            "ask": 0.13,
-            "lastPrice": 0.13,
-            "volume": 105.37,
+            "ask": 0.14,
+            "lastPrice": 0.14,
+            "volume": 1466.71,
             "marketId": "KXWCSCORE-26JUN19TURPAR-TUR1PAR1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19turpar"
@@ -792,11 +773,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Turkiye wins 1-0",
-            "probability": 0.11,
-            "bid": 0.1,
+            "probability": 0.11499999999999999,
+            "bid": 0.11,
             "ask": 0.12,
-            "lastPrice": 0.13,
-            "volume": 34,
+            "lastPrice": 0.12,
+            "volume": 1107.05,
             "marketId": "KXWCSCORE-26JUN19TURPAR-TUR1PAR0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19turpar"
@@ -806,16 +787,38 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Turkiye wins 2-1",
-            "probability": 0.09,
-            "bid": 0.08,
-            "ask": 0.1,
-            "lastPrice": 0.1,
-            "volume": 340.2,
+            "probability": 0.1,
+            "bid": 0.09,
+            "ask": 0.11,
+            "lastPrice": 0.11,
+            "volume": 4524.87,
             "marketId": "KXWCSCORE-26JUN19TURPAR-TUR2PAR1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun19turpar"
           }
-        ]
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.489010989010989,
+            "draw": 0.2857142857142857,
+            "team2": 0.22527472527472525
+          },
+          "expectedGoals": {
+            "team1": 1.4780219780219774,
+            "team2": 0.9835164835164838
+          },
+          "over25": 0.4505494505494506,
+          "bothTeamsScore": 0.5274725274725275,
+          "cleanSheet": {
+            "team1": 0.35714285714285715,
+            "team2": 0.1978021978021978
+          },
+          "topOutcome": "Draw 1-1",
+          "topProbability": 0.13,
+          "marketTotalProbability": 0.9100000000000001,
+          "outcomesCount": 26
+        }
       }
     },
     {
@@ -949,11 +952,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Germany wins 2-0",
-            "probability": 0.11,
-            "bid": 0.1,
-            "ask": 0.12,
+            "probability": 0.1,
+            "bid": 0.09,
+            "ask": 0.11,
             "lastPrice": 0.11,
-            "volume": 37,
+            "volume": 346.61,
             "marketId": "KXWCSCORE-26JUN20GERCIV-GER2CIV0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20gerciv"
@@ -963,11 +966,11 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Germany wins 1-0",
-            "probability": 0.095,
+            "probability": 0.09,
             "bid": 0.08,
-            "ask": 0.11,
-            "lastPrice": 0,
-            "volume": 0,
+            "ask": 0.1,
+            "lastPrice": 0.11,
+            "volume": 40,
             "marketId": "KXWCSCORE-26JUN20GERCIV-GER1CIV0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20gerciv"
@@ -977,16 +980,38 @@
             "source": "Kalshi",
             "type": "correct_score",
             "label": "Germany wins 2-1",
-            "probability": 0.065,
-            "bid": 0.02,
-            "ask": 0.11,
-            "lastPrice": 0,
-            "volume": 0,
+            "probability": 0.09,
+            "bid": 0.08,
+            "ask": 0.1,
+            "lastPrice": 0.11,
+            "volume": 23,
             "marketId": "KXWCSCORE-26JUN20GERCIV-GER2CIV1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20gerciv"
           }
-        ]
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.6818181818181818,
+            "draw": 0.18831168831168824,
+            "team2": 0.12987012987012986
+          },
+          "expectedGoals": {
+            "team1": 2.0519480519480515,
+            "team2": 0.8701298701298701
+          },
+          "over25": 0.5584415584415585,
+          "bothTeamsScore": 0.5324675324675325,
+          "cleanSheet": {
+            "team1": 0.41558441558441556,
+            "team2": 0.08441558441558439
+          },
+          "topOutcome": "Germany wins 2-0",
+          "topProbability": 0.1,
+          "marketTotalProbability": 0.7700000000000002,
+          "outcomesCount": 29
+        }
       }
     },
     {
@@ -1002,7 +1027,75 @@
       "espnId": "760446",
       "score": null,
       "goals1": null,
-      "goals2": null
+      "goals2": null,
+      "betting": {
+        "correctScore": [
+          {
+            "rank": 1,
+            "source": "Kalshi",
+            "type": "correct_score",
+            "label": "Ecuador wins 2-0",
+            "probability": 0.155,
+            "bid": 0.15,
+            "ask": 0.16,
+            "lastPrice": 0.16,
+            "volume": 77,
+            "marketId": "KXWCSCORE-26JUN20ECUCUW-ECU2CUW0",
+            "question": null,
+            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20ecucuw"
+          },
+          {
+            "rank": 2,
+            "source": "Kalshi",
+            "type": "correct_score",
+            "label": "Ecuador wins 3-0",
+            "probability": 0.14500000000000002,
+            "bid": 0.14,
+            "ask": 0.15,
+            "lastPrice": 0.16,
+            "volume": 21.9,
+            "marketId": "KXWCSCORE-26JUN20ECUCUW-ECU3CUW0",
+            "question": null,
+            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20ecucuw"
+          },
+          {
+            "rank": 3,
+            "source": "Kalshi",
+            "type": "correct_score",
+            "label": "Ecuador wins 1-0",
+            "probability": 0.09,
+            "bid": 0.08,
+            "ask": 0.1,
+            "lastPrice": 0.12,
+            "volume": 50,
+            "marketId": "KXWCSCORE-26JUN20ECUCUW-ECU1CUW0",
+            "question": null,
+            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20ecucuw"
+          }
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.8862275449101796,
+            "draw": 0.0838323353293413,
+            "team2": 0.02994011976047903
+          },
+          "expectedGoals": {
+            "team1": 2.796407185628741,
+            "team2": 0.32335329341317365
+          },
+          "over25": 0.6107784431137724,
+          "bothTeamsScore": 0.2574850299401197,
+          "cleanSheet": {
+            "team1": 0.7245508982035926,
+            "team2": 0.05988023952095806
+          },
+          "topOutcome": "Ecuador wins 2-0",
+          "topProbability": 0.155,
+          "marketTotalProbability": 0.8350000000000003,
+          "outcomesCount": 24
+        }
+      }
     },
     {
       "key": "2026-06-25|Philadelphia",
@@ -1142,8 +1235,8 @@
             "probability": 0.11,
             "bid": 0.1,
             "ask": 0.12,
-            "lastPrice": 0.13,
-            "volume": 34,
+            "lastPrice": 0.11,
+            "volume": 110.84,
             "marketId": "KXWCSCORE-26JUN20NEDSWE-NED1SWE1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20nedswe"
@@ -1152,13 +1245,13 @@
             "rank": 2,
             "source": "Kalshi",
             "type": "correct_score",
-            "label": "Netherlands wins 1-0",
+            "label": "Netherlands wins 2-1",
             "probability": 0.105,
             "bid": 0.09,
             "ask": 0.12,
-            "lastPrice": 0,
-            "volume": 0,
-            "marketId": "KXWCSCORE-26JUN20NEDSWE-NED1SWE0",
+            "lastPrice": 0.12,
+            "volume": 1618.57,
+            "marketId": "KXWCSCORE-26JUN20NEDSWE-NED2SWE1",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20nedswe"
           },
@@ -1166,17 +1259,39 @@
             "rank": 3,
             "source": "Kalshi",
             "type": "correct_score",
-            "label": "Netherlands wins 2-0",
+            "label": "Netherlands wins 1-0",
             "probability": 0.1,
             "bid": 0.09,
             "ask": 0.11,
-            "lastPrice": 0.11,
-            "volume": 40,
-            "marketId": "KXWCSCORE-26JUN20NEDSWE-NED2SWE0",
+            "lastPrice": 0,
+            "volume": 0,
+            "marketId": "KXWCSCORE-26JUN20NEDSWE-NED1SWE0",
             "question": null,
             "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun20nedswe"
           }
-        ]
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.5875706214689265,
+            "draw": 0.23728813559322026,
+            "team2": 0.17514124293785308
+          },
+          "expectedGoals": {
+            "team1": 1.8531073446327675,
+            "team2": 0.9548022598870056
+          },
+          "over25": 0.5367231638418078,
+          "bothTeamsScore": 0.5480225988700564,
+          "cleanSheet": {
+            "team1": 0.3728813559322032,
+            "team2": 0.13559322033898302
+          },
+          "topOutcome": "Draw 1-1",
+          "topProbability": 0.11,
+          "marketTotalProbability": 0.8850000000000003,
+          "outcomesCount": 29
+        }
       }
     },
     {
@@ -1192,7 +1307,75 @@
       "espnId": "760449",
       "score": null,
       "goals1": null,
-      "goals2": null
+      "goals2": null,
+      "betting": {
+        "correctScore": [
+          {
+            "rank": 1,
+            "source": "Kalshi",
+            "type": "correct_score",
+            "label": "Japan wins 1-0",
+            "probability": 0.15000000000000002,
+            "bid": 0.13,
+            "ask": 0.17,
+            "lastPrice": 0,
+            "volume": 0,
+            "marketId": "KXWCSCORE-26JUN21TUNJPN-TUN0JPN1",
+            "question": null,
+            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun21tunjpn"
+          },
+          {
+            "rank": 2,
+            "source": "Kalshi",
+            "type": "correct_score",
+            "label": "Japan wins 2-0",
+            "probability": 0.125,
+            "bid": 0.12,
+            "ask": 0.13,
+            "lastPrice": 0.13,
+            "volume": 135,
+            "marketId": "KXWCSCORE-26JUN21TUNJPN-TUN0JPN2",
+            "question": null,
+            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun21tunjpn"
+          },
+          {
+            "rank": 3,
+            "source": "Kalshi",
+            "type": "correct_score",
+            "label": "Japan wins 2-1",
+            "probability": 0.095,
+            "bid": 0.08,
+            "ask": 0.11,
+            "lastPrice": 0.11,
+            "volume": 199,
+            "marketId": "KXWCSCORE-26JUN21TUNJPN-TUN1JPN2",
+            "question": null,
+            "url": "https://kalshi.com/markets/kxwcscore/world-cup-correct-score/kxwcscore-26jun21tunjpn"
+          }
+        ],
+        "summary": {
+          "source": "Kalshi",
+          "result": {
+            "team1": 0.09259259259259257,
+            "draw": 0.19135802469135796,
+            "team2": 0.7160493827160492
+          },
+          "expectedGoals": {
+            "team1": 0.6049382716049382,
+            "team2": 1.8209876543209869
+          },
+          "over25": 0.45061728395061723,
+          "bothTeamsScore": 0.39506172839506165,
+          "cleanSheet": {
+            "team1": 0.14197530864197527,
+            "team2": 0.5493827160493826
+          },
+          "topOutcome": "Japan wins 1-0",
+          "topProbability": 0.15000000000000002,
+          "marketTotalProbability": 0.8100000000000003,
+          "outcomesCount": 25
+        }
+      }
     },
     {
       "key": "2026-06-25|Dallas (Arlington)",
@@ -2486,11 +2669,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.545,
+            "probability": 0.55,
             "bid": 0.54,
-            "ask": 0.55,
+            "ask": 0.56,
             "lastPrice": 0.55,
-            "volume": 48205.051083000006,
+            "volume": 48359.798555,
             "marketId": "2070769",
             "question": "Will Algeria advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-algeria-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2501,11 +2684,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0015,
-            "bid": 0.001,
-            "ask": 0.002,
-            "lastPrice": 0.002,
-            "volume": 6788992.7,
+            "probability": 0.0005,
+            "bid": 0,
+            "ask": 0.001,
+            "lastPrice": 0.001,
+            "volume": 6796721.79,
             "marketId": "KXMENWORLDCUP-26-DZA",
             "question": "Will Algeria win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2514,11 +2697,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0015,
-            "bid": 0.001,
-            "ask": 0.002,
-            "lastPrice": 0.002,
-            "volume": 62418977.31721536,
+            "probability": 0.001,
+            "bid": null,
+            "ask": 0.001,
+            "lastPrice": 0.001,
+            "volume": 62545169.55721534,
             "marketId": "558969",
             "question": "Will Algeria win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-algeria-win-the-2026-fifa-world-cup"
@@ -2550,7 +2733,7 @@
             "bid": 0.108,
             "ask": 0.109,
             "lastPrice": 0.109,
-            "volume": 12018316.66,
+            "volume": 12252233.45,
             "marketId": "KXMENWORLDCUP-26-AR",
             "question": "Will the Argentina win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2562,8 +2745,8 @@
             "probability": 0.1175,
             "bid": 0.117,
             "ask": 0.118,
-            "lastPrice": 0.118,
-            "volume": 60668987.45106869,
+            "lastPrice": 0.117,
+            "volume": 60826296.04025061,
             "marketId": "558938",
             "question": "Will Argentina win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-argentina-win-the-2026-fifa-world-cup-245"
@@ -2576,11 +2759,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.86,
+            "probability": 0.855,
             "bid": 0.85,
-            "ask": 0.87,
+            "ask": 0.86,
             "lastPrice": 0.86,
-            "volume": 52753.77489400009,
+            "volume": 53561.472407000096,
             "marketId": "2070744",
             "question": "Will Australia advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-australia-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2595,7 +2778,7 @@
             "bid": 0.003,
             "ask": 0.004,
             "lastPrice": 0.004,
-            "volume": 6097766.05,
+            "volume": 6129901.29,
             "marketId": "KXMENWORLDCUP-26-AU",
             "question": "Will the Australia win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2608,7 +2791,7 @@
             "bid": 0.004,
             "ask": 0.005,
             "lastPrice": 0.004,
-            "volume": 69240052.39815646,
+            "volume": 69320057.1369065,
             "marketId": "558958",
             "question": "Will Australia win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-australia-win-the-2026-fifa-world-cup-816"
@@ -2621,11 +2804,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.925,
-            "bid": 0.92,
+            "probability": 0.92,
+            "bid": 0.91,
             "ask": 0.93,
-            "lastPrice": 0.93,
-            "volume": 47480.98373099983,
+            "lastPrice": 0.92,
+            "volume": 48083.11373099983,
             "marketId": "2070768",
             "question": "Will Austria advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-austria-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2640,7 +2823,7 @@
             "bid": 0.003,
             "ask": 0.004,
             "lastPrice": 0.004,
-            "volume": 7915195.04,
+            "volume": 7959394.09,
             "marketId": "KXMENWORLDCUP-26-AT",
             "question": "Will the Austria win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2652,8 +2835,8 @@
             "probability": 0.0045000000000000005,
             "bid": 0.004,
             "ask": 0.005,
-            "lastPrice": 0.005,
-            "volume": 60058390.32407627,
+            "lastPrice": 0.004,
+            "volume": 60146759.20507628,
             "marketId": "558975",
             "question": "Will Austria win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-austria-win-the-2026-fifa-world-cup"
@@ -2666,11 +2849,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.957,
-            "bid": 0.956,
-            "ask": 0.958,
+            "probability": 0.9535,
+            "bid": 0.95,
+            "ask": 0.957,
             "lastPrice": 0.958,
-            "volume": 49374.827478999985,
+            "volume": 49379.232478999984,
             "marketId": "2070755",
             "question": "Will Belgium advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-belgium-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2685,7 +2868,7 @@
             "bid": 0.016,
             "ask": 0.017,
             "lastPrice": 0.017,
-            "volume": 7689491.74,
+            "volume": 7699162.98,
             "marketId": "KXMENWORLDCUP-26-BE",
             "question": "Will the Belgium win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2697,8 +2880,8 @@
             "probability": 0.0155,
             "bid": 0.015,
             "ask": 0.016,
-            "lastPrice": 0.015,
-            "volume": 57627476.64797969,
+            "lastPrice": 0.016,
+            "volume": 57786179.46783968,
             "marketId": "558946",
             "question": "Will Belgium win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-belgium-win-the-2026-fifa-world-cup-358"
@@ -2712,28 +2895,13 @@
             "type": "advance",
             "label": "Reach knockouts",
             "probability": 0.665,
-            "bid": 0.65,
-            "ask": 0.68,
-            "lastPrice": 0.63,
-            "volume": 92127.69378499995,
+            "bid": 0.66,
+            "ask": 0.67,
+            "lastPrice": 0.67,
+            "volume": 92511.82115899997,
             "marketId": "2070738",
             "question": "Will Bosnia and Herzegovina advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-bosnia-and-herzegovina-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
-          }
-        ],
-        "group_winner": [
-          {
-            "source": "Polymarket",
-            "type": "group_winner",
-            "label": "Group B",
-            "probability": 0.0015,
-            "bid": 0.001,
-            "ask": 0.002,
-            "lastPrice": 0.001,
-            "volume": 241039.3220290001,
-            "marketId": "839395",
-            "question": "Will Bosnia and Herzegovina win Group B in the 2026 FIFA World Cup?",
-            "url": "https://polymarket.com/market/will-the-winner-of-bosnia-and-herzegovinaitalynorthern-irelandwales-win-group-a-in-the-2026-fifa-world-cup"
           }
         ],
         "winner": [
@@ -2745,7 +2913,7 @@
             "bid": 0,
             "ask": 0.01,
             "lastPrice": 0.01,
-            "volume": 377576.29,
+            "volume": 379923.61,
             "marketId": "KXMENWORLDCUP-26-BIH",
             "question": "Will Bosnia and Herzegovina win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2758,11 +2926,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.9704999999999999,
-            "bid": 0.969,
-            "ask": 0.972,
-            "lastPrice": 0.969,
-            "volume": 68289.79303099998,
+            "probability": 0.966,
+            "bid": 0.959,
+            "ask": 0.973,
+            "lastPrice": 0.973,
+            "volume": 71442.82186599997,
             "marketId": "2070739",
             "question": "Will Brazil advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-brazil-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2776,8 +2944,8 @@
             "probability": 0.0675,
             "bid": 0.067,
             "ask": 0.068,
-            "lastPrice": 0.068,
-            "volume": 10063978.22,
+            "lastPrice": 0.067,
+            "volume": 10157589.24,
             "marketId": "KXMENWORLDCUP-26-BR",
             "question": "Will the Brazil win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2790,7 +2958,7 @@
             "bid": 0.066,
             "ask": 0.067,
             "lastPrice": 0.067,
-            "volume": 44096514.36293303,
+            "volume": 44460961.37413602,
             "marketId": "558937",
             "question": "Will Brazil win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-brazil-win-the-2026-fifa-world-cup-183"
@@ -2803,29 +2971,14 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.997,
-            "bid": 0.995,
+            "probability": 0.9964999999999999,
+            "bid": 0.994,
             "ask": 0.999,
             "lastPrice": 0.999,
-            "volume": 66127.99066899912,
+            "volume": 66431.38872499911,
             "marketId": "2070735",
             "question": "Will Canada advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-canada-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
-          }
-        ],
-        "group_winner": [
-          {
-            "source": "Polymarket",
-            "type": "group_winner",
-            "label": "Group B",
-            "probability": 0.605,
-            "bid": 0.6,
-            "ask": 0.61,
-            "lastPrice": 0.6,
-            "volume": 178709.30447899975,
-            "marketId": "839394",
-            "question": "Will Canada win Group B in the 2026 FIFA World Cup?",
-            "url": "https://polymarket.com/market/will-canada-win-group-a-in-the-2026-fifa-world-cup"
           }
         ],
         "winner": [
@@ -2833,11 +2986,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0045000000000000005,
-            "bid": 0.004,
-            "ask": 0.005,
-            "lastPrice": 0.005,
-            "volume": 5723507.19,
+            "probability": 0.0035,
+            "bid": 0.003,
+            "ask": 0.004,
+            "lastPrice": 0.004,
+            "volume": 6312890.45,
             "marketId": "KXMENWORLDCUP-26-CA",
             "question": "Will the Canada win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2850,7 +3003,7 @@
             "bid": 0.003,
             "ask": 0.004,
             "lastPrice": 0.004,
-            "volume": 60699496.83974735,
+            "volume": 61199301.12606436,
             "marketId": "558952",
             "question": "Will Canada win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-canada-win-the-2026-fifa-world-cup-755"
@@ -2863,11 +3016,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.39,
-            "bid": 0.38,
-            "ask": 0.4,
+            "probability": 0.405,
+            "bid": 0.4,
+            "ask": 0.41,
             "lastPrice": 0.41,
-            "volume": 71042.89481999999,
+            "volume": 71600.77853699998,
             "marketId": "2070762",
             "question": "Will Cape Verde advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-cape-verde-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2882,7 +3035,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 4893411.71,
+            "volume": 4953676.75,
             "marketId": "KXMENWORLDCUP-26-CPV",
             "question": "Will Cape Verde win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2895,7 +3048,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 48737544.45716406,
+            "volume": 48987714.45716406,
             "marketId": "558970",
             "question": "Will Cape Verde win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-cape-verde-win-the-2026-fifa-world-cup"
@@ -2911,8 +3064,8 @@
             "probability": 0.9744999999999999,
             "bid": 0.974,
             "ask": 0.975,
-            "lastPrice": 0.97,
-            "volume": 55873.591821000016,
+            "lastPrice": 0.975,
+            "volume": 56449.96102100002,
             "marketId": "2070772",
             "question": "Will Colombia advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-colombia-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2923,11 +3076,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0175,
-            "bid": 0.017,
-            "ask": 0.018,
-            "lastPrice": 0.018,
-            "volume": 9282178.65,
+            "probability": 0.0185,
+            "bid": 0.018,
+            "ask": 0.019,
+            "lastPrice": 0.019,
+            "volume": 9459980.56,
             "marketId": "KXMENWORLDCUP-26-CO",
             "question": "Will the Colombia win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2939,8 +3092,8 @@
             "probability": 0.0165,
             "bid": 0.016,
             "ask": 0.017,
-            "lastPrice": 0.017,
-            "volume": 57034440.95333203,
+            "lastPrice": 0.016,
+            "volume": 57144762.45477202,
             "marketId": "558947",
             "question": "Will Colombia win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-colombia-win-the-2026-fifa-world-cup-734"
@@ -2953,11 +3106,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.765,
-            "bid": 0.76,
-            "ask": 0.77,
-            "lastPrice": 0.76,
-            "volume": 73032.19861099999,
+            "probability": 0.785,
+            "bid": 0.78,
+            "ask": 0.79,
+            "lastPrice": 0.79,
+            "volume": 85311.60132499998,
             "marketId": "2070776",
             "question": "Will Croatia advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-croatia-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -2972,7 +3125,7 @@
             "bid": 0.006,
             "ask": 0.007,
             "lastPrice": 0.007,
-            "volume": 8109920.04,
+            "volume": 8142847.27,
             "marketId": "KXMENWORLDCUP-26-HR",
             "question": "Will the Croatia win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -2985,7 +3138,7 @@
             "bid": 0.006,
             "ask": 0.007,
             "lastPrice": 0.007,
-            "volume": 63276925.03276164,
+            "volume": 63441481.907356605,
             "marketId": "558976",
             "question": "Will Croatia win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-croatia-win-the-2026-fifa-world-cup"
@@ -2998,11 +3151,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.028000000000000004,
+            "probability": 0.025500000000000002,
             "bid": 0.021,
-            "ask": 0.035,
-            "lastPrice": 0.021,
-            "volume": 92045.16117300001,
+            "ask": 0.03,
+            "lastPrice": 0.03,
+            "volume": 92520.79430700005,
             "marketId": "2070750",
             "question": "Will Curacao advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-curacao-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3017,7 +3170,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 1152731.1,
+            "volume": 1193914.9,
             "marketId": "KXMENWORLDCUP-26-CUW",
             "question": "Will Curacao win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3043,11 +3196,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.21000000000000002,
-            "bid": 0.2,
-            "ask": 0.22,
-            "lastPrice": 0.2,
-            "volume": 49523.98221199995,
+            "probability": 0.335,
+            "bid": 0.33,
+            "ask": 0.34,
+            "lastPrice": 0.34,
+            "volume": 58593.03968799994,
             "marketId": "2070734",
             "question": "Will Czechia advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-czechia-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3062,7 +3215,7 @@
             "bid": 0,
             "ask": 0.01,
             "lastPrice": 0.01,
-            "volume": 151762.16,
+            "volume": 155044.67,
             "marketId": "KXMENWORLDCUP-26-CZE",
             "question": "Will Czechia win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3075,7 +3228,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 56917236.593015656,
+            "volume": 56923222.07301566,
             "marketId": "558984",
             "question": "Will Czechia win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-czechia-win-the-2026-fifa-world-cup"
@@ -3088,11 +3241,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.59,
-            "bid": 0.58,
+            "probability": 0.595,
+            "bid": 0.59,
             "ask": 0.6,
-            "lastPrice": 0.58,
-            "volume": 62316.546258999966,
+            "lastPrice": 0.6,
+            "volume": 62523.13860899996,
             "marketId": "2070774",
             "question": "Will DR Congo advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-dr-congo-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3107,7 +3260,7 @@
             "bid": 0,
             "ask": 0.01,
             "lastPrice": 0.01,
-            "volume": 157652.86,
+            "volume": 185635.7,
             "marketId": "KXMENWORLDCUP-26-COD",
             "question": "Will Congo DR win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3120,7 +3273,7 @@
             "bid": 0.001,
             "ask": 0.002,
             "lastPrice": 0.001,
-            "volume": 75789361.00407165,
+            "volume": 76335066.4990717,
             "marketId": "558981",
             "question": "Will Congo DR win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-congo-dr-win-the-2026-fifa-world-cup"
@@ -3137,7 +3290,7 @@
             "bid": 0.78,
             "ask": 0.79,
             "lastPrice": 0.79,
-            "volume": 40235.74897200001,
+            "volume": 40238.28061600001,
             "marketId": "2070748",
             "question": "Will Ecuador advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-ecuador-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3148,11 +3301,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0045000000000000005,
-            "bid": 0.004,
-            "ask": 0.005,
-            "lastPrice": 0.005,
-            "volume": 8175851.44,
+            "probability": 0.0055,
+            "bid": 0.005,
+            "ask": 0.006,
+            "lastPrice": 0.006,
+            "volume": 8323275.65,
             "marketId": "KXMENWORLDCUP-26-EC",
             "question": "Will the Ecuador win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3165,7 +3318,7 @@
             "bid": 0.004,
             "ask": 0.005,
             "lastPrice": 0.004,
-            "volume": 60024034.86116146,
+            "volume": 60472926.18466147,
             "marketId": "558955",
             "question": "Will Ecuador win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-ecuador-win-the-2026-fifa-world-cup-986"
@@ -3178,11 +3331,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.825,
-            "bid": 0.82,
+            "probability": 0.8200000000000001,
+            "bid": 0.81,
             "ask": 0.83,
-            "lastPrice": 0.82,
-            "volume": 14938.158701000004,
+            "lastPrice": 0.81,
+            "volume": 15086.132779000003,
             "marketId": "2070757",
             "question": "Will Egypt advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-egypt-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3196,8 +3349,8 @@
             "probability": 0.0025,
             "bid": 0.002,
             "ask": 0.003,
-            "lastPrice": 0.003,
-            "volume": 7351289.74,
+            "lastPrice": 0.002,
+            "volume": 7413462.09,
             "marketId": "KXMENWORLDCUP-26-EGY",
             "question": "Will Egypt win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3210,7 +3363,7 @@
             "bid": 0.002,
             "ask": 0.003,
             "lastPrice": 0.002,
-            "volume": 65741688.74928672,
+            "volume": 65896061.931283735,
             "marketId": "558968",
             "question": "Will Egypt win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-egypt-win-the-2026-fifa-world-cup"
@@ -3223,11 +3376,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.995,
+            "probability": 0.996,
             "bid": 0.993,
-            "ask": 0.997,
-            "lastPrice": 0.997,
-            "volume": 40610.55079100002,
+            "ask": 0.999,
+            "lastPrice": 0.999,
+            "volume": 41309.72479100002,
             "marketId": "2070775",
             "question": "Will England advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-england-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3238,11 +3391,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.1295,
-            "bid": 0.129,
-            "ask": 0.13,
-            "lastPrice": 0.13,
-            "volume": 11209750.87,
+            "probability": 0.1285,
+            "bid": 0.128,
+            "ask": 0.129,
+            "lastPrice": 0.129,
+            "volume": 11421618.69,
             "marketId": "KXMENWORLDCUP-26-GB",
             "question": "Will the England win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3255,7 +3408,7 @@
             "bid": 0.128,
             "ask": 0.129,
             "lastPrice": 0.129,
-            "volume": 46089309.46347525,
+            "volume": 46515541.20272816,
             "marketId": "558935",
             "question": "Will England win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-england-win-the-2026-fifa-world-cup-937"
@@ -3271,8 +3424,8 @@
             "probability": 0.9935,
             "bid": 0.992,
             "ask": 0.995,
-            "lastPrice": 0.995,
-            "volume": 236088.22705499997,
+            "lastPrice": 0.992,
+            "volume": 236237.35268199997,
             "marketId": "2070763",
             "question": "Will France advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-france-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3283,11 +3436,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.1875,
-            "bid": 0.187,
-            "ask": 0.188,
-            "lastPrice": 0.188,
-            "volume": 17229754.88,
+            "probability": 0.185,
+            "bid": 0.183,
+            "ask": 0.187,
+            "lastPrice": 0.187,
+            "volume": 17652638.54,
             "marketId": "KXMENWORLDCUP-26-FR",
             "question": "Will the France win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3299,8 +3452,8 @@
             "probability": 0.1845,
             "bid": 0.184,
             "ask": 0.185,
-            "lastPrice": 0.185,
-            "volume": 60374711.00767622,
+            "lastPrice": 0.184,
+            "volume": 61551040.699023254,
             "marketId": "558936",
             "question": "Will France win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-france-win-the-2026-fifa-world-cup-924"
@@ -3313,11 +3466,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.9935,
+            "probability": 0.9944999999999999,
             "bid": 0.992,
-            "ask": 0.995,
-            "lastPrice": 0.995,
-            "volume": 61290.634470999976,
+            "ask": 0.997,
+            "lastPrice": 0.996,
+            "volume": 61701.86447099998,
             "marketId": "2070747",
             "question": "Will Germany advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-germany-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3328,11 +3481,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0595,
-            "bid": 0.059,
-            "ask": 0.06,
-            "lastPrice": 0.06,
-            "volume": 9903077.63,
+            "probability": 0.0605,
+            "bid": 0.06,
+            "ask": 0.061,
+            "lastPrice": 0.061,
+            "volume": 10071108.81,
             "marketId": "KXMENWORLDCUP-26-DE",
             "question": "Will the Germany win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3345,7 +3498,7 @@
             "bid": 0.058,
             "ask": 0.059,
             "lastPrice": 0.058,
-            "volume": 53977060.14895503,
+            "volume": 54431874.46140304,
             "marketId": "558939",
             "question": "Will Germany win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-germany-win-the-2026-fifa-world-cup-467"
@@ -3358,11 +3511,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.695,
-            "bid": 0.69,
-            "ask": 0.7,
-            "lastPrice": 0.71,
-            "volume": 114284.11869399999,
+            "probability": 0.715,
+            "bid": 0.71,
+            "ask": 0.72,
+            "lastPrice": 0.72,
+            "volume": 116942.044109,
             "marketId": "2070778",
             "question": "Will Ghana advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-ghana-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3377,7 +3530,7 @@
             "bid": 0.001,
             "ask": 0.002,
             "lastPrice": 0.002,
-            "volume": 5555327.76,
+            "volume": 5647568.03,
             "marketId": "KXMENWORLDCUP-26-GH",
             "question": "Will the Ghana win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3386,11 +3539,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0015,
-            "bid": 0.001,
-            "ask": 0.002,
-            "lastPrice": 0.002,
-            "volume": 51989494.60844148,
+            "probability": 0.001,
+            "bid": null,
+            "ask": 0.001,
+            "lastPrice": 0.001,
+            "volume": 53192513.05344147,
             "marketId": "558967",
             "question": "Will Ghana win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-ghana-win-the-2026-fifa-world-cup"
@@ -3403,11 +3556,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.039,
-            "bid": 0.038,
-            "ask": 0.04,
-            "lastPrice": 0.038,
-            "volume": 114920.12273100002,
+            "probability": 0.020499999999999997,
+            "bid": 0.019,
+            "ask": 0.022,
+            "lastPrice": 0.022,
+            "volume": 136238.9479639999,
             "marketId": "2070742",
             "question": "Will Haiti advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-haiti-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3422,7 +3575,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 7171239.89,
+            "volume": 7180744.92,
             "marketId": "KXMENWORLDCUP-26-HTI",
             "question": "Will Haiti win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3435,7 +3588,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 32834991.54182009,
+            "volume": 32956991.54182009,
             "marketId": "558977",
             "question": "Will Haiti win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-haiti-win-the-2026-fifa-world-cup"
@@ -3448,11 +3601,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.4135,
-            "bid": 0.411,
+            "probability": 0.414,
+            "bid": 0.412,
             "ask": 0.416,
             "lastPrice": 0.416,
-            "volume": 44669.77091900003,
+            "volume": 44692.169289000034,
             "marketId": "2070756",
             "question": "Will Iran advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-iran-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3463,11 +3616,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0015,
-            "bid": 0.001,
-            "ask": 0.002,
-            "lastPrice": 0.002,
-            "volume": 10177643.48,
+            "probability": 0.0005,
+            "bid": 0,
+            "ask": 0.001,
+            "lastPrice": 0.001,
+            "volume": 10209754.97,
             "marketId": "KXMENWORLDCUP-26-IR",
             "question": "Will the Iran win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3480,7 +3633,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 56312779.226789795,
+            "volume": 56319139.0267898,
             "marketId": "558959",
             "question": "Will Iran win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-iran-win-the-2026-fifa-world-cup-788"
@@ -3497,7 +3650,7 @@
             "bid": 0.05,
             "ask": 0.06,
             "lastPrice": 0.05,
-            "volume": 213679.1450579998,
+            "volume": 213808.1676779998,
             "marketId": "2070766",
             "question": "Will Iraq advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-iraq-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3512,7 +3665,7 @@
             "bid": 0,
             "ask": 0.01,
             "lastPrice": 0.01,
-            "volume": 152775.24,
+            "volume": 153252.18,
             "marketId": "KXMENWORLDCUP-26-IRQ",
             "question": "Will Iraq win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3538,11 +3691,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.953,
-            "bid": 0.947,
-            "ask": 0.959,
-            "lastPrice": 0.948,
-            "volume": 33529.53393199996,
+            "probability": 0.9544999999999999,
+            "bid": 0.945,
+            "ask": 0.964,
+            "lastPrice": 0.96,
+            "volume": 33872.34065799996,
             "marketId": "2070749",
             "question": "Will Ivory Coast advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-ivory-coast-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3557,7 +3710,7 @@
             "bid": 0.004,
             "ask": 0.005,
             "lastPrice": 0.005,
-            "volume": 11257388.5,
+            "volume": 11401802.42,
             "marketId": "KXMENWORLDCUP-26-CIV",
             "question": "Will Ivory Coast win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3570,7 +3723,7 @@
             "bid": 0.004,
             "ask": 0.005,
             "lastPrice": 0.005,
-            "volume": 70548606.7441053,
+            "volume": 71461216.67735529,
             "marketId": "558966",
             "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-ivory-coast-win-the-2026-fifa-world-cup"
@@ -3583,11 +3736,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.845,
-            "bid": 0.84,
-            "ask": 0.85,
-            "lastPrice": 0.85,
-            "volume": 126049.38298399994,
+            "probability": 0.855,
+            "bid": 0.85,
+            "ask": 0.86,
+            "lastPrice": 0.86,
+            "volume": 127468.80606699994,
             "marketId": "2070752",
             "question": "Will Japan advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-japan-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3602,7 +3755,7 @@
             "bid": 0.015,
             "ask": 0.016,
             "lastPrice": 0.016,
-            "volume": 9195631.62,
+            "volume": 9267358.22,
             "marketId": "KXMENWORLDCUP-26-JP",
             "question": "Will the Japan win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3614,8 +3767,8 @@
             "probability": 0.0165,
             "bid": 0.016,
             "ask": 0.017,
-            "lastPrice": 0.017,
-            "volume": 58526912.40797974,
+            "lastPrice": 0.016,
+            "volume": 58798999.582410686,
             "marketId": "558949",
             "question": "Will Japan win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-japan-win-the-2026-fifa-world-cup-112"
@@ -3632,7 +3785,7 @@
             "bid": 0.1,
             "ask": 0.11,
             "lastPrice": 0.11,
-            "volume": 80281.27293000004,
+            "volume": 80319.06404000003,
             "marketId": "2070770",
             "question": "Will Jordan advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-jordan-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3647,7 +3800,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 782888.18,
+            "volume": 788770.68,
             "marketId": "KXMENWORLDCUP-26-JOR",
             "question": "Will Jordan win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3660,7 +3813,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 32773934.86188277,
+            "volume": 32778324.86188277,
             "marketId": "558962",
             "question": "Will Jordan win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-jordan-win-the-2026-fifa-world-cup-233"
@@ -3668,31 +3821,16 @@
         ]
       },
       "Mexico": {
-        "advance": [
-          {
-            "source": "Polymarket",
-            "type": "advance",
-            "label": "Reach knockouts",
-            "probability": 0.9695,
-            "bid": 0.969,
-            "ask": 0.97,
-            "lastPrice": 0.97,
-            "volume": 93210.89480300003,
-            "marketId": "2070731",
-            "question": "Will Mexico advance to the knockout stages at the 2026 FIFA World Cup?",
-            "url": "https://polymarket.com/market/will-mexico-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
-          }
-        ],
         "winner": [
           {
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0165,
-            "bid": 0.016,
-            "ask": 0.017,
-            "lastPrice": 0.017,
-            "volume": 20685750.12,
+            "probability": 0.0195,
+            "bid": 0.019,
+            "ask": 0.02,
+            "lastPrice": 0.02,
+            "volume": 22282840.14,
             "marketId": "KXMENWORLDCUP-26-MX",
             "question": "Will the Mexico win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3701,11 +3839,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0135,
-            "bid": 0.013,
-            "ask": 0.014,
-            "lastPrice": 0.013,
-            "volume": 72120787.60152736,
+            "probability": 0.0155,
+            "bid": 0.015,
+            "ask": 0.016,
+            "lastPrice": 0.015,
+            "volume": 75927924.17883427,
             "marketId": "558945",
             "question": "Will Mexico win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-mexico-win-the-2026-fifa-world-cup-529"
@@ -3718,11 +3856,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.94,
+            "probability": 0.935,
             "bid": 0.93,
-            "ask": 0.95,
-            "lastPrice": 0.92,
-            "volume": 82964.440846,
+            "ask": 0.94,
+            "lastPrice": 0.94,
+            "volume": 88477.44774700001,
             "marketId": "2070740",
             "question": "Will Morocco advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-morocco-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3737,7 +3875,7 @@
             "bid": 0.019,
             "ask": 0.02,
             "lastPrice": 0.02,
-            "volume": 12445415.75,
+            "volume": 12671896.4,
             "marketId": "KXMENWORLDCUP-26-MA",
             "question": "Will the Morocco win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3746,11 +3884,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0235,
-            "bid": 0.023,
-            "ask": 0.024,
-            "lastPrice": 0.023,
-            "volume": 60637039.9019576,
+            "probability": 0.0245,
+            "bid": 0.024,
+            "ask": 0.025,
+            "lastPrice": 0.025,
+            "volume": 61226425.307469666,
             "marketId": "558963",
             "question": "Will Morocco win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-morocco-win-the-2026-fifa-world-cup-464"
@@ -3766,8 +3904,8 @@
             "probability": 0.925,
             "bid": 0.92,
             "ask": 0.93,
-            "lastPrice": 0.91,
-            "volume": 87761.75003299999,
+            "lastPrice": 0.93,
+            "volume": 89434.140629,
             "marketId": "2070751",
             "question": "Will Netherlands advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-netherlands-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3778,11 +3916,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0435,
-            "bid": 0.043,
-            "ask": 0.044,
-            "lastPrice": 0.044,
-            "volume": 16497221.87,
+            "probability": 0.042499999999999996,
+            "bid": 0.042,
+            "ask": 0.043,
+            "lastPrice": 0.043,
+            "volume": 16708095.78,
             "marketId": "KXMENWORLDCUP-26-NL",
             "question": "Will the Netherlands win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3795,7 +3933,7 @@
             "bid": 0.039,
             "ask": 0.04,
             "lastPrice": 0.039,
-            "volume": 53413469.54973258,
+            "volume": 53691312.255853586,
             "marketId": "558941",
             "question": "Will Netherlands win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-netherlands-win-the-2026-fifa-world-cup-739"
@@ -3812,7 +3950,7 @@
             "bid": 0.3,
             "ask": 0.31,
             "lastPrice": 0.31,
-            "volume": 116114.64549999993,
+            "volume": 116410.84844599992,
             "marketId": "2070758",
             "question": "Will New Zealand advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-new-zealand-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3827,7 +3965,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 2431966.24,
+            "volume": 2496148.17,
             "marketId": "KXMENWORLDCUP-26-NZL",
             "question": "Will New Zealand win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3840,7 +3978,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 46894431.662645176,
+            "volume": 46902741.662645176,
             "marketId": "558957",
             "question": "Will New Zealand win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-new-zealand-win-the-2026-fifa-world-cup-635"
@@ -3853,11 +3991,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.956,
-            "bid": 0.95,
-            "ask": 0.962,
-            "lastPrice": 0.951,
-            "volume": 145487.10387299978,
+            "probability": 0.9595,
+            "bid": 0.951,
+            "ask": 0.968,
+            "lastPrice": 0.968,
+            "volume": 145489.16998699977,
             "marketId": "2070765",
             "question": "Will Norway advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-norway-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3872,7 +4010,7 @@
             "bid": 0.025,
             "ask": 0.026,
             "lastPrice": 0.026,
-            "volume": 8398792.62,
+            "volume": 8932081.27,
             "marketId": "KXMENWORLDCUP-26-NO",
             "question": "Will the Norway win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3885,7 +4023,7 @@
             "bid": 0.025,
             "ask": 0.026,
             "lastPrice": 0.026,
-            "volume": 55279105.261113875,
+            "volume": 55423240.78760785,
             "marketId": "558951",
             "question": "Will Norway win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-norway-win-the-2026-fifa-world-cup-893"
@@ -3898,11 +4036,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.11499999999999999,
-            "bid": 0.11,
-            "ask": 0.12,
-            "lastPrice": 0.12,
-            "volume": 68652.84402200002,
+            "probability": 0.125,
+            "bid": 0.12,
+            "ask": 0.13,
+            "lastPrice": 0.11,
+            "volume": 69081.93997600002,
             "marketId": "2070777",
             "question": "Will Panama advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-panama-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3917,7 +4055,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 5484008.58,
+            "volume": 5494986.88,
             "marketId": "KXMENWORLDCUP-26-PAN",
             "question": "Will Panama win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3930,7 +4068,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 20023820.065756883,
+            "volume": 20028210.065756883,
             "marketId": "558979",
             "question": "Will Panama win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-team-z-win-the-2026-fifa-world-cup-316"
@@ -3947,7 +4085,7 @@
             "bid": 0.37,
             "ask": 0.38,
             "lastPrice": 0.38,
-            "volume": 56060.36105600004,
+            "volume": 56118.84559200004,
             "marketId": "2070745",
             "question": "Will Paraguay advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-paraguay-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -3962,7 +4100,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 5769919.3,
+            "volume": 5799670.7,
             "marketId": "KXMENWORLDCUP-26-PY",
             "question": "Will the Paraguay win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -3975,7 +4113,7 @@
             "bid": 0.001,
             "ask": 0.002,
             "lastPrice": 0.001,
-            "volume": 61128870.97698735,
+            "volume": 61204726.922987334,
             "marketId": "558956",
             "question": "Will Paraguay win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-paraguay-win-the-2026-fifa-world-cup-967"
@@ -3988,11 +4126,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.9515,
-            "bid": 0.951,
-            "ask": 0.952,
-            "lastPrice": 0.952,
-            "volume": 114365.75371000005,
+            "probability": 0.9385,
+            "bid": 0.933,
+            "ask": 0.944,
+            "lastPrice": 0.944,
+            "volume": 118604.77675900006,
             "marketId": "2070771",
             "question": "Will Portugal advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-portugal-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4003,11 +4141,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0835,
-            "bid": 0.082,
-            "ask": 0.085,
-            "lastPrice": 0.085,
-            "volume": 20504354.02,
+            "probability": 0.079,
+            "bid": 0.078,
+            "ask": 0.08,
+            "lastPrice": 0.08,
+            "volume": 20769993.29,
             "marketId": "KXMENWORLDCUP-26-PT",
             "question": "Will the Portugal win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4016,11 +4154,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0775,
-            "bid": 0.077,
-            "ask": 0.078,
-            "lastPrice": 0.077,
-            "volume": 55533278.37257583,
+            "probability": 0.0735,
+            "bid": 0.073,
+            "ask": 0.074,
+            "lastPrice": 0.073,
+            "volume": 56101508.25837885,
             "marketId": "558940",
             "question": "Will Portugal win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-portugal-win-the-2026-fifa-world-cup-912"
@@ -4033,29 +4171,14 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.125,
+            "probability": 0.11499999999999999,
             "bid": 0.11,
-            "ask": 0.14,
-            "lastPrice": 0.11,
-            "volume": 155083.206202,
+            "ask": 0.12,
+            "lastPrice": 0.12,
+            "volume": 155982.46068999998,
             "marketId": "2070737",
             "question": "Will Qatar advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-qatar-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
-          }
-        ],
-        "group_winner": [
-          {
-            "source": "Polymarket",
-            "type": "group_winner",
-            "label": "Group B",
-            "probability": 0.001,
-            "bid": null,
-            "ask": 0.001,
-            "lastPrice": 0.001,
-            "volume": 150934.58143399985,
-            "marketId": "839396",
-            "question": "Will Qatar win Group B in the 2026 FIFA World Cup?",
-            "url": "https://polymarket.com/market/will-qatar-win-group-a-in-the-2026-fifa-world-cup"
           }
         ],
         "winner": [
@@ -4067,7 +4190,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 1278119.2,
+            "volume": 1282870.6,
             "marketId": "KXMENWORLDCUP-26-QAT",
             "question": "Will Qatar win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4096,8 +4219,8 @@
             "probability": 0.435,
             "bid": 0.43,
             "ask": 0.44,
-            "lastPrice": 0.43,
-            "volume": 170760.08118199994,
+            "lastPrice": 0.44,
+            "volume": 170974.29010899994,
             "marketId": "2070761",
             "question": "Will Saudi Arabia advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-saudi-arabia-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4112,7 +4235,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 2336926.27,
+            "volume": 2366223.77,
             "marketId": "KXMENWORLDCUP-26-SA",
             "question": "Will the Saudi Arabia win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4125,7 +4248,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 56330714.20288371,
+            "volume": 56331714.20288371,
             "marketId": "558972",
             "question": "Will Saudi Arabia win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-saudi-arabia-win-the-2026-fifa-world-cup"
@@ -4138,11 +4261,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.765,
-            "bid": 0.76,
-            "ask": 0.77,
+            "probability": 0.79,
+            "bid": 0.78,
+            "ask": 0.8,
             "lastPrice": 0.8,
-            "volume": 127231.80612299974,
+            "volume": 141377.6113709997,
             "marketId": "2070741",
             "question": "Will Scotland advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-scotland-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4157,7 +4280,7 @@
             "bid": 0.001,
             "ask": 0.002,
             "lastPrice": 0.002,
-            "volume": 6391272.59,
+            "volume": 6497267.76,
             "marketId": "KXMENWORLDCUP-26-SC",
             "question": "Will the Scotland win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4166,11 +4289,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0025,
-            "bid": 0.002,
-            "ask": 0.003,
-            "lastPrice": 0.003,
-            "volume": 60556611.00358234,
+            "probability": 0.0015,
+            "bid": 0.001,
+            "ask": 0.002,
+            "lastPrice": 0.002,
+            "volume": 60662410.71874734,
             "marketId": "558973",
             "question": "Will Scotland win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-scotland-win-the-2026-fifa-world-cup"
@@ -4187,7 +4310,7 @@
             "bid": 0.67,
             "ask": 0.68,
             "lastPrice": 0.68,
-            "volume": 80576.47529899988,
+            "volume": 80682.95389399989,
             "marketId": "2070764",
             "question": "Will Senegal advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-senegal-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4198,11 +4321,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0055,
-            "bid": 0.005,
-            "ask": 0.006,
-            "lastPrice": 0.006,
-            "volume": 6686429.7,
+            "probability": 0.0045000000000000005,
+            "bid": 0.004,
+            "ask": 0.005,
+            "lastPrice": 0.005,
+            "volume": 6697680.87,
             "marketId": "KXMENWORLDCUP-26-SN",
             "question": "Will the Senegal win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4211,11 +4334,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.006500000000000001,
-            "bid": 0.006,
-            "ask": 0.007,
-            "lastPrice": 0.007,
-            "volume": 53439251.25145691,
+            "probability": 0.0055,
+            "bid": 0.005,
+            "ask": 0.006,
+            "lastPrice": 0.006,
+            "volume": 53663689.494606934,
             "marketId": "558965",
             "question": "Will Senegal win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-senegal-win-the-2026-fifa-world-cup"
@@ -4228,11 +4351,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.15000000000000002,
-            "bid": 0.14,
-            "ask": 0.16,
+            "probability": 0.165,
+            "bid": 0.16,
+            "ask": 0.17,
             "lastPrice": 0.17,
-            "volume": 42678.26063900003,
+            "volume": 44356.13485300002,
             "marketId": "2070733",
             "question": "Will South Africa advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-south-africa-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4247,7 +4370,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 1200242.73,
+            "volume": 1219929.83,
             "marketId": "KXMENWORLDCUP-26-RSA",
             "question": "Will South Africa win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4260,7 +4383,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 39185977.40789427,
+            "volume": 39185986.21789427,
             "marketId": "558964",
             "question": "Will South Africa win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-south-africa-win-the-2026-fifa-world-cup"
@@ -4273,11 +4396,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.935,
-            "bid": 0.93,
-            "ask": 0.94,
-            "lastPrice": 0.94,
-            "volume": 33189.58617900003,
+            "probability": 0.905,
+            "bid": 0.9,
+            "ask": 0.91,
+            "lastPrice": 0.91,
+            "volume": 38648.82918900004,
             "marketId": "2070732",
             "question": "Will South Korea advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-south-korea-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4292,7 +4415,7 @@
             "bid": 0.003,
             "ask": 0.004,
             "lastPrice": 0.004,
-            "volume": 11492066.06,
+            "volume": 12115400.36,
             "marketId": "KXMENWORLDCUP-26-KR",
             "question": "Will the South Korea win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4304,8 +4427,8 @@
             "probability": 0.0035,
             "bid": 0.003,
             "ask": 0.004,
-            "lastPrice": 0.004,
-            "volume": 81850989.31581528,
+            "lastPrice": 0.003,
+            "volume": 84550236.69480027,
             "marketId": "558961",
             "question": "Will South Korea win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-south-korea-win-the-2026-fifa-world-cup-485"
@@ -4318,11 +4441,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.9695,
-            "bid": 0.969,
+            "probability": 0.969,
+            "bid": 0.968,
             "ask": 0.97,
             "lastPrice": 0.97,
-            "volume": 106995.99795299991,
+            "volume": 107671.04250499993,
             "marketId": "2070759",
             "question": "Will Spain advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-spain-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4333,11 +4456,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.1325,
+            "probability": 0.1335,
             "bid": 0.132,
-            "ask": 0.133,
-            "lastPrice": 0.133,
-            "volume": 13186013.34,
+            "ask": 0.135,
+            "lastPrice": 0.135,
+            "volume": 13398716.1,
             "marketId": "KXMENWORLDCUP-26-ES",
             "question": "Will the Spain win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4350,7 +4473,7 @@
             "bid": 0.136,
             "ask": 0.137,
             "lastPrice": 0.137,
-            "volume": 53703097.92414794,
+            "volume": 53834615.4275169,
             "marketId": "558934",
             "question": "Will Spain win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-spain-win-the-2026-fifa-world-cup-963"
@@ -4363,11 +4486,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.9430000000000001,
-            "bid": 0.937,
+            "probability": 0.945,
+            "bid": 0.941,
             "ask": 0.949,
             "lastPrice": 0.949,
-            "volume": 105622.50805099991,
+            "volume": 106247.44471599991,
             "marketId": "2070754",
             "question": "Will Sweden advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-sweden-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4382,7 +4505,7 @@
             "bid": 0.004,
             "ask": 0.005,
             "lastPrice": 0.005,
-            "volume": 7192252.49,
+            "volume": 7230333.85,
             "marketId": "KXMENWORLDCUP-26-SE",
             "question": "Will the Sweden win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4394,8 +4517,8 @@
             "probability": 0.0055,
             "bid": 0.005,
             "ask": 0.006,
-            "lastPrice": 0.006,
-            "volume": 48317205.93568836,
+            "lastPrice": 0.005,
+            "volume": 48484410.95534539,
             "marketId": "558980",
             "question": "Will Sweden win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-sweden-win-the-2026-fifa-world-cup"
@@ -4408,29 +4531,14 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.9995,
-            "bid": 0.999,
-            "ask": 1,
-            "lastPrice": 0.999,
-            "volume": 358543.50610100036,
+            "probability": 0.9975,
+            "bid": 0.997,
+            "ask": 0.998,
+            "lastPrice": 0.998,
+            "volume": 406163.5661010004,
             "marketId": "2070736",
             "question": "Will Switzerland advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-switzerland-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
-          }
-        ],
-        "group_winner": [
-          {
-            "source": "Polymarket",
-            "type": "group_winner",
-            "label": "Group B",
-            "probability": 0.405,
-            "bid": 0.4,
-            "ask": 0.41,
-            "lastPrice": 0.41,
-            "volume": 455744.70638100314,
-            "marketId": "839397",
-            "question": "Will Switzerland win Group B in the 2026 FIFA World Cup?",
-            "url": "https://polymarket.com/market/will-switzerland-win-group-a-in-the-2026-fifa-world-cup"
           }
         ],
         "winner": [
@@ -4441,8 +4549,8 @@
             "probability": 0.0095,
             "bid": 0.009,
             "ask": 0.01,
-            "lastPrice": 0.012,
-            "volume": 8240710.72,
+            "lastPrice": 0.01,
+            "volume": 8272105.64,
             "marketId": "KXMENWORLDCUP-26-CH",
             "question": "Will the Switzerland win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4455,7 +4563,7 @@
             "bid": 0.009,
             "ask": 0.01,
             "lastPrice": 0.01,
-            "volume": 56851013.39106033,
+            "volume": 56901421.03336939,
             "marketId": "558974",
             "question": "Will Switzerland win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-switzerland-win-the-2026-fifa-world-cup"
@@ -4468,11 +4576,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.07500000000000001,
-            "bid": 0.07,
-            "ask": 0.08,
-            "lastPrice": 0.08,
-            "volume": 102387.6815210001,
+            "probability": 0.08499999999999999,
+            "bid": 0.08,
+            "ask": 0.09,
+            "lastPrice": 0.09,
+            "volume": 102884.2477480001,
             "marketId": "2070753",
             "question": "Will Tunisia advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-tunisia-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4487,7 +4595,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 991717.1,
+            "volume": 996646.1,
             "marketId": "KXMENWORLDCUP-26-TN",
             "question": "Will the Tunisia win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4500,7 +4608,7 @@
             "bid": null,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 36404931.373686016,
+            "volume": 36409321.373686016,
             "marketId": "558954",
             "question": "Will Tunisia win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-tunisia-win-the-2026-fifa-world-cup-165"
@@ -4513,11 +4621,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.5,
-            "bid": 0.49,
-            "ask": 0.51,
-            "lastPrice": 0.5,
-            "volume": 62384.528148,
+            "probability": 0.475,
+            "bid": 0.47,
+            "ask": 0.48,
+            "lastPrice": 0.48,
+            "volume": 68629.72057399996,
             "marketId": "2070746",
             "question": "Will Turkiye advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-turkiye-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4532,7 +4640,7 @@
             "bid": 0.003,
             "ask": 0.004,
             "lastPrice": 0.004,
-            "volume": 6341371.81,
+            "volume": 6344894.71,
             "marketId": "KXMENWORLDCUP-26-TR",
             "question": "Will the Turkey win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4545,7 +4653,7 @@
             "bid": 0.004,
             "ask": 0.005,
             "lastPrice": 0.005,
-            "volume": 56914767.80934023,
+            "volume": 57529550.67534026,
             "marketId": "558985",
             "question": "Will Turkiye win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-turkiye-win-the-2026-fifa-world-cup"
@@ -4558,11 +4666,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.9715,
-            "bid": 0.971,
-            "ask": 0.972,
-            "lastPrice": 0.98,
-            "volume": 104459.29009600001,
+            "probability": 0.9784999999999999,
+            "bid": 0.978,
+            "ask": 0.979,
+            "lastPrice": 0.986,
+            "volume": 105583.74818299999,
             "marketId": "2070743",
             "question": "Will USA advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-usa-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4573,11 +4681,11 @@
             "source": "Kalshi",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0345,
-            "bid": 0.034,
-            "ask": 0.035,
-            "lastPrice": 0.035,
-            "volume": 27437161,
+            "probability": 0.035500000000000004,
+            "bid": 0.035,
+            "ask": 0.036,
+            "lastPrice": 0.037,
+            "volume": 28310890.29,
             "marketId": "KXMENWORLDCUP-26-US",
             "question": "Will the USA win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4586,11 +4694,11 @@
             "source": "Polymarket",
             "type": "winner",
             "label": "World Cup winner",
-            "probability": 0.0225,
-            "bid": 0.022,
-            "ask": 0.023,
-            "lastPrice": 0.022,
-            "volume": 78851113.51599413,
+            "probability": 0.0235,
+            "bid": 0.023,
+            "ask": 0.024,
+            "lastPrice": 0.024,
+            "volume": 79345817.88733728,
             "marketId": "558943",
             "question": "Will USA win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-usa-win-the-2026-fifa-world-cup-467"
@@ -4603,11 +4711,11 @@
             "source": "Polymarket",
             "type": "advance",
             "label": "Reach knockouts",
-            "probability": 0.775,
+            "probability": 0.77,
             "bid": 0.76,
-            "ask": 0.79,
-            "lastPrice": 0.8,
-            "volume": 23644.336085000017,
+            "ask": 0.78,
+            "lastPrice": 0.78,
+            "volume": 23668.62689200002,
             "marketId": "2070760",
             "question": "Will Uruguay advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-uruguay-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4622,7 +4730,7 @@
             "bid": 0.005,
             "ask": 0.006,
             "lastPrice": 0.006,
-            "volume": 6827466.78,
+            "volume": 7071655.59,
             "marketId": "KXMENWORLDCUP-26-UY",
             "question": "Will the Uruguay win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4635,7 +4743,7 @@
             "bid": 0.005,
             "ask": 0.006,
             "lastPrice": 0.005,
-            "volume": 59416053.60877324,
+            "volume": 59572758.38110327,
             "marketId": "558944",
             "question": "Will Uruguay win the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-uruguay-win-the-2026-fifa-world-cup-932"
@@ -4652,7 +4760,7 @@
             "bid": 0.18,
             "ask": 0.19,
             "lastPrice": 0.18,
-            "volume": 35730.71383100001,
+            "volume": 35933.45773000001,
             "marketId": "2070773",
             "question": "Will Uzbekistan advance to the knockout stages at the 2026 FIFA World Cup?",
             "url": "https://polymarket.com/market/will-uzbekistan-advance-to-the-knockout-stages-at-the-2026-fifa-world-cup"
@@ -4667,7 +4775,7 @@
             "bid": 0,
             "ask": 0.001,
             "lastPrice": 0.001,
-            "volume": 2148030.68,
+            "volume": 2198534.68,
             "marketId": "KXMENWORLDCUP-26-UZB",
             "question": "Will Uzbekistan win the 2026 Men's World Cup?",
             "url": "https://kalshi.com/markets/kxmenworldcup/mens-world-cup-winner/kxmenworldcup-26"
@@ -4687,6 +4795,244 @@
           }
         ]
       }
-    }
+    },
+    "goldenBoot": [
+      {
+        "rank": 1,
+        "source": "Polymarket",
+        "label": "Kylian Mbappe",
+        "probability": 0.24,
+        "bid": 0.23,
+        "ask": 0.25,
+        "lastPrice": 0.25,
+        "volume": 688055.8888980006,
+        "marketId": "2069638",
+        "question": "Will Kylian Mbappe be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-kylian-mbappe-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 2,
+        "source": "Polymarket",
+        "label": "Harry Kane",
+        "probability": 0.215,
+        "bid": 0.21,
+        "ask": 0.22,
+        "lastPrice": 0.21,
+        "volume": 534582.2850040002,
+        "marketId": "2069670",
+        "question": "Will Harry Kane be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-harry-kane-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 3,
+        "source": "Polymarket",
+        "label": "Lionel Messi",
+        "probability": 0.2095,
+        "bid": 0.209,
+        "ask": 0.21,
+        "lastPrice": 0.21,
+        "volume": 492621.2091280008,
+        "marketId": "2069635",
+        "question": "Will Lionel Messi be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-lionel-messi-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 4,
+        "source": "Polymarket",
+        "label": "Erling Haaland",
+        "probability": 0.08499999999999999,
+        "bid": 0.08,
+        "ask": 0.09,
+        "lastPrice": 0.09,
+        "volume": 477598.25746399997,
+        "marketId": "2069636",
+        "question": "Will Erling Haaland be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-erling-haaland-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 5,
+        "source": "Polymarket",
+        "label": "Kai Havertz",
+        "probability": 0.0525,
+        "bid": 0.052,
+        "ask": 0.053,
+        "lastPrice": 0.052,
+        "volume": 252982.72854699995,
+        "marketId": "2069681",
+        "question": "Will Kai Havertz be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-kai-havertz-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 6,
+        "source": "Polymarket",
+        "label": "Lamine Yamal",
+        "probability": 0.0295,
+        "bid": 0.029,
+        "ask": 0.03,
+        "lastPrice": 0.028,
+        "volume": 374371.21977900015,
+        "marketId": "2069640",
+        "question": "Will Lamine Yamal be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-lamine-yamal-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 7,
+        "source": "Polymarket",
+        "label": "Folarin Balogun",
+        "probability": 0.025,
+        "bid": 0.024,
+        "ask": 0.026,
+        "lastPrice": 0.026,
+        "volume": 101962.53608399989,
+        "marketId": "2069687",
+        "question": "Will Folarin Balogun be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-folarin-balogun-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 8,
+        "source": "Polymarket",
+        "label": "Vinicius Junior",
+        "probability": 0.0225,
+        "bid": 0.021,
+        "ask": 0.024,
+        "lastPrice": 0.024,
+        "volume": 243798.39720700026,
+        "marketId": "2069646",
+        "question": "Will Vinicius Junior be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-vinicius-junior-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 9,
+        "source": "Polymarket",
+        "label": "Ferran Torres",
+        "probability": 0.0205,
+        "bid": 0.02,
+        "ask": 0.021,
+        "lastPrice": 0.02,
+        "volume": 407656.24659400084,
+        "marketId": "2069656",
+        "question": "Will Ferran Torres be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-ferran-torres-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 10,
+        "source": "Polymarket",
+        "label": "Cristiano Ronaldo",
+        "probability": 0.019,
+        "bid": 0.018,
+        "ask": 0.02,
+        "lastPrice": 0.021,
+        "volume": 404854.3646000009,
+        "marketId": "2069637",
+        "question": "Will Cristiano Ronaldo be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-cristiano-ronaldo-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 11,
+        "source": "Polymarket",
+        "label": "Mikel Oyarzabal",
+        "probability": 0.0155,
+        "bid": 0.015,
+        "ask": 0.016,
+        "lastPrice": 0.015,
+        "volume": 303136.91927399964,
+        "marketId": "2069674",
+        "question": "Will Mikel Oyarzabal be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-mikel-oyarzabal-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 12,
+        "source": "Polymarket",
+        "label": "Michael Olise",
+        "probability": 0.0095,
+        "bid": 0.009,
+        "ask": 0.01,
+        "lastPrice": 0.013,
+        "volume": 400525.3956930008,
+        "marketId": "2069662",
+        "question": "Will Michael Olise be the top goalscorer at the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-michael-olise-be-the-top-goalscorer-at-the-2026-fifa-world-cup"
+      }
+    ],
+    "continents": [
+      {
+        "rank": 1,
+        "source": "Polymarket",
+        "label": "Europe (UEFA)",
+        "probability": 0.705,
+        "bid": 0.7,
+        "ask": 0.71,
+        "lastPrice": 0.7,
+        "volume": 509131.9370919926,
+        "marketId": "840929",
+        "question": "Will Europe (UEFA) win the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-europe-win-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 2,
+        "source": "Polymarket",
+        "label": "South America (CONMEBOL)",
+        "probability": 0.20500000000000002,
+        "bid": 0.2,
+        "ask": 0.21,
+        "lastPrice": 0.21,
+        "volume": 449243.1336619964,
+        "marketId": "840931",
+        "question": "Will South America (CONMEBOL) win the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-south-america-win-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 3,
+        "source": "Polymarket",
+        "label": "North America (CONCACAF)",
+        "probability": 0.038,
+        "bid": 0.036,
+        "ask": 0.04,
+        "lastPrice": 0.039,
+        "volume": 697274.0950399962,
+        "marketId": "840930",
+        "question": "Will North America (CONCACAF) win the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-north-america-win-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 4,
+        "source": "Polymarket",
+        "label": "Africa (CAF)",
+        "probability": 0.036500000000000005,
+        "bid": 0.035,
+        "ask": 0.038,
+        "lastPrice": 0.04,
+        "volume": 1479860.567018999,
+        "marketId": "840927",
+        "question": "Will Africa (CAF) win the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-africa-win-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 5,
+        "source": "Polymarket",
+        "label": "Asia (AFC)",
+        "probability": 0.020999999999999998,
+        "bid": 0.02,
+        "ask": 0.022,
+        "lastPrice": 0.02,
+        "volume": 765293.085793995,
+        "marketId": "840928",
+        "question": "Will Asia (AFC) win the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-asia-win-the-2026-fifa-world-cup"
+      },
+      {
+        "rank": 6,
+        "source": "Polymarket",
+        "label": "Oceania (OCF)",
+        "probability": 0.0025,
+        "bid": 0.002,
+        "ask": 0.003,
+        "lastPrice": 0.005,
+        "volume": 1812095.5620559976,
+        "marketId": "840932",
+        "question": "Will Oceania (OCF) win the 2026 FIFA World Cup?",
+        "url": "https://polymarket.com/market/will-oceania-win-the-2026-fifa-world-cup"
+      }
+    ]
   }
 }

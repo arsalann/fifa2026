@@ -6,7 +6,7 @@ import { computeGroups, teamTournamentRecord } from '../lib/standings'
 import { goldenBoot } from '../lib/scorers'
 import { useFavorite } from '../lib/prefs'
 import { track } from '../lib/analytics'
-import { flattenTeamMarkets, formatProbability, formatVolume } from '../lib/betting'
+import { flattenTeamMarkets, formatProbability, formatVolume, winnerConsensus } from '../lib/betting'
 import MatchCard from '../components/MatchCard'
 import Lineup from '../components/Lineup'
 
@@ -30,6 +30,21 @@ function MarketRow({ market }) {
         {volume && <div className="market-row-sub">{volume}</div>}
       </div>
       <strong>{formatProbability(market.probability)}</strong>
+    </div>
+  )
+}
+
+function MarketConsensus({ consensus }) {
+  if (!consensus) return null
+  return (
+    <div className="market-consensus">
+      <div>
+        <div className="market-row-main">Winner consensus</div>
+        <div className="market-row-sub">
+          {consensus.high.source} high by {formatProbability(consensus.spread)}
+        </div>
+      </div>
+      <strong>{formatProbability(consensus.average)}</strong>
     </div>
   )
 }
@@ -59,6 +74,10 @@ export default function TeamPage() {
   const scorers = useMemo(() => goldenBoot(matches).filter((s) => s.team === name), [matches, name])
   const markets = useMemo(
     () => flattenTeamMarkets(betting?.teamMarkets?.[name]).slice(0, 5),
+    [betting, name],
+  )
+  const consensus = useMemo(
+    () => winnerConsensus(betting?.teamMarkets?.[name]),
     [betting, name],
   )
 
@@ -118,6 +137,7 @@ export default function TeamPage() {
           <>
             <h4>Market view</h4>
             <div className="market-list">
+              <MarketConsensus consensus={consensus} />
               {markets.map((market) => (
                 <MarketRow
                   key={`${market.source}-${market.type}-${market.label}`}
