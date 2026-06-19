@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T23:56:08.949Z",
+  "generatedAt": "2026-06-19T08:51:44.348Z",
   "source": "bruin:motherduck-fifa:raw.espn_scoreboard + raw.espn_match_summary",
   "summaries": {
     "760414": {
@@ -26640,12 +26640,12 @@
               {
                 "name": "accuratePasses",
                 "label": "Accurate Passes",
-                "displayValue": "517"
+                "displayValue": "516"
               },
               {
                 "name": "totalPasses",
                 "label": "Passes",
-                "displayValue": "587"
+                "displayValue": "586"
               },
               {
                 "name": "passPct",
@@ -26660,7 +26660,7 @@
               {
                 "name": "totalCrosses",
                 "label": "Crosses",
-                "displayValue": "22"
+                "displayValue": "23"
               },
               {
                 "name": "crossPct",
@@ -26670,12 +26670,12 @@
               {
                 "name": "totalLongBalls",
                 "label": "Long Balls",
-                "displayValue": "49"
+                "displayValue": "50"
               },
               {
                 "name": "accurateLongBalls",
                 "label": "Accurate Long Balls",
-                "displayValue": "23"
+                "displayValue": "25"
               },
               {
                 "name": "longballPct",
@@ -26690,7 +26690,7 @@
               {
                 "name": "effectiveTackles",
                 "label": "Effective Tackles",
-                "displayValue": "14"
+                "displayValue": "13"
               },
               {
                 "name": "totalTackles",
@@ -26705,17 +26705,17 @@
               {
                 "name": "interceptions",
                 "label": "Interceptions",
-                "displayValue": "4"
+                "displayValue": "5"
               },
               {
                 "name": "effectiveClearance",
                 "label": "Effective Clearances",
-                "displayValue": "19"
+                "displayValue": "17"
               },
               {
                 "name": "totalClearance",
                 "label": "Clearances",
-                "displayValue": "19"
+                "displayValue": "17"
               }
             ]
           },
@@ -26789,12 +26789,12 @@
               {
                 "name": "accuratePasses",
                 "label": "Accurate Passes",
-                "displayValue": "285"
+                "displayValue": "287"
               },
               {
                 "name": "totalPasses",
                 "label": "Passes",
-                "displayValue": "353"
+                "displayValue": "354"
               },
               {
                 "name": "passPct",
@@ -26824,7 +26824,7 @@
               {
                 "name": "accurateLongBalls",
                 "label": "Accurate Long Balls",
-                "displayValue": "12"
+                "displayValue": "13"
               },
               {
                 "name": "longballPct",
@@ -26854,17 +26854,17 @@
               {
                 "name": "interceptions",
                 "label": "Interceptions",
-                "displayValue": "12"
+                "displayValue": "11"
               },
               {
                 "name": "effectiveClearance",
                 "label": "Effective Clearances",
-                "displayValue": "35"
+                "displayValue": "36"
               },
               {
                 "name": "totalClearance",
                 "label": "Clearances",
-                "displayValue": "35"
+                "displayValue": "36"
               }
             ]
           }
@@ -27583,7 +27583,7 @@
               {
                 "name": "foulsCommitted",
                 "label": "Fouls",
-                "displayValue": "7"
+                "displayValue": "9"
               },
               {
                 "name": "yellowCards",
@@ -27603,7 +27603,7 @@
               {
                 "name": "wonCorners",
                 "label": "Corner Kicks",
-                "displayValue": "16"
+                "displayValue": "19"
               },
               {
                 "name": "saves",
@@ -27612,13 +27612,13 @@
               },
               {
                 "name": "possessionPct",
-                "label": "POSSESSION",
-                "displayValue": "77.6"
+                "label": "Possession",
+                "displayValue": "79"
               },
               {
                 "name": "totalShots",
                 "label": "SHOTS",
-                "displayValue": "29"
+                "displayValue": "32"
               },
               {
                 "name": "shotsOnTarget",
@@ -27643,12 +27643,12 @@
               {
                 "name": "accuratePasses",
                 "label": "Accurate Passes",
-                "displayValue": "467"
+                "displayValue": "515"
               },
               {
                 "name": "totalPasses",
                 "label": "Passes",
-                "displayValue": "518"
+                "displayValue": "567"
               },
               {
                 "name": "passPct",
@@ -27658,12 +27658,12 @@
               {
                 "name": "accurateCrosses",
                 "label": "Accurate Crosses",
-                "displayValue": "11"
+                "displayValue": "13"
               },
               {
                 "name": "totalCrosses",
                 "label": "Crosses",
-                "displayValue": "48"
+                "displayValue": "55"
               },
               {
                 "name": "crossPct",
@@ -27688,7 +27688,7 @@
               {
                 "name": "blockedShots",
                 "label": "Blocked Shots",
-                "displayValue": "13"
+                "displayValue": "14"
               },
               {
                 "name": "effectiveTackles",
@@ -27747,7 +27747,7 @@
               {
                 "name": "offsides",
                 "label": "Offsides",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "wonCorners",
@@ -27761,8 +27761,8 @@
               },
               {
                 "name": "possessionPct",
-                "label": "POSSESSION",
-                "displayValue": "22.4"
+                "label": "Possession",
+                "displayValue": "21"
               },
               {
                 "name": "totalShots",
@@ -27792,12 +27792,12 @@
               {
                 "name": "accuratePasses",
                 "label": "Accurate Passes",
-                "displayValue": "103"
+                "displayValue": "104"
               },
               {
                 "name": "totalPasses",
                 "label": "Passes",
-                "displayValue": "160"
+                "displayValue": "162"
               },
               {
                 "name": "passPct",
@@ -27822,12 +27822,12 @@
               {
                 "name": "totalLongBalls",
                 "label": "Long Balls",
-                "displayValue": "50"
+                "displayValue": "54"
               },
               {
                 "name": "accurateLongBalls",
                 "label": "Accurate Long Balls",
-                "displayValue": "16"
+                "displayValue": "17"
               },
               {
                 "name": "longballPct",
@@ -27842,12 +27842,12 @@
               {
                 "name": "effectiveTackles",
                 "label": "Effective Tackles",
-                "displayValue": "8"
+                "displayValue": "10"
               },
               {
                 "name": "totalTackles",
                 "label": "Tackles",
-                "displayValue": "13"
+                "displayValue": "16"
               },
               {
                 "name": "tacklePct",
@@ -27862,12 +27862,12 @@
               {
                 "name": "effectiveClearance",
                 "label": "Effective Clearances",
-                "displayValue": "53"
+                "displayValue": "61"
               },
               {
                 "name": "totalClearance",
                 "label": "Clearances",
-                "displayValue": "53"
+                "displayValue": "61"
               }
             ]
           }
@@ -27880,7 +27880,7 @@
             "city": "Vancouver"
           }
         },
-        "attendance": 0,
+        "attendance": 52497,
         "officials": [
           {
             "fullName": "Cristián Garay",
@@ -28640,24 +28640,144 @@
             },
             "statistics": [
               {
-                "name": "goalDifference",
-                "label": "Goal Difference",
-                "displayValue": "2"
+                "name": "foulsCommitted",
+                "label": "Fouls",
+                "displayValue": "9"
               },
               {
-                "name": "totalGoals",
-                "label": "Total Goals",
-                "displayValue": "2"
-              },
-              {
-                "name": "goalAssists",
-                "label": "Assists",
-                "displayValue": "2"
-              },
-              {
-                "name": "goalsConceded",
-                "label": "Goals Against",
+                "name": "yellowCards",
+                "label": "Yellow Cards",
                 "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "label": "Red Cards",
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "label": "Offsides",
+                "displayValue": "3"
+              },
+              {
+                "name": "wonCorners",
+                "label": "Corner Kicks",
+                "displayValue": "1"
+              },
+              {
+                "name": "saves",
+                "label": "Saves",
+                "displayValue": "2"
+              },
+              {
+                "name": "possessionPct",
+                "label": "Possession",
+                "displayValue": "42.4"
+              },
+              {
+                "name": "totalShots",
+                "label": "SHOTS",
+                "displayValue": "8"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "ON GOAL",
+                "displayValue": "4"
+              },
+              {
+                "name": "shotPct",
+                "label": "On Target %",
+                "displayValue": "0.5"
+              },
+              {
+                "name": "penaltyKickGoals",
+                "label": "Penalty Goals",
+                "displayValue": "0"
+              },
+              {
+                "name": "penaltyKickShots",
+                "label": "Penalty Kicks Taken",
+                "displayValue": "0"
+              },
+              {
+                "name": "accuratePasses",
+                "label": "Accurate Passes",
+                "displayValue": "349"
+              },
+              {
+                "name": "totalPasses",
+                "label": "Passes",
+                "displayValue": "427"
+              },
+              {
+                "name": "passPct",
+                "label": "Pass Completion %",
+                "displayValue": "0.8"
+              },
+              {
+                "name": "accurateCrosses",
+                "label": "Accurate Crosses",
+                "displayValue": "4"
+              },
+              {
+                "name": "totalCrosses",
+                "label": "Crosses",
+                "displayValue": "6"
+              },
+              {
+                "name": "crossPct",
+                "label": "Cross %",
+                "displayValue": "0.7"
+              },
+              {
+                "name": "totalLongBalls",
+                "label": "Long Balls",
+                "displayValue": "56"
+              },
+              {
+                "name": "accurateLongBalls",
+                "label": "Accurate Long Balls",
+                "displayValue": "16"
+              },
+              {
+                "name": "longballPct",
+                "label": "Long Balls %",
+                "displayValue": "0.3"
+              },
+              {
+                "name": "blockedShots",
+                "label": "Blocked Shots",
+                "displayValue": "1"
+              },
+              {
+                "name": "effectiveTackles",
+                "label": "Effective Tackles",
+                "displayValue": "7"
+              },
+              {
+                "name": "totalTackles",
+                "label": "Tackles",
+                "displayValue": "14"
+              },
+              {
+                "name": "tacklePct",
+                "label": "Tackle %",
+                "displayValue": "0.5"
+              },
+              {
+                "name": "interceptions",
+                "label": "Interceptions",
+                "displayValue": "6"
+              },
+              {
+                "name": "effectiveClearance",
+                "label": "Effective Clearances",
+                "displayValue": "20"
+              },
+              {
+                "name": "totalClearance",
+                "label": "Clearances",
+                "displayValue": "20"
               }
             ]
           },
@@ -28669,24 +28789,144 @@
             },
             "statistics": [
               {
-                "name": "goalDifference",
-                "label": "Goal Difference",
-                "displayValue": "1"
+                "name": "foulsCommitted",
+                "label": "Fouls",
+                "displayValue": "7"
               },
               {
-                "name": "totalGoals",
-                "label": "Total Goals",
+                "name": "yellowCards",
+                "label": "Yellow Cards",
                 "displayValue": "2"
               },
               {
-                "name": "goalAssists",
-                "label": "Assists",
+                "name": "redCards",
+                "label": "Red Cards",
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "label": "Offsides",
+                "displayValue": "6"
+              },
+              {
+                "name": "wonCorners",
+                "label": "Corner Kicks",
                 "displayValue": "2"
               },
               {
-                "name": "goalsConceded",
-                "label": "Goals Against",
-                "displayValue": "1"
+                "name": "saves",
+                "label": "Saves",
+                "displayValue": "3"
+              },
+              {
+                "name": "possessionPct",
+                "label": "Possession",
+                "displayValue": "57.6"
+              },
+              {
+                "name": "totalShots",
+                "label": "SHOTS",
+                "displayValue": "9"
+              },
+              {
+                "name": "shotsOnTarget",
+                "label": "ON GOAL",
+                "displayValue": "2"
+              },
+              {
+                "name": "shotPct",
+                "label": "On Target %",
+                "displayValue": "0.2"
+              },
+              {
+                "name": "penaltyKickGoals",
+                "label": "Penalty Goals",
+                "displayValue": "0"
+              },
+              {
+                "name": "penaltyKickShots",
+                "label": "Penalty Kicks Taken",
+                "displayValue": "0"
+              },
+              {
+                "name": "accuratePasses",
+                "label": "Accurate Passes",
+                "displayValue": "488"
+              },
+              {
+                "name": "totalPasses",
+                "label": "Passes",
+                "displayValue": "578"
+              },
+              {
+                "name": "passPct",
+                "label": "Pass Completion %",
+                "displayValue": "0.8"
+              },
+              {
+                "name": "accurateCrosses",
+                "label": "Accurate Crosses",
+                "displayValue": "5"
+              },
+              {
+                "name": "totalCrosses",
+                "label": "Crosses",
+                "displayValue": "9"
+              },
+              {
+                "name": "crossPct",
+                "label": "Cross %",
+                "displayValue": "0.6"
+              },
+              {
+                "name": "totalLongBalls",
+                "label": "Long Balls",
+                "displayValue": "64"
+              },
+              {
+                "name": "accurateLongBalls",
+                "label": "Accurate Long Balls",
+                "displayValue": "23"
+              },
+              {
+                "name": "longballPct",
+                "label": "Long Balls %",
+                "displayValue": "0.4"
+              },
+              {
+                "name": "blockedShots",
+                "label": "Blocked Shots",
+                "displayValue": "3"
+              },
+              {
+                "name": "effectiveTackles",
+                "label": "Effective Tackles",
+                "displayValue": "10"
+              },
+              {
+                "name": "totalTackles",
+                "label": "Tackles",
+                "displayValue": "17"
+              },
+              {
+                "name": "tacklePct",
+                "label": "Tackle %",
+                "displayValue": "0.6"
+              },
+              {
+                "name": "interceptions",
+                "label": "Interceptions",
+                "displayValue": "5"
+              },
+              {
+                "name": "effectiveClearance",
+                "label": "Effective Clearances",
+                "displayValue": "12"
+              },
+              {
+                "name": "totalClearance",
+                "label": "Clearances",
+                "displayValue": "12"
               }
             ]
           }
@@ -28699,8 +28939,19 @@
             "city": "Guadalajara"
           }
         },
-        "attendance": 0,
-        "officials": []
+        "attendance": 45522,
+        "officials": [
+          {
+            "fullName": "Gustavo Tejera",
+            "displayName": "Gustavo Tejera",
+            "position": {
+              "name": "Referee",
+              "displayName": "Referee",
+              "id": "1"
+            },
+            "order": 1
+          }
+        ]
       },
       "rosters": [
         {
@@ -28709,7 +28960,358 @@
             "name": null,
             "id": "203"
           },
-          "roster": []
+          "roster": [
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "1",
+              "athlete": {
+                "displayName": "Raúl Rangel",
+                "shortName": "R. Rangel"
+              },
+              "position": {
+                "name": "Goalkeeper",
+                "displayName": "Goalkeeper",
+                "abbreviation": "G"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "5",
+              "athlete": {
+                "displayName": "Johan Vásquez",
+                "shortName": "J. Vásquez"
+              },
+              "position": {
+                "name": "Center Left Defender",
+                "displayName": "Center Left Defender",
+                "abbreviation": "CD-L"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "4",
+              "athlete": {
+                "displayName": "Edson Álvarez",
+                "shortName": "E. Álvarez"
+              },
+              "position": {
+                "name": "Center Right Defender",
+                "displayName": "Center Right Defender",
+                "abbreviation": "CD-R"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "23",
+              "athlete": {
+                "displayName": "Jesús Gallardo",
+                "shortName": "J. Gallardo"
+              },
+              "position": {
+                "name": "Left Back",
+                "displayName": "Left Back",
+                "abbreviation": "LB"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "2",
+              "athlete": {
+                "displayName": "Jorge Sánchez",
+                "shortName": "J. Sánchez"
+              },
+              "position": {
+                "name": "Right Back",
+                "displayName": "Right Back",
+                "abbreviation": "RB"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "6",
+              "athlete": {
+                "displayName": "Érik Lira",
+                "shortName": "É. Lira"
+              },
+              "position": {
+                "name": "Center Midfielder",
+                "displayName": "Center Midfielder",
+                "abbreviation": "CM"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "7",
+              "athlete": {
+                "displayName": "Luis Romo",
+                "shortName": "L. Romo"
+              },
+              "position": {
+                "name": "Left Midfielder",
+                "displayName": "Left Midfielder",
+                "abbreviation": "LM"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "26",
+              "athlete": {
+                "displayName": "Brian Gutiérrez",
+                "shortName": "B. Gutiérrez"
+              },
+              "position": {
+                "name": "Right Midfielder",
+                "displayName": "Right Midfielder",
+                "abbreviation": "RM"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "9",
+              "athlete": {
+                "displayName": "Raúl Jiménez",
+                "shortName": "R. Jiménez"
+              },
+              "position": {
+                "name": "Forward",
+                "displayName": "Forward",
+                "abbreviation": "F"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "16",
+              "athlete": {
+                "displayName": "Julián Quiñones",
+                "shortName": "J. Quiñones"
+              },
+              "position": {
+                "name": "Left Forward",
+                "displayName": "Left Forward",
+                "abbreviation": "LF"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "25",
+              "athlete": {
+                "displayName": "Roberto Alvarado",
+                "shortName": "R. Alvarado"
+              },
+              "position": {
+                "name": "Right Forward",
+                "displayName": "Right Forward",
+                "abbreviation": "RF"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "20",
+              "athlete": {
+                "displayName": "Mateo Chávez",
+                "shortName": "M. Chávez"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "18",
+              "athlete": {
+                "displayName": "Obed Vargas",
+                "shortName": "O. Vargas"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "8",
+              "athlete": {
+                "displayName": "Álvaro Fidalgo",
+                "shortName": "Á. Fidalgo"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "19",
+              "athlete": {
+                "displayName": "Gilberto Mora",
+                "shortName": "G. Mora"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "11",
+              "athlete": {
+                "displayName": "Santiago Gimenez",
+                "shortName": "S. Gimenez"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "12",
+              "athlete": {
+                "displayName": "Carlos Acevedo",
+                "shortName": "C. Acevedo"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "15",
+              "athlete": {
+                "displayName": "Israel Reyes",
+                "shortName": "I. Reyes"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "21",
+              "athlete": {
+                "displayName": "César Huerta",
+                "shortName": "C. Huerta"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "17",
+              "athlete": {
+                "displayName": "Orbelín Pineda",
+                "shortName": "O. Pineda"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "22",
+              "athlete": {
+                "displayName": "Guillermo Martínez",
+                "shortName": "G. Martínez"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "24",
+              "athlete": {
+                "displayName": "Luis Chávez",
+                "shortName": "L. Chávez"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "14",
+              "athlete": {
+                "displayName": "Armando González",
+                "shortName": "A. González"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "13",
+              "athlete": {
+                "displayName": "Guillermo Ochoa",
+                "shortName": "G. Ochoa"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "10",
+              "athlete": {
+                "displayName": "Alexis Vega",
+                "shortName": "A. Vega"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            }
+          ]
         },
         {
           "team": {
@@ -28717,7 +29319,372 @@
             "name": null,
             "id": "451"
           },
-          "roster": []
+          "roster": [
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "1",
+              "athlete": {
+                "displayName": "Kim Seung-Gyu",
+                "shortName": "K. Seung-Gyu"
+              },
+              "position": {
+                "name": "Goalkeeper",
+                "displayName": "Goalkeeper",
+                "abbreviation": "G"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "4",
+              "athlete": {
+                "displayName": "Kim Min-Jae",
+                "shortName": "K. Min-Jae"
+              },
+              "position": {
+                "name": "Center Defender",
+                "displayName": "Center Defender",
+                "abbreviation": "CD"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "3",
+              "athlete": {
+                "displayName": "Lee Gi-Hyuk",
+                "shortName": "L. Gi-Hyuk"
+              },
+              "position": {
+                "name": "Center Left Defender",
+                "displayName": "Center Left Defender",
+                "abbreviation": "CD-L"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "2",
+              "athlete": {
+                "displayName": "Lee Han-Beom",
+                "shortName": "L. Han-Beom"
+              },
+              "position": {
+                "name": "Center Right Defender",
+                "displayName": "Center Right Defender",
+                "abbreviation": "CD-R"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "8",
+              "athlete": {
+                "displayName": "Paik Seung-Ho",
+                "shortName": "P. Seung-Ho"
+              },
+              "position": {
+                "name": "Center Left Midfielder",
+                "displayName": "Center Left Midfielder",
+                "abbreviation": "CM-L"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "6",
+              "athlete": {
+                "displayName": "Hwang In-Beom",
+                "shortName": "H. In-Beom"
+              },
+              "position": {
+                "name": "Center Right Midfielder",
+                "displayName": "Center Right Midfielder",
+                "abbreviation": "CM-R"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "22",
+              "athlete": {
+                "displayName": "Seol Young-Woo",
+                "shortName": "S. Young-Woo"
+              },
+              "position": {
+                "name": "Left Midfielder",
+                "displayName": "Left Midfielder",
+                "abbreviation": "LM"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "15",
+              "athlete": {
+                "displayName": "Kim Moon-Hwan",
+                "shortName": "K. Moon-Hwan"
+              },
+              "position": {
+                "name": "Right Midfielder",
+                "displayName": "Right Midfielder",
+                "abbreviation": "RM"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "7",
+              "athlete": {
+                "displayName": "Son Heung-Min",
+                "shortName": "S. Heung-Min"
+              },
+              "position": {
+                "name": "Forward",
+                "displayName": "Forward",
+                "abbreviation": "F"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "10",
+              "athlete": {
+                "displayName": "Lee Jae-Sung",
+                "shortName": "L. Jae-Sung"
+              },
+              "position": {
+                "name": "Center Left Forward",
+                "displayName": "Center Left Forward",
+                "abbreviation": "CF-L"
+              }
+            },
+            {
+              "starter": true,
+              "captain": false,
+              "jersey": "19",
+              "athlete": {
+                "displayName": "Lee Kang-In",
+                "shortName": "L. Kang-In"
+              },
+              "position": {
+                "name": "Center Right Forward",
+                "displayName": "Center Right Forward",
+                "abbreviation": "CF-R"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "21",
+              "athlete": {
+                "displayName": "Jo Hyeon-Woo",
+                "shortName": "J. Hyeon-Woo"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "14",
+              "athlete": {
+                "displayName": "Cho Wi-Je",
+                "shortName": "C. Wi-Je"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "23",
+              "athlete": {
+                "displayName": "Jens Castrop",
+                "shortName": "J. Castrop"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "18",
+              "athlete": {
+                "displayName": "Oh Hyeon-Gyu",
+                "shortName": "O. Hyeon-Gyu"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "13",
+              "athlete": {
+                "displayName": "Lee Tae-Seok",
+                "shortName": "L. Tae-Seok"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "5",
+              "athlete": {
+                "displayName": "Kim Tae-Hyeon",
+                "shortName": "K. Tae-Hyeon"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "25",
+              "athlete": {
+                "displayName": "Eom Ji-Sung",
+                "shortName": "E. Ji-Sung"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "11",
+              "athlete": {
+                "displayName": "Hwang Hee-Chan",
+                "shortName": "H. Hee-Chan"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "9",
+              "athlete": {
+                "displayName": "Cho Gue-Sung",
+                "shortName": "C. Gue-Sung"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "17",
+              "athlete": {
+                "displayName": "Bae Jun-Ho",
+                "shortName": "B. Jun-Ho"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "26",
+              "athlete": {
+                "displayName": "Lee Dong-Gyeong",
+                "shortName": "L. Dong-Gyeong"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "12",
+              "athlete": {
+                "displayName": "Song Bum-Keun",
+                "shortName": "S. Bum-Keun"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "20",
+              "athlete": {
+                "displayName": "Yang Hyun-Jun",
+                "shortName": "Y. Hyun-Jun"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "16",
+              "athlete": {
+                "displayName": "Park Jin-Seop",
+                "shortName": "P. Jin-Seop"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            },
+            {
+              "starter": false,
+              "captain": false,
+              "jersey": "24",
+              "athlete": {
+                "displayName": "Kim Jin-Gyu",
+                "shortName": "K. Jin-Gyu"
+              },
+              "position": {
+                "name": "Substitute",
+                "displayName": "Substitute",
+                "abbreviation": "SUB"
+              }
+            }
+          ]
         }
       ]
     },
@@ -30245,7 +31212,7 @@
               {
                 "name": "goalAssists",
                 "label": "Assists",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "goalsConceded",
@@ -30574,12 +31541,12 @@
               {
                 "name": "goalDifference",
                 "label": "Goal Difference",
-                "displayValue": "0"
+                "displayValue": "-3"
               },
               {
                 "name": "totalGoals",
                 "label": "Total Goals",
-                "displayValue": "1"
+                "displayValue": "2"
               },
               {
                 "name": "goalAssists",
@@ -30589,7 +31556,7 @@
               {
                 "name": "goalsConceded",
                 "label": "Goals Against",
-                "displayValue": "1"
+                "displayValue": "5"
               }
             ]
           },
@@ -30603,7 +31570,7 @@
               {
                 "name": "goalDifference",
                 "label": "Goal Difference",
-                "displayValue": "0"
+                "displayValue": "-6"
               },
               {
                 "name": "totalGoals",
@@ -30618,7 +31585,7 @@
               {
                 "name": "goalsConceded",
                 "label": "Goals Against",
-                "displayValue": "1"
+                "displayValue": "7"
               }
             ]
           }
@@ -30666,22 +31633,22 @@
               {
                 "name": "goalDifference",
                 "label": "Goal Difference",
-                "displayValue": "0"
+                "displayValue": "3"
               },
               {
                 "name": "totalGoals",
                 "label": "Total Goals",
-                "displayValue": "1"
+                "displayValue": "5"
               },
               {
                 "name": "goalAssists",
                 "label": "Assists",
-                "displayValue": "0"
+                "displayValue": "2"
               },
               {
                 "name": "goalsConceded",
                 "label": "Goals Against",
-                "displayValue": "1"
+                "displayValue": "2"
               }
             ]
           },
@@ -30695,17 +31662,17 @@
               {
                 "name": "goalDifference",
                 "label": "Goal Difference",
-                "displayValue": "0"
+                "displayValue": "6"
               },
               {
                 "name": "totalGoals",
                 "label": "Total Goals",
-                "displayValue": "1"
+                "displayValue": "7"
               },
               {
                 "name": "goalAssists",
                 "label": "Assists",
-                "displayValue": "1"
+                "displayValue": "2"
               },
               {
                 "name": "goalsConceded",
@@ -30947,7 +31914,7 @@
               {
                 "name": "totalGoals",
                 "label": "Total Goals",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "goalAssists",
@@ -30957,7 +31924,7 @@
               {
                 "name": "goalsConceded",
                 "label": "Goals Against",
-                "displayValue": "2"
+                "displayValue": "3"
               }
             ]
           },
@@ -30971,7 +31938,7 @@
               {
                 "name": "goalDifference",
                 "label": "Goal Difference",
-                "displayValue": "1"
+                "displayValue": "0"
               },
               {
                 "name": "totalGoals",
@@ -30986,7 +31953,7 @@
               {
                 "name": "goalsConceded",
                 "label": "Goals Against",
-                "displayValue": "1"
+                "displayValue": "2"
               }
             ]
           }
@@ -31039,17 +32006,17 @@
               {
                 "name": "totalGoals",
                 "label": "Total Goals",
-                "displayValue": "1"
+                "displayValue": "2"
               },
               {
                 "name": "goalAssists",
                 "label": "Assists",
-                "displayValue": "1"
+                "displayValue": "2"
               },
               {
                 "name": "goalsConceded",
                 "label": "Goals Against",
-                "displayValue": "2"
+                "displayValue": "3"
               }
             ]
           },
@@ -31063,12 +32030,12 @@
               {
                 "name": "goalDifference",
                 "label": "Goal Difference",
-                "displayValue": "2"
+                "displayValue": "3"
               },
               {
                 "name": "totalGoals",
                 "label": "Total Goals",
-                "displayValue": "2"
+                "displayValue": "3"
               },
               {
                 "name": "goalAssists",
@@ -32269,7 +33236,7 @@
               {
                 "name": "goalAssists",
                 "label": "Assists",
-                "displayValue": "0"
+                "displayValue": "1"
               },
               {
                 "name": "goalsConceded",
@@ -33024,11 +33991,32 @@
         "teams": [
           {
             "team": {
-              "displayName": "Group A Winner",
-              "name": "Group A Winner",
-              "id": "5923"
+              "displayName": "Mexico",
+              "name": "Mexico",
+              "id": "203"
             },
-            "statistics": []
+            "statistics": [
+              {
+                "name": "goalDifference",
+                "label": "Goal Difference",
+                "displayValue": "3"
+              },
+              {
+                "name": "totalGoals",
+                "label": "Total Goals",
+                "displayValue": "3"
+              },
+              {
+                "name": "goalAssists",
+                "label": "Assists",
+                "displayValue": "2"
+              },
+              {
+                "name": "goalsConceded",
+                "label": "Goals Against",
+                "displayValue": "0"
+              }
+            ]
           },
           {
             "team": {
@@ -33053,9 +34041,9 @@
       "rosters": [
         {
           "team": {
-            "displayName": "Group A Winner",
+            "displayName": "Mexico",
             "name": null,
-            "id": "5923"
+            "id": "203"
           },
           "roster": []
         },

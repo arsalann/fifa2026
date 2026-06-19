@@ -4,6 +4,7 @@ import { fetchMatchFacts } from '../lib/espn'
 import { matchStatus, finalScore, isInPlay, useData } from '../lib/data.jsx'
 import { computeGroups } from '../lib/standings'
 import { STADIUMS, fmtDateLong, fmtTime, shortCity, liveLabel } from '../lib/format'
+import { formatExpectedGoals, formatProbability } from '../lib/betting'
 
 const FACTS_POLL_MS = 30 * 1000
 const STAT_LABELS = {
@@ -92,6 +93,62 @@ function GoalTimeline({ match }) {
         </div>
       ))}
     </div>
+  )
+}
+
+function MatchMarketPanel({ match }) {
+  const summary = match.betting?.summary
+  const scores = match.betting?.correctScore ?? []
+  if (!summary?.result && scores.length === 0) return null
+  return (
+    <section className="facts-market-block">
+      <h3>Market view</h3>
+      {summary?.result && (
+        <>
+          <div className="market-prob-grid">
+            <div>
+              <strong>{formatProbability(summary.result.team1)}</strong>
+              <span>{match.team1}</span>
+            </div>
+            <div>
+              <strong>{formatProbability(summary.result.draw)}</strong>
+              <span>Draw</span>
+            </div>
+            <div>
+              <strong>{formatProbability(summary.result.team2)}</strong>
+              <span>{match.team2}</span>
+            </div>
+          </div>
+          <div className="market-micro-grid">
+            <div>
+              <strong>
+                {formatExpectedGoals(summary.expectedGoals?.team1)}-
+                {formatExpectedGoals(summary.expectedGoals?.team2)}
+              </strong>
+              <span>xG</span>
+            </div>
+            <div>
+              <strong>{formatProbability(summary.over25)}</strong>
+              <span>Over 2.5</span>
+            </div>
+            <div>
+              <strong>{formatProbability(summary.bothTeamsScore)}</strong>
+              <span>BTTS</span>
+            </div>
+          </div>
+        </>
+      )}
+      {scores.length > 0 && (
+        <div className="market-score-list">
+          {scores.slice(0, 3).map((score) => (
+            <div key={`${score.marketId}-${score.rank}`}>
+              <span>{score.label}</span>
+              <strong>{formatProbability(score.probability)}</strong>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
   )
 }
 
@@ -202,6 +259,7 @@ export default function MatchFacts({ match, onClose }) {
         </div>
 
         <GoalTimeline match={match} />
+        <MatchMarketPanel match={match} />
 
         <div className="facts-panel">
           {hasStats ? (

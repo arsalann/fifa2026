@@ -1,10 +1,37 @@
 import { useMemo } from 'react'
 import { useData } from '../lib/data.jsx'
 import { goldenBoot, tournamentTotals } from '../lib/scorers'
+import { formatProbability, formatVolume } from '../lib/betting'
 import teams from '../data/bruin/teams.json'
 
+function GoldenBootMarkets({ markets }) {
+  if (!markets?.length) return null
+  return (
+    <section className="card">
+      <h3>Market favorites</h3>
+      <div className="market-list">
+        {markets.slice(0, 8).map((market) => {
+          const volume = formatVolume(market.volume)
+          return (
+            <div className="market-row" key={market.marketId}>
+              <div>
+                <div className="market-row-main">{market.label}</div>
+                <div className="market-row-sub">
+                  {market.source}
+                  {volume ? ` · ${volume}` : ''}
+                </div>
+              </div>
+              <strong>{formatProbability(market.probability)}</strong>
+            </div>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
 export default function ScorersPage() {
-  const { matches } = useData()
+  const { matches, betting } = useData()
   const boot = useMemo(() => goldenBoot(matches), [matches])
   const totals = useMemo(() => tournamentTotals(matches), [matches])
 
@@ -27,6 +54,7 @@ export default function ScorersPage() {
           <div className="stat-label">Goals per match</div>
         </div>
       </div>
+      <GoldenBootMarkets markets={betting?.goldenBoot} />
       {boot.length === 0 ? (
         <p className="hint">
           No goals yet — the leaderboard fills in as soon as matches are played. Scores and

@@ -23,18 +23,21 @@ export default function MatchCard({ match, showDate = false, highlight = false }
   const final = finalScore(match)
   const ht = match.score?.ht
   const pens = match.score?.p
+  const marketSummary = match.betting?.summary
+  const topScore = match.betting?.correctScore?.[0]
+  const hasMarketDetails = Boolean(marketSummary || topScore)
   // a live snapshot only counts while the match is actually in play
   const live = !final && isInPlay(status) ? match.live : null
 
   // Tapping the card opens match facts once there's something to show;
   // team names (links inside) still navigate to team pages.
   const openable =
-    status !== 'upcoming' &&
-    Boolean(match.espnId || final || ht || match.goals1?.length || match.goals2?.length)
+    hasMarketDetails ||
+    (status !== 'upcoming' &&
+      Boolean(match.espnId || final || ht || match.goals1?.length || match.goals2?.length))
 
   const label = match.group ? `Group ${match.group}` : match.round
   const stadium = STADIUMS[match.city]
-  const topScore = match.betting?.correctScore?.[0]
 
   const openFacts = () => {
     track('match_facts_opened', { stage: match.stage, status })
@@ -107,7 +110,18 @@ export default function MatchCard({ match, showDate = false, highlight = false }
             <TeamTag name={match.team2} bold />
           </div>
         </div>
-        {topScore && (
+        {marketSummary?.result && (
+          <div className="market-strip">
+            <span className="market-source">{marketSummary.source}</span>
+            <span className="market-label">
+              {match.team1} {formatProbability(marketSummary.result.team1)} · Draw{' '}
+              {formatProbability(marketSummary.result.draw)} · {match.team2}{' '}
+              {formatProbability(marketSummary.result.team2)}
+            </span>
+            {topScore && <strong>{formatProbability(topScore.probability)}</strong>}
+          </div>
+        )}
+        {!marketSummary?.result && topScore && (
           <div className="market-strip">
             <span className="market-source">{topScore.source}</span>
             <span className="market-label">Top score: {topScore.label}</span>

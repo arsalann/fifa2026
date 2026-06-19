@@ -4,6 +4,7 @@ import { useData, matchStatus } from '../lib/data.jsx'
 import { computeGroups, thirdPlaceRace } from '../lib/standings'
 import { useFavorite } from '../lib/prefs'
 import { dayKey, fmtDate, fmtTime } from '../lib/format'
+import { advanceProbability, formatProbability } from '../lib/betting'
 import teams from '../data/bruin/teams.json'
 import TeamTag from '../components/TeamTag'
 import MatchCard from '../components/MatchCard'
@@ -56,6 +57,23 @@ function TodaySection({ matches, favorite }) {
   )
 }
 
+function ContinentMarket({ markets }) {
+  if (!markets?.length) return null
+  return (
+    <section className="card compact-market">
+      <h2>Continent market</h2>
+      <div className="continent-market-grid">
+        {markets.slice(0, 4).map((market) => (
+          <div key={market.marketId}>
+            <strong>{formatProbability(market.probability)}</strong>
+            <span>{market.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function ThirdPlaceTable({ groups }) {
   const race = thirdPlaceRace(groups)
   if (race.length < 12) return null
@@ -97,8 +115,30 @@ function ThirdPlaceTable({ groups }) {
   )
 }
 
+function GroupMarketPressure({ rows, betting }) {
+  const markets = rows
+    .map((row) => ({
+      team: row.team,
+      market: advanceProbability(betting?.teamMarkets?.[row.team]),
+    }))
+    .filter((row) => row.market)
+    .sort((a, b) => Number(b.market.probability) - Number(a.market.probability))
+  if (markets.length < 2) return null
+  return (
+    <div className="group-market">
+      <div className="group-market-title">Advance market</div>
+      {markets.map(({ team, market }) => (
+        <div className="group-market-row" key={team}>
+          <span>{team}</span>
+          <strong>{formatProbability(market.probability)}</strong>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function GroupsPage() {
-  const { matches } = useData()
+  const { matches, betting } = useData()
   const [favorite] = useFavorite()
   const groups = useMemo(() => computeGroups(matches), [matches])
 
@@ -106,6 +146,7 @@ export default function GroupsPage() {
     <div className="page">
       {favorite && <FavoriteCard favorite={favorite} matches={matches} />}
       <TodaySection matches={matches} favorite={favorite} />
+      <ContinentMarket markets={betting?.continents} />
       <p className="hint">
         Top 2 of each group + the 8 best third-placed teams advance to the Round of 32.
         Tap a team for full stats.
@@ -151,6 +192,7 @@ export default function GroupsPage() {
                   ))}
                 </tbody>
               </table>
+              <GroupMarketPressure rows={groups[g]} betting={betting} />
             </section>
           ))}
       </div>

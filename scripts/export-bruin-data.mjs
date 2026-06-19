@@ -25,13 +25,22 @@ const publicDetailsPath = resolve(
 )
 const queryMaxBuffer = 256 * 1024 * 1024
 
+function parseCommandJson(output) {
+  const text = String(output ?? '').trim()
+  const objectStart = text.indexOf('{')
+  const arrayStart = text.indexOf('[')
+  const starts = [objectStart, arrayStart].filter((index) => index >= 0)
+  const start = starts.length ? Math.min(...starts) : -1
+  return JSON.parse(start >= 0 ? text.slice(start) : text || '[]')
+}
+
 function query(sql) {
   if (dbPath) {
     const out = execFileSync('duckdb', ['-readonly', dbPath, '-json', sql], {
       encoding: 'utf8',
       maxBuffer: queryMaxBuffer,
     })
-    return JSON.parse(out || '[]')
+    return parseCommandJson(out)
   }
 
   const out = execFileSync(
@@ -51,7 +60,7 @@ function query(sql) {
     ],
     { encoding: 'utf8', maxBuffer: queryMaxBuffer },
   )
-  const parsed = JSON.parse(out || '[]')
+  const parsed = parseCommandJson(out)
   if (Array.isArray(parsed)) return parsed
   if (Array.isArray(parsed.rows) && Array.isArray(parsed.columns)) {
     const columnNames = parsed.columns.map((column) =>
@@ -102,6 +111,47 @@ function marketRow(row) {
     marketId: row.market_id ?? null,
     question: row.question ?? null,
     url: row.url ?? null,
+  }
+}
+
+function rankedMarketRow(row) {
+  return {
+    rank: Number(row.rank),
+    source: row.source,
+    label: row.label,
+    probability: numberOrNull(row.probability),
+    bid: numberOrNull(row.bid),
+    ask: numberOrNull(row.ask),
+    lastPrice: numberOrNull(row.last_price),
+    volume: numberOrNull(row.volume),
+    marketId: row.market_id ?? null,
+    question: row.question ?? null,
+    url: row.url ?? null,
+  }
+}
+
+function matchMarketSummary(row) {
+  return {
+    source: row.source,
+    result: {
+      team1: numberOrNull(row.team1_win_probability),
+      draw: numberOrNull(row.draw_probability),
+      team2: numberOrNull(row.team2_win_probability),
+    },
+    expectedGoals: {
+      team1: numberOrNull(row.expected_team1_goals),
+      team2: numberOrNull(row.expected_team2_goals),
+    },
+    over25: numberOrNull(row.over_2_5_probability),
+    bothTeamsScore: numberOrNull(row.both_teams_score_probability),
+    cleanSheet: {
+      team1: numberOrNull(row.team1_clean_sheet_probability),
+      team2: numberOrNull(row.team2_clean_sheet_probability),
+    },
+    topOutcome: row.top_outcome ?? null,
+    topProbability: numberOrNull(row.top_probability),
+    marketTotalProbability: numberOrNull(row.market_total_probability),
+    outcomesCount: Number(row.outcomes_count ?? 0),
   }
 }
 
@@ -331,6 +381,37 @@ try {
   matchBettingByIndex = new Map()
 }
 
+try {
+  const summaryRows = query(`
+    SELECT
+        match_index,
+        source,
+        team1_win_probability,
+        draw_probability,
+        team2_win_probability,
+        expected_team1_goals,
+        expected_team2_goals,
+        over_2_5_probability,
+        both_teams_score_probability,
+        team1_clean_sheet_probability,
+        team2_clean_sheet_probability,
+        top_outcome,
+        top_probability,
+        market_total_probability,
+        outcomes_count
+    FROM marts.app_match_market_summary
+    ORDER BY match_index
+  `)
+  for (const row of summaryRows) {
+    const key = Number(row.match_index)
+    const current = matchBettingByIndex.get(key) ?? { correctScore: [] }
+    current.summary = matchMarketSummary(row)
+    matchBettingByIndex.set(key, current)
+  }
+} catch {
+  // Match market summaries are optional app enhancements.
+}
+
 let teamMarkets = {}
 try {
   const rows = query(`
@@ -358,6 +439,37 @@ try {
   }
 } catch {
   teamMarkets = {}
+}
+
+let goldenBootMarkets = []
+let continentMarkets = []
+try {
+  const rows = query(`
+    SELECT
+        category,
+        source,
+        rank,
+        label,
+        probability,
+        bid,
+        ask,
+        last_price,
+        volume,
+        market_id,
+        question,
+        url
+    FROM marts.app_market_insights
+    ORDER BY category, rank
+  `)
+  goldenBootMarkets = rows
+    .filter((row) => row.category === 'golden_boot')
+    .map(rankedMarketRow)
+  continentMarkets = rows
+    .filter((row) => row.category === 'continent_winner')
+    .map(rankedMarketRow)
+} catch {
+  goldenBootMarkets = []
+  continentMarkets = []
 }
 
 const matches = matchRows.map((row) => {
@@ -392,7 +504,11 @@ const schedulePayload = {
   generatedAt,
   source: `bruin:${dbPath ?? bruinConnection}:marts.app_matches`,
   matches,
-  betting: { teamMarkets },
+  betting: {
+    teamMarkets,
+    goldenBoot: goldenBootMarkets,
+    continents: continentMarkets,
+  },
 }
 writeJson(schedulePath, schedulePayload)
 writeJson(publicSchedulePath, schedulePayload)
@@ -447,5 +563,7 @@ console.log(`Exported ${teamRows.length} teams to ${teamsPath}`)
 console.log(`Exported ${teamRows.length} teams to ${publicTeamsPath}`)
 console.log(`Exported ${Object.keys(teamMarkets).length} team betting market groups`)
 console.log(`Exported ${matchBettingByIndex.size} match betting market groups`)
+console.log(`Exported ${goldenBootMarkets.length} Golden Boot market rows`)
+console.log(`Exported ${continentMarkets.length} continent market rows`)
 console.log(`Exported ${Object.keys(details.summaries).length} ESPN summaries to ${detailsPath}`)
 console.log(`Exported ${Object.keys(details.summaries).length} ESPN summaries to ${publicDetailsPath}`)
