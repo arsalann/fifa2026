@@ -1,9 +1,10 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import bruinData from '../data/bruin/schedule.json'
 
 const LIVE_MS = 25 * 1000 // poll hard while a match is being played
 const IDLE_MS = 5 * 60 * 1000 // gentle background poll otherwise
 const SOON_MS = 5 * 60 * 1000 // ramp up this long before a kickoff
+const ACTIVE_USER_REFRESH_MS = 15 * 1000
 
 const LIVE_STATES = new Set(['1h', 'ht', '2h', 'et', 'pens', 'live'])
 const BASE_URL = import.meta.env?.BASE_URL ?? '/'
@@ -69,13 +70,22 @@ export function scheduleStateFromPayload(payload, fallbackPayload = bruinData) {
 
 export function DataProvider({ children }) {
   const [state, setState] = useState(() => scheduleStateFromPayload(bruinData))
+  const stateRef = useRef(state)
+  const refreshPromiseRef = useRef(null)
+
+  useEffect(() => {
+    stateRef.current = state
+  }, [state])
 
   const refresh = useCallback(() => {
+    if (refreshPromiseRef.current) return refreshPromiseRef.current
+
     if (typeof fetch !== 'function') {
       setState(stateFromPayload(bruinData))
       return Promise.resolve()
     }
-    return fetch(`${LIVE_SCHEDULE_URL}?t=${Date.now()}`, { cache: 'no-store' })
+
+    refreshPromiseRef.current = fetch(`${LIVE_SCHEDULE_URL}?t=${Date.now()}`, { cache: 'no-store' })
       .then((response) => {
         if (!response.ok) throw new Error(`Unable to load Bruin data: ${response.status}`)
         return response.json()
@@ -88,10 +98,76 @@ export function DataProvider({ children }) {
       )
       .then((payload) => setState(scheduleStateFromPayload(payload)))
       .catch(() => setState(scheduleStateFromPayload(bruinData)))
+      .finally(() => {
+        refreshPromiseRef.current = null
+      })
+
+    return refreshPromiseRef.current
   }, [])
 
   useEffect(() => {
     refresh()
+  }, [refresh])
+
+  useEffect(() => {
+    let stopped = false
+    let timer = null
+
+    const schedule = () => {
+      if (stopped) return
+      window.clearTimeout(timer)
+      timer = window.setTimeout(() => {
+        if (document.visibilityState === 'hidden') {
+          schedule()
+          return
+        }
+        refresh().finally(() => {
+          schedule()
+        })
+      }, nextRefreshDelay(stateRef.current.matches))
+    }
+
+    schedule()
+    return () => {
+      stopped = true
+      window.clearTimeout(timer)
+    }
+  }, [refresh])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return undefined
+
+    let lastActivityRefresh = 0
+    const shouldRefreshForActivity = (now) => {
+      const delay = nextRefreshDelay(stateRef.current.matches, new Date(now))
+      const minimumGap = delay <= LIVE_MS ? ACTIVE_USER_REFRESH_MS : IDLE_MS
+      return now - lastActivityRefresh >= minimumGap
+    }
+    const maybeRefresh = (force = false) => {
+      if (document.visibilityState === 'hidden') return
+      const now = Date.now()
+      if (!force && !shouldRefreshForActivity(now)) return
+      lastActivityRefresh = now
+      refresh()
+    }
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') maybeRefresh(true)
+    }
+    const onActivity = () => maybeRefresh(false)
+
+    document.addEventListener('visibilitychange', onVisible)
+    window.addEventListener('focus', onVisible)
+    window.addEventListener('online', onVisible)
+    window.addEventListener('pointerdown', onActivity, { passive: true })
+    window.addEventListener('keydown', onActivity)
+
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible)
+      window.removeEventListener('focus', onVisible)
+      window.removeEventListener('online', onVisible)
+      window.removeEventListener('pointerdown', onActivity)
+      window.removeEventListener('keydown', onActivity)
+    }
   }, [refresh])
 
   const value = useMemo(() => ({ ...state, refresh }), [state, refresh])

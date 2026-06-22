@@ -32,6 +32,12 @@ function parseJson(value, fallback = null) {
   return value
 }
 
+function isoDate(value) {
+  if (!value) return null
+  const parsed = new Date(value)
+  return Number.isNaN(parsed.getTime()) ? null : parsed.toISOString()
+}
+
 function score(row) {
   if (row.team1_score == null || row.team2_score == null) return parseJson(row.reference_score)
   const value = { ft: [Number(row.team1_score), Number(row.team2_score)] }
@@ -133,6 +139,14 @@ async function loadPayload() {
   const conn = await instance.connect()
   try {
     const result = await conn.runAndReadAll(`
+      WITH app_freshness AS (
+        SELECT max(generated_at) AS app_data_generated_at
+        FROM marts.app_data_manifest
+      ),
+      scoreboard_freshness AS (
+        SELECT max(ingested_at) AS scoreboard_ingested_at
+        FROM raw.espn_scoreboard_window
+      )
       SELECT
           match_index,
           match_key,
@@ -159,13 +173,22 @@ async function loadPayload() {
           team2_score,
           team1_ht_score,
           team2_ht_score,
-          competitions
+          competitions,
+          app_data_generated_at,
+          scoreboard_ingested_at
       FROM marts.app_matches
+      CROSS JOIN app_freshness
+      CROSS JOIN scoreboard_freshness
       ORDER BY match_index
     `)
     const rows = result.getRowObjects()
+    const firstRow = rows[0] ?? {}
     return {
-      generatedAt: new Date().toISOString(),
+      generatedAt:
+        isoDate(firstRow.app_data_generated_at) ??
+        isoDate(firstRow.scoreboard_ingested_at) ??
+        new Date().toISOString(),
+      readAt: new Date().toISOString(),
       source: `motherduck:${DB_NAME}:marts.app_matches`,
       matches: rows.map(toMatch),
     }
