@@ -2,6 +2,7 @@
 name: raw.reference_schedule_json
 description: Curated tournament schedule JSON ingested into DuckDB for app export.
 connection: motherduck-fifa
+uri: motherduck://fifa/raw/reference_schedule_json
 
 materialization:
   type: table

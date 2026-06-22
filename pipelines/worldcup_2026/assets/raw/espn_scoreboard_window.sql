@@ -5,6 +5,7 @@ description: |
   the full tournament date range so the first run backfills historical results
   and later runs refresh the same event IDs with the latest ESPN state.
 connection: motherduck-fifa
+uri: motherduck://fifa/raw/espn_scoreboard_window
 
 materialization:
   type: table

@@ -5,6 +5,7 @@ description: |
   and overlays ESPN-ingested scoreboard IDs, status, and scores where ESPN has
   a matching event.
 connection: motherduck-fifa
+uri: motherduck://fifa/marts/app_matches
 
 materialization:
   type: table

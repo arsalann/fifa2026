@@ -8,9 +8,6 @@ materialization:
   type: table
   strategy: create+replace
 
-depends:
-  - raw.espn_scoreboard_window
-
 columns:
   - name: event_id
     type: varchar
