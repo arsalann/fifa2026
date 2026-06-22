@@ -33,6 +33,7 @@ import {
   trackPageview,
 } from '../src/lib/analytics.js'
 import {
+  activeRunCount,
   hasActiveRun,
   hasRecentRun,
   triggerWindow,
@@ -379,6 +380,7 @@ check('alias unknown', canonName('Narnia'), null)
 
 // ---------- Bruin Cloud trigger gate ----------
 {
+  check('bruin cloud active run count', activeRunCount([{ status: 'running' }, { status: 'queued' }, { status: 'success' }]), 2)
   check('bruin cloud active run detected', hasActiveRun([{ status: 'running' }]), true)
   check('bruin cloud terminal run not active', hasActiveRun([{ status: 'success' }]), false)
   check(
