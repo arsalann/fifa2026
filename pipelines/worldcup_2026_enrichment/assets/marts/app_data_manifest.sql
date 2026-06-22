@@ -8,13 +8,12 @@ materialization:
   strategy: create+replace
 
 depends:
-  - marts.app_matches
+  - uri: motherduck://fifa/marts/app_matches
   - marts.app_teams
   - marts.app_team_betting
   - marts.app_match_betting
   - marts.app_match_market_summary
   - marts.app_market_insights
-  - raw.espn_scoreboard_window
   - raw.espn_match_summary
 
 columns:
@@ -45,7 +44,6 @@ WITH counts AS (
         (SELECT COUNT(*) FROM marts.app_match_betting) AS match_betting_rows,
         (SELECT COUNT(*) FROM marts.app_match_market_summary) AS match_market_summary_rows,
         (SELECT COUNT(*) FROM marts.app_market_insights) AS market_insight_rows,
-        (SELECT COUNT(*) FROM raw.espn_scoreboard_window) AS espn_window_rows,
         (SELECT COUNT(*) FROM raw.espn_match_summary) AS espn_summary_rows
 )
 SELECT
@@ -62,10 +60,6 @@ SELECT
     match_betting_rows,
     match_market_summary_rows,
     market_insight_rows,
-    CASE
-        WHEN espn_window_rows != 104 THEN error('Expected 104 rows in raw.espn_scoreboard_window')
-        ELSE espn_window_rows
-    END AS espn_window_rows,
     CASE
         WHEN espn_summary_rows != 104 THEN error('Expected 104 rows in raw.espn_match_summary')
         ELSE espn_summary_rows

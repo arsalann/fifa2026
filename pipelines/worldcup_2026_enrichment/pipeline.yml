@@ -1,5 +1,5 @@
-name: worldcup_2026
-schedule: "*/2 * * * *"
+name: worldcup_2026_enrichment
+schedule: "0 * * * *"
 start_date: "2026-01-01"
 catchup: false
 concurrency: 1

@@ -141,7 +141,7 @@ async function loadPayload() {
     const result = await conn.runAndReadAll(`
       WITH app_freshness AS (
         SELECT max(generated_at) AS app_data_generated_at
-        FROM marts.app_data_manifest
+        FROM marts.app_live_manifest
       ),
       scoreboard_freshness AS (
         SELECT max(ingested_at) AS scoreboard_ingested_at

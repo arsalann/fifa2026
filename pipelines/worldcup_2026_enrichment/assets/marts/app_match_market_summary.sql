@@ -9,7 +9,7 @@ materialization:
 
 depends:
   - raw.reference_teams_json
-  - raw.reference_schedule_json
+  - uri: motherduck://fifa/raw/reference_schedule_json
   - raw.kalshi_worldcup_correct_score
 
 columns:

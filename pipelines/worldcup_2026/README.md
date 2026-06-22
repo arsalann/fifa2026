@@ -1,13 +1,16 @@
-# World Cup 2026 Bruin Pipeline
+# World Cup 2026 Bruin Pipelines
 
-This pipeline lands FIFA World Cup 2026 soccer data into MotherDuck and exports
-an app-ready schedule overlay for the React app.
+These pipelines land FIFA World Cup 2026 soccer data into MotherDuck and export
+app-ready JSON for the React app.
 
 ## Layout
 
-- `assets/raw/`: `ingestr` assets for the requested soccer sources plus local
-  reference JSON ingested through DuckDB.
-- `assets/marts/`: DuckDB SQL assets that normalize Bruin-ingested data for the app.
+- `pipelines/worldcup_2026`: live score pipeline, scheduled every 2 minutes.
+  It refreshes curated schedule JSON, ESPN scoreboard rows, `marts.app_matches`,
+  and `marts.app_live_manifest`.
+- `pipelines/worldcup_2026_enrichment`: enrichment pipeline, scheduled hourly.
+  It refreshes team metadata, ESPN summary/details, Kalshi/Polymarket markets,
+  retained ESPN demo sources, and `marts.app_data_manifest`.
 - MotherDuck database: `fifa`.
 - `src/data/bruin/schedule.json`: generated app match data plus betting insights.
 - `src/data/bruin/teams.json`: generated team metadata.
@@ -17,7 +20,7 @@ an app-ready schedule overlay for the React app.
 
 ## Sources
 
-The app-data path uses:
+The app-data paths use:
 
 - ESPN full-window scoreboard data for match IDs, scores, status, and details.
 - ESPN match-summary data for box scores, facts, rosters, and starting XIs.
@@ -41,21 +44,29 @@ these environment variables:
 export MOTHERDUCK_TOKEN=...
 ```
 
-Then validate, run the app-data selector, and export:
+Then validate, run both app-data selectors, and export:
 
 ```bash
 npm run pipeline:validate
 npm run pipeline:refresh
 ```
 
-`pipeline:run` executes the upstream assets needed for `marts.app_data_manifest`:
-ESPN full-window scoreboard ingestion, ESPN match-summary ingestion, Kalshi and
-Polymarket public market ingestion, local reference JSON ingestion, and
-app-facing marts. The full-window ESPN asset loads the whole tournament range on
-each run, which backfills historical results on the first run and refreshes
-event rows on later runs. It is the app-score source; `raw.espn_match_summary`
-refreshes one summary payload per event ID so lineups stay warehouse-owned. The
-separate ESPN ingestr assets are retained for source coverage demos.
+`pipeline:run` runs `pipeline:run:live` first, then `pipeline:run:enrichment`.
+The live selector executes the upstream assets needed for
+`marts.app_live_manifest`: curated schedule ingestion, ESPN full-window
+scoreboard ingestion, and `marts.app_matches`. The full-window ESPN asset loads
+the whole tournament range on each run, which backfills historical results on
+the first run and refreshes event rows on later runs. It is the app-score
+source.
+
+The enrichment selector executes the upstream assets needed for
+`marts.app_data_manifest`: ESPN match-summary ingestion, Kalshi and Polymarket
+public market ingestion, team/reference ingestion, retained ESPN source demos,
+and app-facing betting/team/detail marts. `raw.espn_match_summary` refreshes one
+summary payload per event ID so lineups stay warehouse-owned. The enrichment
+manifest depends on live `marts.app_matches` by MotherDuck URI so Bruin Cloud
+can model the cross-pipeline dependency.
+
 `pipeline:export` uses
 `bruin query` against the `motherduck-fifa` connection and serializes those
 MotherDuck marts/raw rows into `src/data/bruin/` and `public/data/bruin/`. The
