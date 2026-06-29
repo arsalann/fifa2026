@@ -107,6 +107,15 @@ const cleanScheduleMatches = () =>
   check('empty live payload falls back to bundled schedule', emptyLive.matches.length, schedule.matches.length)
   check('empty live payload keeps group cards renderable', Object.keys(computeGroups(emptyLive.matches)).length, 12)
 
+  const groupOnlyLive = scheduleStateFromPayload({
+    generatedAt: '2026-06-29T17:00:00.000Z',
+    source: 'live',
+    matches: schedule.matches.filter((m) => m.stage === 'group'),
+  })
+  check('partial live payload keeps full schedule', groupOnlyLive.matches.length, schedule.matches.length)
+  check('partial live payload keeps knockout rounds', groupOnlyLive.matches.filter((m) => m.stage === 'r32').length, 16)
+  check('partial live payload keeps knockout match numbers', groupOnlyLive.matches.find((m) => m.stage === 'r32')?.matchNumber, 73)
+
   const driftedLive = scheduleStateFromPayload({
     generatedAt: '2026-06-18T17:00:00.000Z',
     source: 'live',
@@ -128,6 +137,11 @@ const cleanScheduleMatches = () =>
     'bundled Bruin schedule includes scorer data',
     schedule.matches.some((m) => m.goals1?.length || m.goals2?.length),
     true,
+  )
+  check(
+    'bundled Bruin schedule includes knockout match numbers',
+    schedule.matches.find((m) => m.stage === 'r32')?.matchNumber,
+    73,
   )
   check(
     'bundled Bruin details includes lineup rosters',

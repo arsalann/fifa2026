@@ -100,6 +100,7 @@ function toMatch(row) {
   return {
     key: row.match_key,
     index: Number(row.match_index),
+    ...(row.match_number == null ? {} : { matchNumber: Number(row.match_number) }),
     stage: row.stage,
     round: row.round,
     group: row.group_name,
@@ -146,40 +147,51 @@ async function loadPayload() {
       scoreboard_freshness AS (
         SELECT max(ingested_at) AS scoreboard_ingested_at
         FROM raw.espn_scoreboard_window
+      ),
+      match_numbers AS (
+        SELECT
+          CAST(json_extract_string(value, '$.index') AS INTEGER) AS match_index,
+          CAST(json_extract_string(value, '$.matchNumber') AS INTEGER) AS match_number
+        FROM raw.reference_schedule_json,
+          json_each(payload, '$.matches')
+        WHERE filename = 'schedule.json'
       )
       SELECT
-          match_index,
-          match_key,
-          stage,
-          round,
-          group_name,
-          team1,
-          team2,
-          kickoff,
-          city,
-          team1_espn_name,
-          team2_espn_name,
-          reference_score,
-          reference_goals1,
-          reference_goals2,
-          espn_id,
-          home_team,
-          away_team,
-          status_state,
-          status_name,
-          status_period,
-          display_clock,
-          team1_score,
-          team2_score,
-          team1_ht_score,
-          team2_ht_score,
-          competitions,
+          m.match_index,
+          m.match_key,
+          mn.match_number,
+          m.stage,
+          m.round,
+          m.group_name,
+          m.team1,
+          m.team2,
+          m.kickoff,
+          m.city,
+          m.team1_espn_name,
+          m.team2_espn_name,
+          m.reference_score,
+          m.reference_goals1,
+          m.reference_goals2,
+          m.espn_id,
+          m.home_team,
+          m.away_team,
+          m.status_state,
+          m.status_name,
+          m.status_period,
+          m.display_clock,
+          m.team1_score,
+          m.team2_score,
+          m.team1_ht_score,
+          m.team2_ht_score,
+          m.competitions,
           app_data_generated_at,
           scoreboard_ingested_at
-      FROM marts.app_matches
+      FROM marts.app_matches m
+      LEFT JOIN match_numbers mn
+        ON m.match_index = mn.match_index
       CROSS JOIN app_freshness
       CROSS JOIN scoreboard_freshness
-      ORDER BY match_index
+      ORDER BY m.match_index
     `)
     const rows = result.getRowObjects()
     const firstRow = rows[0] ?? {}
