@@ -45,13 +45,13 @@ export default function App() {
         <div className="topbar-actions">
           <div className="powered-by" aria-label="Powered by Bruin, Netlify, and MotherDuck">
             <span>Powered by</span>
-            <a className="powered-link" href="https://getbruin.com/" target="_blank" rel="noreferrer">
+            <a className="powered-link" href="https://getbruin.com" target="_blank" rel="noreferrer">
               <img className="powered-logo powered-logo-bruin" src="/bruin-logo.svg" alt="Bruin" />
             </a>
-            <a className="powered-link" href="https://www.netlify.com/" target="_blank" rel="noreferrer">
+            <a className="powered-link" href="https://join.netlify.com/gpym1z3g2vry-w6zrwt" target="_blank" rel="noreferrer">
               <img className="powered-logo powered-logo-netlify" src="/netlify-logo.png" alt="Netlify" />
             </a>
-            <a className="powered-link" href="https://motherduck.com/" target="_blank" rel="noreferrer">
+            <a className="powered-link" href="https://motherduck.com/ecosystem/bruin/" target="_blank" rel="noreferrer">
               <img className="powered-logo powered-logo-motherduck" src="/motherduck-wordmark.png" alt="MotherDuck" />
             </a>
           </div>
