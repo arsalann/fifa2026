@@ -156,6 +156,10 @@ espn_events AS (
         id AS espn_id,
         name AS espn_name,
         date AS espn_kickoff,
+        COALESCE(
+            TRY_STRPTIME(date, '%Y-%m-%dT%H:%M:%SZ'),
+            TRY_STRPTIME(date, '%Y-%m-%dT%H:%MZ')
+        ) AS espn_kickoff_ts,
         json_extract_string(status, '$.type.state') AS status_state,
         json_extract_string(status, '$.type.name') AS status_name,
         CAST(json_extract_string(status, '$.period') AS INTEGER) AS status_period,
@@ -178,6 +182,22 @@ espn_oriented AS (
         *,
         CASE WHEN c0_home_away = 'home' THEN c0_team ELSE c1_team END AS home_team,
         CASE WHEN c0_home_away = 'home' THEN c1_team ELSE c0_team END AS away_team,
+        CASE CASE WHEN c0_home_away = 'home' THEN c0_team ELSE c1_team END
+            WHEN 'Bosnia-Herzegovina' THEN 'Bosnia & Herzegovina'
+            WHEN 'Congo DR' THEN 'DR Congo'
+            WHEN 'Czechia' THEN 'Czech Republic'
+            WHEN 'United States' THEN 'USA'
+            WHEN 'Türkiye' THEN 'Turkey'
+            ELSE CASE WHEN c0_home_away = 'home' THEN c0_team ELSE c1_team END
+        END AS home_app_team,
+        CASE CASE WHEN c0_home_away = 'home' THEN c1_team ELSE c0_team END
+            WHEN 'Bosnia-Herzegovina' THEN 'Bosnia & Herzegovina'
+            WHEN 'Congo DR' THEN 'DR Congo'
+            WHEN 'Czechia' THEN 'Czech Republic'
+            WHEN 'United States' THEN 'USA'
+            WHEN 'Türkiye' THEN 'Turkey'
+            ELSE CASE WHEN c0_home_away = 'home' THEN c1_team ELSE c0_team END
+        END AS away_app_team,
         CASE WHEN c0_home_away = 'home' THEN c0_score ELSE c1_score END AS home_score,
         CASE WHEN c0_home_away = 'home' THEN c1_score ELSE c0_score END AS away_score,
         CASE WHEN c0_home_away = 'home' THEN c0_linescores ELSE c1_linescores END AS home_linescores,
@@ -186,7 +206,32 @@ espn_oriented AS (
 ),
 matched AS (
     SELECT
-        r.*,
+        r.match_index,
+        r.match_key,
+        r.stage,
+        r.round,
+        r.group_name,
+        CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN e.home_app_team
+            ELSE r.team1
+        END AS team1,
+        CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN e.away_app_team
+            ELSE r.team2
+        END AS team2,
+        CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN e.home_team
+            ELSE r.team1_espn_name
+        END AS team1_espn_name,
+        CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN e.away_team
+            ELSE r.team2_espn_name
+        END AS team2_espn_name,
+        r.kickoff,
+        r.city,
+        r.reference_score,
+        r.reference_goals1,
+        r.reference_goals2,
         e.espn_id,
         e.espn_kickoff,
         e.status_state,
@@ -202,21 +247,25 @@ matched AS (
         e.away_linescores,
         e.competitions,
         CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN e.home_score
             WHEN r.team1_espn_name = e.home_team THEN e.home_score
             WHEN r.team1_espn_name = e.away_team THEN e.away_score
             ELSE NULL
         END AS team1_score,
         CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN e.away_score
             WHEN r.team2_espn_name = e.home_team THEN e.home_score
             WHEN r.team2_espn_name = e.away_team THEN e.away_score
             ELSE NULL
         END AS team2_score,
         CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN CAST(json_extract_string(e.home_linescores, '$[0].value') AS INTEGER)
             WHEN r.team1_espn_name = e.home_team THEN CAST(json_extract_string(e.home_linescores, '$[0].value') AS INTEGER)
             WHEN r.team1_espn_name = e.away_team THEN CAST(json_extract_string(e.away_linescores, '$[0].value') AS INTEGER)
             ELSE NULL
         END AS team1_ht_score,
         CASE
+            WHEN r.stage != 'group' AND e.espn_id IS NOT NULL THEN CAST(json_extract_string(e.away_linescores, '$[0].value') AS INTEGER)
             WHEN r.team2_espn_name = e.home_team THEN CAST(json_extract_string(e.home_linescores, '$[0].value') AS INTEGER)
             WHEN r.team2_espn_name = e.away_team THEN CAST(json_extract_string(e.away_linescores, '$[0].value') AS INTEGER)
             ELSE NULL
@@ -224,6 +273,10 @@ matched AS (
     FROM reference_matches r
     LEFT JOIN espn_oriented e
         ON LOWER(e.espn_name) = LOWER(r.team2_espn_name || ' at ' || r.team1_espn_name)
+        OR (
+            r.stage != 'group'
+            AND ABS(EPOCH(CAST(r.kickoff AS TIMESTAMPTZ)) - EPOCH(e.espn_kickoff_ts)) <= 3600
+        )
 )
 SELECT *
 FROM matched

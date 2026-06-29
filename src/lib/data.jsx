@@ -33,6 +33,7 @@ function normalizeMatch(match, fallbackMatch = null) {
   const group = match?.group ?? match?.groupName ?? match?.group_name
   return {
     ...match,
+    matchNumber: match?.matchNumber ?? match?.match_number ?? fallbackMatch?.matchNumber,
     stage: normalizeStage(match?.stage ?? match?.stageName ?? match?.stage_name),
     group: group == null ? group : String(group).trim(),
     score: parseJson(match?.score, null),
@@ -46,14 +47,42 @@ function hasRenderableGroups(matches) {
   return matches.some((m) => m.stage === 'group' && m.group && m.team1 && m.team2)
 }
 
-function stateFromPayload(payload, fallbackPayload = null) {
-  const fallbackMatches = new Map(
-    (fallbackPayload?.matches ?? []).map((match) => [Number(match.index), match]),
+function finiteIndex(match) {
+  const index = Number(match?.index)
+  return Number.isFinite(index) ? index : null
+}
+
+function normalizeMatches(payloadMatches, fallbackPayload = null) {
+  const fallbackMatches = fallbackPayload?.matches ?? []
+  const fallbackByIndex = new Map(
+    fallbackMatches
+      .map((match) => [finiteIndex(match), match])
+      .filter(([index]) => index != null),
   )
+  const payloadByIndex = new Map(
+    payloadMatches
+      .map((match) => [finiteIndex(match), match])
+      .filter(([index]) => index != null),
+  )
+
+  if (
+    fallbackMatches.length &&
+    payloadByIndex.size &&
+    fallbackMatches.some((match) => !payloadByIndex.has(finiteIndex(match)))
+  ) {
+    return fallbackMatches.map((fallbackMatch) => {
+      const match = payloadByIndex.get(finiteIndex(fallbackMatch)) ?? fallbackMatch
+      return normalizeMatch(match, fallbackMatch)
+    })
+  }
+
+  return payloadMatches.map((match) => normalizeMatch(match, fallbackByIndex.get(finiteIndex(match))))
+}
+
+function stateFromPayload(payload, fallbackPayload = null) {
+  const payloadMatches = Array.isArray(payload?.matches) ? payload.matches : []
   return {
-    matches: Array.isArray(payload?.matches)
-      ? payload.matches.map((match) => normalizeMatch(match, fallbackMatches.get(Number(match.index))))
-      : [],
+    matches: normalizeMatches(payloadMatches, fallbackPayload),
     updatedAt: payload?.generatedAt ? new Date(payload.generatedAt) : null,
     source: payload?.source ?? 'bruin',
     betting: payload?.betting ?? fallbackPayload?.betting ?? { teamMarkets: {} },
